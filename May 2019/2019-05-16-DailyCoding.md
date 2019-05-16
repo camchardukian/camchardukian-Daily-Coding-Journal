@@ -1,4 +1,4 @@
-# Wednesday May 15th, 2019 Daily Coding Journal
+# Thursday May 16th, 2019 Daily Coding Journal
 
 8:46 -- I'm going to get this journal entry setup and then do some React work.
 
@@ -159,43 +159,48 @@ shouldComponentUpdate(nextProps, nextState) {
     }
 ```
 
+
 17:24 -- Now, let's review the pros and cons of how conservative we are in updating or not updating components. If we always update components, we're less likely to have bugs, but our application will run slower. Conversely, updates that occur too infrequently can lead to hard debug errors. Like most things in life, finding the proper balance is very key.
 
 17:26 -- That's all I've got for now. In the next pomodoro session we'll start to talk about the componentWillUnmount() lifecycle method.
 ___
+22:42 -- I've been doing a great job getting my programming in this week despite a busy schedule. With that being said, I definitely feel my energy levels beginning to dip. Let's make a little more progress on lifecycle methods before calling it a night.
 
+22:44 -- Now we're talking about the  **componentWillUnmount()** method.
 
-___
-___
-___
-___
-___
-___
-___
-___
-___
-___
-___
-___
-___
-___
-___
-___
-___
-___
-___
-___
-___
-___
-___
-___
-___
-___
-___
+22:48 -- The main use case for tbe componentWillUnmount() method is to clean up or tear down anything the developer has setup that could lead to clutter in the DOM or application. Here's one common example:
+* Removing an event listener
+
+22:51 -- I've finished the [part 1 lifecycle methods](https://scrimba.com/p/p7P5Hd/cewQ2Sq) video. On to part 2 we go!
+
+22:53 -- Three lifecycle methods that have been deprecated within the last year or so in React include:
+* componentWillReceiveProps()
+* componentWillMount()
+* componentWillUpdate()
+
+22:56 -- Of course, we'd be in a bit of a bind if all of those lifecycle methods were deprecated without any new methods being introduced. Fortunately, some new methods were introduced to replace the recently deprecated ones.
+
+22:58 -- One of the new methods is called getDerivedStateFromProps(). One thing we should remember about this method, however, is that it's a static method. This means that we need to write the word static before using this method. *Was that unclear?* **No problem**. Here's an example:
+```
+static getDerivedStateFromProps(props, state) {
+
+    }
+```
+
+23:03 -- As you may have noticed, the getDerivedStateFromProps() method takes two parameters, *props* and *state*. Based on the props passed to this method, the method will return a new, updated state.
+
+23:06 -- According to the course instructor, the getDerivedStateFromProps() method is one that has been misused by many developers. Said developers misusage of this application has resulted in many strange bugs and poor application performance.
+
+23:10 -- While the React team acknowledges that there are definitely occasions in which the getDerivedStateFromProps() method could be useful, the team generally recommends steering away from using it. I'd imagine this is especially so if you're a noob like me and are unlikely to have developed the ability to accurately identify the rare occasions in which this method could actuall be useful.
+
+23:12 -- We're going to talk about one more lifecycle method tonight -- The **getSnapshotBeforeUpdate()** method.
+This method basically creates a backup or clone of some data. This allows you to have access to your old data points even if your component then changes in someway... *At least that's my best interpretation of things lol* In any case, the instructor said that this lifecycle method is also rarely used, but just good to be aware about.
+
+23:17 -- I just finished watching and taking notes on the [lifecycle methods part 2 video](https://scrimba.com/p/p7P5Hd/cEkyPH2). This seems like a natural place to call it a night. Tomorrow I'll start learning about conditional rendering.
 ___
 
-Total time spent coding today: N/A
+**Total time spent coding today**: 2 hours 39 minutes
 ___
-Total time spent coding thus far in May 2019: N/A
+**Total time spent coding thus far in May 2019**: 33 hours 22 minutes
 ___
-Total lifetime hours of coding: N/A
+**Total lifetime hours of coding**: 529 hours 14 minutes
