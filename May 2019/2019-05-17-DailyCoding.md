@@ -74,7 +74,36 @@ However, the ninjaKick function would never actually run because it was assigned
 
 11:38 -- Wow! I can't believe we spent 30 minutes talking just about the setTimeout() method. With that being said, I'm going to take a break now, and discuss the setInterval() method in the next pomodoro session!
 ___
+19:52 -- I'm feeling a bit tired. I think I may have just had some bad fried seaweed + mixed seafood rice. Nonetheless, we shall persevere lol. Here I come setInterval()!
 
+19:53 -- The setInterval() method is similar to setTimeout() in that you the developer will pass in a function and time inverval in milliseconds. The main difference, however, is that the setInterval() will call your function continuously (waiting your passed number of milliseconds between each function call).
+
+20:03 -- I really like the example Beau gave in [this video](https://www.youtube.com/watch?v=kOcFZV3c75I) so I find it unnecessary to create my own from scratch. Let me just give you Beau's code (I refactored it slightly for modern ES6 syntax and to simplify things a bit for JavaScript noobs) and walk you through it:
+```javascript
+let count = 0;
+setInterval(counter, 1000);
+function counter() {
+    console.log(++count)
+}
+```
+1. We initialize our count variable to 0.
+1. We create a function called **counter()** which will increment our count variable and log it to the console.
+1. We call setInterval with *counter* and *1000* (milliseconds) passed as arguments.
+1. We see 1 logged to the console, followed by 2 a second later, followed by 3, and so on.
+
+20:15 -- Hopefully you found the above explanation useful. Oh, and here's another thing to note. We can use the clearInterval() method (with a variable passed to it) if we ever want our function to stop running (just like the clearTimeout method).
+
+20:17 -- Now that we've got setTimeout and setInterval() down pretty solid, let's get back to the conditional rendering video.
+
+20:18 -- [The video](https://scrimba.com/p/p7P5Hd/c4kJNSL) and concepts presented within it feel a lot more managable to understand this time around (thus far).
+
+One thing we should note is that the componentDidMount() lifecycle method is used to give us a chance to run some code after a component mounts to the screen for the first time.
+
+By mount, I assume the course instructor means is successfully rendered or processed, though I cannot yet confirm that 100%.
+
+20:24 -- Generally speaking, remember that whenever a component receives a different prop (or the same prop with a different value), the render method that encloses said component will run again.
+
+20:28 -- This has been a solid session. Let's take a break.
 ___
 **Total time spent coding today**: N/A
 ___
