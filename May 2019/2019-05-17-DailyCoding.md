@@ -27,7 +27,55 @@ If true, the loading message or whatnot will be displayed. If false, the loading
 
 10:18 -- My neck is starting to feel a little cramped. I'm going to take a quick walk, maybe get a little something to eat and then I'll take notes on **setTimeout()** and **setInterval()**.
 ___
+11:06 -- Just finished a 10-15 minute walk and lunch. Let's get to those notes.
 
+11:07 -- For the setTimeout() method we pass a function and numbers of milliseconds. After the specified number of milliseconds have passed, the function will then run.
+
+11:11 -- Here's an example code block for the setTimeout() method.
+```javascript
+setTimeout(ninjaKick, 4000)
+
+console.log("Quick! The ninja is coming! Close this window before he gets you!")
+
+function ninjaKick () {
+    console.log("Too slow... The ninja has kicked you in the face.")
+}
+```
+
+11:15 -- If you look at the code I've written above, here's what will happen. First, the plain console.log will run. The user will get a message that,
+> "Quick! The ninja is coming! Close this window before he gets you!"
+
+Assuming the window or application remains open, however, four seconds later (four seconds because we passed 4000 milliseconds as an argument to setTimeout) the user will then get the message, 
+>  "Too slow... The ninja has kicked you in the face."
+
+11:21 -- According to Beau, it is possible to stop the function from running even after the setTimeout() method has been called. *How?* Let me keep watching to find out for you.
+
+11:23 -- Fortunately the process for stopping the function passed to the setTimeout() method is pretty simple. Here's a list of things we need to do...
+
+1. Assign our setTimeout() method to a variable.
+1. Call the **clearTimeout() method with our variable from step 1 passed in as the argument.
+
+Hmm... let's show you some code to help you (and I) internalize this. Continuing with the above example...
+```javascript
+const clearedVariable = setTimeout(ninjaKick, 4000);
+
+console.log("Quick! The ninja is coming! Close this window before he gets you!");
+
+clearTimeout(clearedVariable);
+
+function ninjaKick () {
+    console.log("Too slow... The ninja has kicked you in the face.");
+}
+```
+In the above example, the following text would be logged to the console: 
+> "Quick! The ninja is coming! Close this window before he gets you!"
+
+However, the ninjaKick function would never actually run because it was assigned to the clearedVariable that was passed to the clearTimeout method. Thus, only the vanilla console.log() warning users about the incoming ninja would ever actually log to the console.
+
+11:38 -- Wow! I can't believe we spent 30 minutes talking just about the setTimeout() method. With that being said, I'm going to take a break now, and discuss the setInterval() method in the next pomodoro session!
+___
+
+___
 **Total time spent coding today**: N/A
 ___
 **Total time spent coding thus far in May 2019**: N/A
