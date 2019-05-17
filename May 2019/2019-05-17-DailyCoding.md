@@ -105,8 +105,12 @@ By mount, I assume the course instructor means is successfully rendered or proce
 
 20:28 -- This has been a solid session. Let's take a break.
 ___
-**Total time spent coding today**: N/A
+22:49 -- Today has been a decent day of programming. Unfortunately, I had to spend most of my evening focusing on something else important so I'm not going to be able to get in another programming session. We'll hit it hard again tomorrow though!
+
+
 ___
-**Total time spent coding thus far in May 2019**: N/A
+**Total time spent coding today**: 2 hours 14 minutes
 ___
-**Total lifetime hours of coding**: N/A
+**Total time spent coding thus far in May 2019**: 35 hours 37 minutes
+___
+**Total lifetime hours of coding**: 531 hours 33 minutes
