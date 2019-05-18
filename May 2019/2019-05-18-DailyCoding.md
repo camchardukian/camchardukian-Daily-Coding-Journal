@@ -176,10 +176,74 @@ export default Conditional
 I know things aren't super clean now. There's some refactoring to be done. For example, I should have implemented a ternary operator in Conditional.js instead of using an *if else* statement in order to keep my code shorter. I'm pretty happy with this session overall though!
 
 I'm going to take a break now to get dinner and be back for another session either tonight or tomorrow depending on time restraints.
+___
+23:30 -- I got dinner, called my mom, went through my night routine, and now it's time to get one more session of code in before bed.
 
+23:38 -- I've done the basic setup of the app including:
+* imports/exports
+* constructor/super
+* rendering
+
+23:39 -- Now I'm going to implement a simulated API call using setTimeout and conditional rendering.
+
+23:41 -- Getting close...
+```
+import React from "react"
+import Conditional from "./Conditional"
+
+class App extends React.Component {
+    constructor () {
+        super() 
+        this.state = {
+            isLoading: true
+        }
+    }
+    
+    render() {
+        console.log(this.state.isLoading)
+        return (
+        <Conditional isLoading={this.state.isLoading} />
+        )
+    }
+}
+```
+
+23:47 -- Ohhh my baby here is looking puuuurty:
+```
+ componentDidMount() {
+    setTimeout(() => this.setState({
+    isLoading: false    
+    }), 2000)
+    }
+```
+
+23:48 -- Now I'm going to try to write the conditional statement inside of Conditional.js. I'll first do the logic using an if else statement and then refactor it using a ternary for brevity.
+
+23:55 -- My application is now functional! Here's the example code from my **Functional.js file:**
+
+```
+import React from "react"
+
+function Conditional (props) {
+if (props.isLoading) {
+    return (
+        <h1>Please wait for your data to be fetched... </h1>
+    )
+}
+    return (
+        <h1> Example data from API call here </h1>
+    )
+}
+
+export default Conditional
+```
+
+23:56 -- Now let's do it again using a ternary operator...
+
+23:59 -- I've finished. To see the final output look in daily coding journal entry 2019-05-18...
 ___
-**Total time spent coding today**: N/A
+**Total time spent coding today**: 3 hours 15 minutes
 ___
-**Total time spent coding thus far in May 2019**: N/A
+**Total time spent coding thus far in May 2019**: 38 hours 57 minutes
 ___
-**Total lifetime hours of coding**: N/A
+**Total lifetime hours of coding**: 534 hours 52 minutes
