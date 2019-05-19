@@ -354,10 +354,52 @@ handleClick () {
 }
 ```
 I can't find any solutions to toggle the state using my handleClick function. My eyes are *super* dry so I need to take a break now. Hopefully I can find a solution later tonight.
+___
 
+22:33 -- Let me be honest, I was not excited to sit down and program tonight. I've done a 8 focused hours of work today already. I'm not in the mood, but again I'm thinking of Michael Jordan's trainer that said,
+> "You don't have to love the work. You just have to be addicted to the results."
+
+Let's get it!
+
+22:37 -- I'm halfway through [the tutorial](https://scrimba.com/p/p7P5Hd/c893vh2) going over the exercise I tried to complete in the previous couple pomodoro sessions. Thus far, the instructor has done literally EVERYTHING identical to the way I chose to do things.
+
+22:39 -- OMG lol. I think the mistake I made earlier was that I tried doing all these convulted kinds of functions instead of remembering that this.setState() can take in prevState as its parameter.
+
+22:40 -- Knowing this fact, I'm going to try to solve the exercise again without watching anymore of the tutorial.
+
+22:47 --  Nahhh I'm stumped. Let me see what the expert's plan is.
+
+22:50 -- Alright, here's the moment you've been waiting for. Let me dish out the dirt. Here's the code I should've written before:
+```
+ handleClick() {
+    this.setState(prevState =>{
+        return {
+            isLoggedIn: !prevState.isLoggedIn
+        }
+    })
+    }
+```
+22:52 -- There were a few mistakes I was consistently making in my previous attempts at solving this problem.
+1. Forgetting that given that I was using a function to return state, it's absolutely necessary that I include one return statement, and sometimes multiple return statements depending upon the flow of the function.
+1. I didn't use the prevState parameter.
+1. Even if I would've used the prevState parameter, I may or may not have remembered to access the isLoggedIn property as *prevState.isLoggedIn*.
+
+23:01 -- The instructor came up with a cool way of changing the button's text based on whether the user was logged in or logged out.
+
+Instead of moving the button to a Conditional.js file, he simply created a variable called button text and set that text to equal one of two different strings based on whether the user was logged in or logged out. Super smart of him to do things that way!
+
+23:04 -- Now that I've learned a few tricks, let me try to implement some of them. And do the entire project over again... **from scratch.**
+
+23:22 -- I've done it. I've built everything from scratch. And you know what...? Despite not wanting to leave my house to go to the convenient store and work through this exercise. I'm feeling great now that I've gone through everything.
+
+>Perhaps we should remember that sometimes our emotions lie to us. Emotions are largely derived from inertia. What you feel often is designed to just keep you in place. True happiness and fulfillment comes from knowing when to listen to, and when to ignore your feelings.
+
+23:25 -- Anyway, I'm going to call it a night now. I'm super proud with the work I put in today. I learned a TON today. This may have been my best coding day of 2019 despite having a ton of other obligations that took energy from me today.
+
+I'm going to work hard to continue the momentum and make tomorrow another amazing day!
 ___
-**Total time spent coding today**: N/A
+**Total time spent coding today**: 3 hours 36 minutes
 ___
-**Total time spent coding thus far in May 2019**: N/A
+**Total time spent coding thus far in May 2019**: 42 hours 32 minutes
 ___
-**Total lifetime hours of coding**: N/A
+**Total lifetime hours of coding**: 538 hours 25 minutes
