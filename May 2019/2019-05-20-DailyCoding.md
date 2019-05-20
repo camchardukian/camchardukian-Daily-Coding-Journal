@@ -180,12 +180,42 @@ As if this wasn't convulted enough, it turns out resolve and reject are also fun
 
 20:24 -- I must admit that I feel as though I still don't really "get" promises. I need to take a break to let the previous video incubate in my head a bit.
 
-20:25 -- When I come back I'll watch [Coding Train's video on promises](https://www.youtube.com/watch?v=QO4NXhWo_NM). I'm sure I'll be at least somewhat more comfortable with promises after watching and taking notes on his 2-part 35 minutes series on JavaScript promises.
+20:25 -- When I come back I'll watch [Coding Train's part I video on promises](https://www.youtube.com/watch?v=QO4NXhWo_NM). I'm sure I'll be at least somewhat more comfortable with promises after watching and taking notes on his 2-part 35 minutes series on JavaScript promises.
 
 20:26 -- Catch you later!
 ___
-**Total time spent coding today**: N/A
+21:47 -- I'm back for what I expect to be the last pomodoro session of the day. Let's continue with promises.
+
+21:49 -- The following notes will be from the video I cited above. Let's continue!
+
+21:50 -- Promises used to just be a part of certain libraries that you could import into JavaScript, but a few years ago promises were introduced natively into JavaScript.
+
+21:53 -- Callback functions seem to be more appropriate when we have a single event we're dealing with while promises may be more suitable when dealing with asynchronous sequences.
+
+21:56 -- Promises are objects that can be in one of three states:
+1. **Pending** -- We are still waiting to get the data back from the API.
+1. **Fulfilled** -- The promise has been resolved(completed) and we have received the data back from the API.
+1. **Rejected** -- Some error has occured during the process and as a result the promise is unable to be fulfilled.
+
+22:03 --
+>The .then() method is basically a function that takes a function that will be executed and executes that function when the promise is fulfilled.
+
+> The .catch() method is basically a function that takes a function that will be executes and executes that function if and when the promise is rejected.
+
+22:06 -- I like his explanation of the fetch() method. He says that basically what fetch() does is you give it a URL, and it will get some information from said URL and it will return a promise for you.
+
+22:12 -- Sometimes when the fetch() method gets data from an API it will return you information that seemingly cannot be interpreted by JavaScript without triggering an error. If that is the case, you may need to return the information from fetch and need to chain .json to it.
+
+22:14 -- Another important thing to consider is that .json will return a promise itself, and thus you will need to chain your .then() methods.
+
+22:22 -- If you chain promises, you need to remember to explicitly return (or rely on the single line arrow function's implicit return) a value for the next .then() method to do something with.
+
+22:24 -- The nice thing about the .catch() method is that it covers us against errors that occur in any part of the promise chain. This is convenient because it allows us to *not* have to write a separate error callback function at each point of the process (that would get messy really quick).
+
+22:29 -- I just finished Part I of Coding Train's series on promises. I think that's a natural place for us to call it a night. Tomorrow I'll continue with [Part II of his promise series](https://www.youtube.com/watch?v=AwyoVjVXnLk).
 ___
-**Total time spent coding thus far in May 2019**: N/A
+**Total time spent coding today**: 3 hours 37 minutes
 ___
-**Total lifetime hours of coding**: N/A
+**Total time spent coding thus far in May 2019**: 46 hours 10 minutes
+___
+**Total lifetime hours of coding**: 542 hours 3 minutes
