@@ -27,6 +27,66 @@ Having been [introduced in ES8](https://hackernoon.com/es8-was-released-and-here
 
 1:40 -- It's pretty late now so I'm going to get to bed. In the morning I'll start learning about promise.all in [this video](https://www.youtube.com/watch?v=01RTj1MWec0). I'll probably also start to watch Dylan Israel's videos on Scrimba about async and await. See you then!
 ___
+5:16 -- Just slept for about 3 or 3.5 hours. Let's get in 20+ minutes of coding and then I'll allow myself to sleep some more.
+
+5:21 -- It seems that Promise.all() needs an array passed to it. With that array, we can then chain a .then() method and a .catch() method. The .then() method will work by waiting for our all of our original promises to be resolved.
+
+Then, it will return the results of all of those promises in an array which maintains the order in which the original promises were made. Of course, if there any unexpected problems that occur during this process, the .catch() method will then come into play.
+
+5:30 -- To reiterate, promise.all() has a weakness in that if *ANY* of the individual promises it contains are rejected, then the entire array would then be rejected.
+
+5:32 -- I've now finished *The Coding Train's* entire series on promises, async, await, and promise.all(). Now I'm going to go look over Dylan Israel's videos on async and await.
+
+5:42 -- I've just finished watching the [first video](https://scrimba.com/p/p4Mrt9/cKLyeuy) Dylan has on async and await. Now let's get into the [second video](https://scrimba.com/p/p4Mrt9/c2vQ4Cg) (which is a challenge video).
+
+5:43 -- Dylan's challenge for us is to convert the following function into a function that utilizes the await and async keywords:
+
+```
+function resolveAfter3Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 3000);
+  });
+}
+
+```
+
+5:46 -- I'm guessing that this is roughly what he wanted me to create, but I'm not yet sure on the details...
+```
+async function cameronsResolveAfter3Seconds () {
+
+}
+```
+
+5:53 -- While I'm not sure on the specifics, here's kind of my rough idea on using async and await:
+
+```
+async function cameronsResolveAfter3Seconds () {
+const simulatedApiResponse = setTimeout(() => {
+    console.log("resolved");
+}, 3000); //closing parenthesis for setTimeout
+const jsonify = await simulatedApiResponse + "IN THIS STEP WE WOULD NORMALLY USE JSON ON OUR PROMISE THAT HAD JUST BEEN RESOLVED"
+console.log(jsonify)
+}
+
+cameronsResolveAfter3Seconds ()
+```
+
+5:56 -- It seems like I was on the right track. Dylan's solution was pretty similar to mine, apart from the fact that he didn't do anything with json this time.
+
+```
+async function getAsyncData() {
+    const result = await resolveAfter3Seconds();
+    console.log(result);
+}
+
+getAsyncData();
+```
+
+5:58 -- I'm going to brush my teeth, and then sleep a bit more. When I wake up I'll do another few videos on promises and then continue on with the Learn React for Free course -- probably in the afternoon.
+___
+
 **Total time spent coding today**: N/A
 ___
 **Total time spent coding thus far in May 2019**: N/A 
