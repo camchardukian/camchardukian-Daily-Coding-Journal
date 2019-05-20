@@ -146,6 +146,44 @@ ___
 17:26 -- I've finished skimming the above article. To be honest, I still feel pretty sketchy on promises. I think I'm going to have to watch several videos and maybe do some exercises to get the hang of them. I'm going to walk home and then I'll watch some videos on promises in an hour or two.
 
 ___
+19:46 -- I paid rent, went for a couple walks, took a shower, ate some strawberries, and now it's time to get back to learning about promises.
+
+19:48 -- I'm going to build on my knowledge of promises by watching and taking notes on [this video](https://www.youtube.com/watch?v=2d7s3spWAzo&) from the FunFunFunction Youtube channel. I find in general that this developer does an excellent job of introducing new concepts to developers.
+
+19:52 -- promise has a method called *.then()*.
+
+19:53 -- MPJ (the name of the developer that created the video) compares promises in JavaScript to promises in the real-world. Let's illustrate this...
+>If you go to the bank, they may promise to lend you a certain amount of money. When you are looking to buy a house, you can then tell your real estate agent how much money the bank was willing to lend to you and make a contract based on the bank's promise -- despite the fact that you haven't actually yet received any of that money.
+
+Or, to quote MPJ directly, 
+>"A promise is something you can pass around and write code around it even though you don't have the value you just yet." 
+
+19:59 -- MPJ just went on a rant about the *node.js Christmas tree of doom*. Or basically, the idea that having an excessive number of callback functions does not comply with the DRY programming principle.
+
+20:04 -- The promise constructor takes a single callback function as its argument. This callback function then takes by convention two arguments; *resolve* and *reject*.
+
+As if this wasn't convulted enough, it turns out resolve and reject are also functions in their own right! O_O
+
+20:12 -- MPJ says that promises are more helpful to us than callbacks due to the fact that promises compose.
+
+20:15 -- The .catch() method along with the argument of error and a callback function can help us "catch" (I don't fully understand yet, so I won't try to clarify catch in my own words) any errors that occur during the promise process:
+```
+.catch((error) => {
+ // I think you put what will happen if there is an error here.
+})
+```
+
+20:19 -- Here are some closing notes from MPJ:
+* Promises are closely related to callbacks.
+* Both can be used to deal with asynchronous code when we don't know when something is going to happen.
+* Promises are more powerful than callbacks because they compose.
+
+20:24 -- I must admit that I feel as though I still don't really "get" promises. I need to take a break to let the previous video incubate in my head a bit.
+
+20:25 -- When I come back I'll watch [Coding Train's video on promises](https://www.youtube.com/watch?v=QO4NXhWo_NM). I'm sure I'll be at least somewhat more comfortable with promises after watching and taking notes on his 2-part 35 minutes series on JavaScript promises.
+
+20:26 -- Catch you later!
+___
 **Total time spent coding today**: N/A
 ___
 **Total time spent coding thus far in May 2019**: N/A
