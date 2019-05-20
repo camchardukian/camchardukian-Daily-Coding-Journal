@@ -118,6 +118,34 @@ While my method allowed for the styling of both completed, and incompleted todoi
 
 10:57 -- I'll quick upload this journal to GitHub, walk home and eat another Bun Thit Nuong on the way there, and then maybe take a nap when I get home.
 ___
+
+16:57 -- I slept for nearly two hours, plus had lunch and other professional obligations I had to attend to. Regardless, now I'm ready to finally take notes on APIs!
+
+17:00 -- The first minute or two of the video were just reviewing the **componentDidMount( )** lifecycle method.
+
+17:01 -- *Fetch* is a relatively new built-in JavaScript tool that offers a promise-based way to perform HTTP requests in order for us to get data.
+
+17:05 -- This tutorial uses the [Star Wars API](https://swapi.co/) as it's one of the more simple APIs out there.
+
+17:08 -- [The tutorial](https://scrimba.com/p/p7P5Hd/c79Jask) recommends getting a solid grasp of promises in order to better understand how fetching data from an API works.
+
+17:10 -- Here are a few notes from [this article](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261) on promises (Some bullets are taken word for word from the article. Those I've indicated with double quotes. Anything not in double quotes is my paraphrased interpretation of the article.)
+
+* >"A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it’s not resolved (e.g., a network error occurred)."
+* Any promise will be set to one of three possible states that include:
+    * Fulfilled
+    * Rejected
+    * Pending
+* While promises have been around in different programming languages for decades, they have recently increased in popularity in JavaScript in large part to the *Promise* global introduced in ES6.
+* Promises that have already been settled are immutable (or in simpler terms.... unchangeable).
+* Promises can be chained.
+* The author of the cited article recommends ending all promise chains with the .catch() method (supposedly because doing so helps prevent errors from going undetected or being "swallowed").
+* >"Only the function that creates the promise should be able to resolve, reject, or cancel the promise."
+* There may be times when you are programming and you need to insert a function somewhere to prevent errors from occuring, but you don't necessarily need said function to do anything. In that situation, it's recommended you follow the naming convention and call your function noop() which is short for no-op (no-operation I presume).
+
+17:26 -- I've finished skimming the above article. To be honest, I still feel pretty sketchy on promises. I think I'm going to have to watch several videos and maybe do some exercises to get the hang of them. I'm going to walk home and then I'll watch some videos on promises in an hour or two.
+
+___
 **Total time spent coding today**: N/A
 ___
 **Total time spent coding thus far in May 2019**: N/A
