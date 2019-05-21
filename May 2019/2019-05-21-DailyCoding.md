@@ -127,6 +127,273 @@ ___
 11:05 -- Now I'm going to write the code from the video by hand a few times to internalize the syntax and logic patterns. Then, later today I'll try to rebuild everything from scratch.
 
 11:19 -- I finished writing the code by hand twice thus far. My neck is starting to get a little stiff. I'm going to take a break for lunch, edit a video or two, maybe take a nap and then get back to it this afternoon.
+___
+15:12 -- Where have the last four hours gone? lol. Between eating a couple lunches, taking an hour long nap, and going for a walk, a ton of time had passed!
+
+15:13 -- Let's spend another 15 minutes or so writing code by hand and then I'll try to implement API calls by myself.
+
+15:29 -- I just wrote the code by hand 3 times and played around with giving some of the argument throughout the promise different names. I noticed something strange.
+
+```
+componentDidMount() {
+        this.setState({loading: true})
+        fetch("https://swapi.co/api/people/1")
+            .then(response => response.json())
+            .then(data => {
+                this.setState({
+                    loading: false,
+                    character: data
+                })
+            })
+```
+
+In the above code blog I can change the name of response to *"q"* or whatever I'd like the argument to be named and my app remains functional. If, however, I change the name of data my app is in a perpetual state of loading.
+
+15:32 -- DUH. I just realized that it isn't so strange after all. The reality is that both response and data were arbitrarily named.
+
+The reason I couldn't change the name of data without my application breaking, however, is because I forgot to adjust setting my state on character from data to the new variable name.
+
+The new code down below works just fine.
+
+```
+componentDidMount() {
+        this.setState({loading: true})
+        fetch("https://swapi.co/api/people/1")
+            .then(bananaPeel => bananaPeel.json())
+            .then(arbitraryName => {
+                this.setState({
+                    loading: false,
+                    character: arbitraryName
+                })
+            })
+    }
+```
+
+15:35 -- Would naming my arguments in the manner I have done be advisable? Of course not.
+
+We should follow coding conventions whenever possible to make our code easier to read for both others and our future selves.
+
+With that being said, I do believe there is a lot of value in playing with code and testing to see what elements of our code our keywords versus variable/function/argument names that were arbitrarily chosen.
+
+This gives us a deeper understanding of the code we are working with and makes us better software engineers.
+
+15:37 -- My neck is sore. I'm going to take a quick 5-10 minute break, write the code from scratch one more time, and then attempt to re-engineer the solution on Scrimba from scratch.
+
+___
+
+15:46 -- Let's get back to work.
+
+15:51 -- I've finished writing the code from scratch for the last time. Now, let's build the solution from scratch.
+
+15:57 -- I read over some of the documentation from the (and copy/pasted it onto Scrimba). I'm starting from eventually a blank canvas to solve this problem. Below is all the information I am giving myself access to in order to solve this problem:
+
+```
+// Note to self: Use this URL to get information about planet 3. https://swapi.co/api/planets/3/
+
+// Information from swapi documentation: A Planet resource is a large mass, planet or planetoid in the Star Wars Universe, at the time of 0 ABY.
+
+// Example response: {
+//     "climate": "Arid",
+//     "created": "2014-12-09T13:50:49.641000Z",
+//     "diameter": "10465",
+//     "edited": "2014-12-15T13:48:16.167217Z",
+//     "films": [
+//         "https://swapi.co/api/films/1/",
+//         ...
+//     ],
+//     "gravity": "1",
+//     "name": "Tatooine",
+//     "orbital_period": "304",
+//     "population": "120000",
+//     "residents": [
+//         "https://swapi.co/api/people/1/",
+//         ...
+//     ],
+//     "rotation_period": "23",
+//     "surface_water": "1",
+//     "terrain": "Dessert",
+//     "url": "https://swapi.co/api/planets/1/"
+// }
+```
+16:01 -- So far it's smooth sailing. To be fair, I haven't got to the most challenging part of the problem, but I'm off to a good start with everything properly rending and functioning without errors thus far:
+
+```
+import React from "react"
+
+class App extends React.Component {
+    constructor () {
+        super()
+        this.state = {
+            isLoading: false,
+            name: {}
+        }
+    }
+    
+    componentDidMount() {
+        
+    }
+    
+    render() {
+        return (
+            <p> This is some test text to display for my sanity... </p>
+        )
+    }
+}
+
+export default App
+```
+
+16:04 -- Right as I was starting to get confident I feel as if I've hit a brick wall. I feel like I have literally no idea what to do now lol. I know about fetch, and .json, and chaining the .then() methods, and setting my state, but I forgot how I'm supposed to start things off inside componentDidMount.
+
+16:05 -- Actually... I think I do remember. The first thing I need to do is set my state of isLoading to be true. This will prep my application to render *loading...* to the screen while the user waits for the data to be successfully retrieved from the API.
+
+16:11 -- I'm continuing to make progress. My application now sets the state of isLoading to true and displays a loading message.
+```
+import React from "react"
+
+class App extends React.Component {
+    constructor () {
+        super()
+        this.state = {
+            isLoading: false,
+            name: {}
+        }
+    }
+    
+    componentDidMount() {
+        this.setState({isLoading: true})
+    }
+    
+    render() {
+         const text = this.state.isLoading ? "loading...." : "We'll add some API stuff here later"
+        return (
+            <div>
+            <p> {text} </p>
+            </div>
+        )
+    }
+}
+
+export default App
+```
+
+16:13 -- Now I just have to successfuly fetch from the API, run .json on the response, and use the returned data to setState of name (of the planet) to equal data, and setState of isLoading to false (because if we've gotten to this point the API call was obviously successful.)
+
+16:16 -- Well, this is a bizarre error. The URL of the API I'm trying to access is (https://swapi.co/api/planets/3/). But, I can't seem to use this data inside of the fetch() method because the two forward slashes comment out the rest of the URL.
+
+I then tried to add a back slash to escape the forward slashes but that seems to have just made my url unreadable lol.
+
+Surely I can't be the only person to have had this problem.
+
+16:19 -- I guess I'll just try accessing the API using this URL (swapi.co/api/planets/3/). Later I'll read up about if accessing it in this way poses any security risks.
+
+16:21 -- It seems like I'm not using the fetch() method correctly. I will NOT cheat and watch the tutorial to figure out the solution.
+
+But, there's no sense in me just randomly throwing things against the wall either when I'm facing more of a syntax issue rather than a logical error.
+
+For that reason, I'm going to quickly consult the MDN for information on using fetch. If MDN's explanation is too complex for me to understand I'll watch some youtube tutorials on fetch (that are not directly related to the problem I'm currently trying to solve).
+
+16:25 -- On an unrelated note, I just realized that Markdown doesn't have a native underlining feature. If I want to underline I have to do so with CSS. This seems a bit crazy to me!
+
+16:30 -- Well, I found at least one problem with my code from earlier. I forgot to wrap the URL I passed to my fetch() method in quotes!
+
+16:31 -- It seems adding the double quotes solved not only the *expression expected* error I was encountering earlier, but also the error in which the double slashes were resulting in the rest of my URL being commented out.
+#MakingProgress
+Yeah baby!
+
+16:35 -- I'm soooo close. Check out my code:
+
+```
+componentDidMount() {
+        this.setState({isLoading: true})
+        fetch("https://swapi.co/api/planets/3/")
+        .then( (response) => {
+            return response.json
+        }).then(data => {
+            console.log(data.name)
+        }) 
+    } 
+```
+
+16:36 -- For some reason, however, whether I console.log() data, or data.name, I simply receive the json method or a string with the text "json".
+
+16:37 -- Unfortunately, my wrists are starting to get a bit sore now so I'm going to have to take a break. Catch you again later!
+
+
+
+MY CODE FOR WHEN SCRIMBA RELOADS:
+
+import React from "react"
+
+class App extends React.Component {
+    constructor () {
+        super()
+        this.state = {
+            isLoading: false,
+            name: {}
+        }
+    }
+    
+    componentDidMount() {
+        this.setState({isLoading: true})
+        fetch("https://swapi.co/api/planets/3/")
+        .then( (response) => {
+            return response.json
+        }).then(data => {
+            console.log(data.name)
+        }) 
+    } 
+    
+    render() {
+         const text = this.state.isLoading ? "loading...." : "We'll add some API stuff here later"
+        return (
+            <div>
+            <p> {text} </p>
+            </div>
+        )
+    }
+}
+
+
+
+
+export default App
+
+
+
+
+
+
+
+
+// Note to self: Use this URL to get information about planet 3. https://swapi.co/api/planets/3/
+// Information from swapi documentation: A Planet resource is a large mass, planet or planetoid in the Star Wars Universe, at the time of 0 ABY.
+// Example response: {
+//     "climate": "Arid",
+//     "created": "2014-12-09T13:50:49.641000Z",
+//     "diameter": "10465",
+//     "edited": "2014-12-15T13:48:16.167217Z",
+//     "films": [
+//         "https://swapi.co/api/films/1/",
+//         ...
+//     ],
+//     "gravity": "1",
+//     "name": "Tatooine",
+//     "orbital_period": "304",
+//     "population": "120000",
+//     "residents": [
+//         "https://swapi.co/api/people/1/",
+//         ...
+//     ],
+//     "rotation_period": "23",
+//     "surface_water": "1",
+//     "terrain": "Dessert",
+//     "url": "https://swapi.co/api/planets/1/"
+// }
+
+___
+
+
 
 **Total time spent coding today**: N/A
 ___
