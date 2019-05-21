@@ -435,12 +435,52 @@ No matter what I tried, however, it seemed the only thing that mattered was that
 
 Catch ya later!
 ___
-Continue with Brad's fetch API video upon my return...
+20:36 -- I'm feeling a bit tired. Fatigue is starting to kick in. Between all my naps today, however, I've now gotten 7 hours of sleep lol. Anyway, let's continue taking notes on Brad's video!
 
+20:45 -- Being introspective, I need to be honest and say I'm not getting much out of Brad's video right now. I kind of just feel like my eyes are glazing over it now haha.
+
+I'm going to continue in the React course. Doing so will increase the difficulty level of the material I'm watching and thus force my brain to re-engage.
+
+20:46 -- I'm going to watch the *Learn React for Free* [Forms Part I video](https://scrimba.com/p/p7P5Hd/cW8Jdfy) all the way through. Then I'll watch it again and take notes.
+
+21:03 -- My girl just got here so I'm not sure how much longer I'll be able to code. I'm going to try to get in at least another 25 minutes or so. I really want to make today the first time in my life I've ever coded 6 full hours in one day.
+
+21:17 -- My chances of getting the programming time I wanted in weren't looking good. But... when my girl went to take a shower I snuck out of the house and came to the convenience store.
+
+I was in such a rush to get out I just put on shorts and forgot to wear underwear. Man oh man, that's what they call dedication! lol
+
+21:18 -- Right now I'm taking notes on the official [React forms documentation](https://reactjs.org/docs/forms.html) while using this video as a [supplementary resource](https://www.youtube.com/watch?v=7FQS6_fOgR8):
+
+* We need to pass the state of our HTML forms onto React.
+* Forms in the browser typically maintain their own internal state.
+* React uses a virtual DOM.
+    * For this reason, React is only able to observe DOM changes that we explicitly tell it about.
+* The virtual DOM is essentialy an object representation of all of our components, data, and everything we pass onto our application. The virtual DOM holds all of said information in memory.
+* React is great because when we update a component, React is smart enough to only update the relevant parts of the screen.
+* Since React observes only the virtual DOM and not the DOM itself, we need to setState and tell React about changes that are occuring in our forms.
+* If we do not tell React about changes that are occuring in our forms and set the relevant state(s) based on those changes, React will be unable to validate any of the form fields.
+
+21:34 -- Let's get back to the [Learn React for Free](https://www.youtube.com/watch?v=7FQS6_fOgR8) course!
+
+21:35 -- As far as forms are concerned, one of the primary differences between vanilla JavaScript and React is that vanilla JS typically waits until the user submits the form to do any validation of the data submitted.
+
+React on the other hand is able to utilize state to keep track of the values in the forms along with each keystroke the user makes (inside of the form field).
+
+21:40 -- We can use the onChange event to detect whenever the input inside of our input box changes, and then run a function.
+
+21:42 -- When events fire in JavaScript, they pass a predetermined parameter into our function.
+
+21:44 -- Quick reminder: Any time we have a class method that's calling setState, we need to make sure we bind it inside of the constructor.
+
+21:47 -- If you are describing a string property name inside of an object, you need to wrap that string inside of square brackets in order to avoid a syntax error.
+
+21:49 -- State should always be the single source of truth.
+
+21:52 -- I just finished the video! Tomorrow I'll rewrite the code by hand, watch the video again, and try to rebuild everything from scratch. If you're still reading this journal 6+ hours of work later, you're a real champ!
 ___
 
-**Total time spent coding today**: N/A
+**Total time spent coding today**: 6 hours 19 minutes
 ___
-**Total time spent coding thus far in May 2019**: N/A 
+**Total time spent coding thus far in May 2019**: 52 hours 32 minutes 
 ___
-**Total lifetime hours of coding**: N/A
+**Total lifetime hours of coding**: 548 hours 26 minutes
