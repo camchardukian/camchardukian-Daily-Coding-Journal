@@ -86,6 +86,30 @@ getAsyncData();
 
 5:58 -- I'm going to brush my teeth, and then sleep a bit more. When I wake up I'll do another few videos on promises and then continue on with the Learn React for Free course -- probably in the afternoon.
 ___
+7:05 -- Whoa. For whatever reason I haven't gone to sleep yet. I've already gone through my morning routine and gotten about 2 hours of productive work in today despite going to sleep at 2am last night lol. Let's stay on the grind!
+
+7:11 -- Promises are great for taking a task that takes a long time to complete, and move the processing of that task into the background instead of halting your entire application until that task is completed.
+
+7:18 -- [The video I'm watching right now](https://www.youtube.com/watch?v=DHvZLI7Db8E) is super noob friendly. If you're a beginner developer that has somehow stumbled upon my journal, I definitely recommend watching Web Dev Simplified's video on promises.
+
+7:20 -- A neat thing I learned in Web Dev Simplified's promise video is the **promise.race()** method. Similar to promise.all(), promise.race() accepts an array of promises as its argument.
+
+The key difference is that promise.race() does not force you to wait for all of the promises to be resolved before returning something.
+
+In fact, promise.race() does not even return all of your promises! Promise.race() will return only the first promise that is resolved.
+
+7:26 -- I feel like I'm really starting to get promises. I'm going to watch another two videos on promises and then I'll continue the React course on Scrimba.
+
+7:27 -- [Let's watch Techsith's tutorial on promises](https://www.youtube.com/watch?v=s6SH72uAn3Q).
+
+7:36 -- While most of Techsith's tutorial was a review to me at this point, I did get one gold nugget on a possible use case for promise.race().
+
+If we trying to fetch data from a server or API, we will often try to fetch said data from multiple sources for redundancy purposes.
+
+This allows us to still get the data we need even if one of our potential data sources is not functioning properly. By using promise.race() we can fetch data from multiple sources and just return data from the first successful API call or whatnot.
+
+7:41 -- I feel I'm about ready to get back into the Scrimba *Learn React for Free* course. In the next pomodoro session I'll take notes on [Traversy Media's async JS crash course](https://www.youtube.com/watch?v=PoRJizFvM7s) that talks about callbacks, promises, and asnyc wait. That'll be the last video before I at least attempt to get back on Scrimba.
+___
 
 **Total time spent coding today**: N/A
 ___
