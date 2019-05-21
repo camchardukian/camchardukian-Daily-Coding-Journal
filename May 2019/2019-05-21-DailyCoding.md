@@ -110,6 +110,23 @@ This allows us to still get the data we need even if one of our potential data s
 
 7:41 -- I feel I'm about ready to get back into the Scrimba *Learn React for Free* course. In the next pomodoro session I'll take notes on [Traversy Media's async JS crash course](https://www.youtube.com/watch?v=PoRJizFvM7s) that talks about callbacks, promises, and asnyc wait. That'll be the last video before I at least attempt to get back on Scrimba.
 ___
+10:12 -- On to the next pomodoro session. Let's get through Traversy Media's async JS crash course!
+
+10:27 -- If your promise is rejected but you forget to include a .caught() method you'll receive an error of *uncaught (in promise) error*.
+
+10:28 -- Brad says that more and more JavaScript libraries are starting to implement promises. With that being said, he said that usually as a developer you'll spend more time dealing with the responses of promises than creating them yourself. But... that you definitely *should* know how to create them yourself.
+
+10:37 -- I finished Brad's video. I'm going to take a quick break to stretch and clean my room a bit. Then we'll finally get back to the Scrimba React course!
+
+10:52 -- I'm back. Let's get to it!
+
+10:56 -- Fetch is a global function. My interpretation of this is that fetch can be called from anywhere within our program because fetch isn't limited to a single local scope (in which it couldn't be called outside of).
+
+11:04 -- I just finished watching the [*Fetching data from an API*](https://scrimba.com/p/p7P5Hd/c79Jask) video again.
+
+11:05 -- Now I'm going to write the code from the video by hand a few times to internalize the syntax and logic patterns. Then, later today I'll try to rebuild everything from scratch.
+
+11:19 -- I finished writing the code by hand twice thus far. My neck is starting to get a little stiff. I'm going to take a break for lunch, edit a video or two, maybe take a nap and then get back to it this afternoon.
 
 **Total time spent coding today**: N/A
 ___
