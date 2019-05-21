@@ -318,11 +318,32 @@ componentDidMount() {
 16:36 -- For some reason, however, whether I console.log() data, or data.name, I simply receive the json method or a string with the text "json".
 
 16:37 -- Unfortunately, my wrists are starting to get a bit sore now so I'm going to have to take a break. Catch you again later!
+___
+17:24 -- It seems the grind never stops today. Be a machine! 
 
+17:25 -- I'm going to work through and take notes on a Traversy Media video on the fetch() method. The video is called [Fetch API Introduction](https://www.youtube.com/watch?v=Oive66jrwBs) if you'd like to follow along with me.
 
+17:31 -- The fetch method takes in a file name or URL as its argument.
 
-MY CODE FOR WHEN SCRIMBA RELOADS:
+17:32 -- Fetch always returns a promise.
 
+17:33 -- Remember to NOT put a semi colon after your fetch() method (because doing so would end the statement and prevent you from being able to chain .then() )
+
+17:38 -- I found one of the mistakes I was making earlier. Instead of writing:
+> return response.json()
+
+I simply wrote:
+>return response.json
+
+Unfortunately, the latter does not work as I intended because I am not actually calling the .json() method on my response.
+
+17:46 -- I'm getting closer, but it seems I'm still missing something. I'm repeatedly getting an error that:
+
+*Invariant Violation: Objects are not valid as a React child (found: object with keys {}). If you meant to render a collection of children, use an array instead.*
+
+I've written the code that produces said error below:
+
+```
 import React from "react"
 
 class App extends React.Component {
@@ -337,15 +358,62 @@ class App extends React.Component {
     componentDidMount() {
         this.setState({isLoading: true})
         fetch("https://swapi.co/api/planets/3/")
-        .then( (response) => {
-            return response.json
-        }).then(data => {
-            console.log(data.name)
-        }) 
-    } 
+        .then( (response) =>
+         {
+        return response.json()
+        })
+        .then( (data) => {
+          this.setState({
+        isLoading: false,
+        name: data.name
+            })
+        }
+        )
+    }
     
     render() {
-         const text = this.state.isLoading ? "loading...." : "We'll add some API stuff here later"
+         const text = this.state.isLoading ? "loading...." : this.state.name
+        return (
+            <div>
+            <p> {text} </p>
+            </div>
+        )
+    }
+}
+export default App
+```
+
+17:55 -- I've now written a workable solution. Here's where I'm at now:
+```
+import React from "react"
+
+class App extends React.Component {
+    constructor () {
+        super()
+        this.state = {
+            isLoading: false,
+            name: "" // could also use square brackets, just curly brackets seem to cause issues.
+        }
+    }
+    
+    componentDidMount() {
+        this.setState({isLoading: true})
+        fetch("https://swapi.co/api/planets/3/")
+        .then( (response) =>
+         {
+        return response.json()
+        })
+        .then( (data) => {
+            this.setState({
+                isLoading: false,
+                name: data.name
+            })
+        }
+        )
+    }
+    
+    render() {
+         const text = this.state.isLoading ? "loading...." : this.state.name
         return (
             <div>
             <p> {text} </p>
@@ -354,46 +422,22 @@ class App extends React.Component {
     }
 }
 
-
-
-
 export default App
+```
 
+17:57 -- It appears the thing I was having problems with earlier was my ternary operator. I think I was getting an error message because my isLoading state was initially set to equal curly brackets.
 
+I used a ternary operator with different logic (that relied on this.state.name rather than this.state.isLoading), amongst countless other hacks.
 
+No matter what I tried, however, it seemed the only thing that mattered was that I NOT initalize my state with curly brackets. I should instead use square brackets or an empty string.
 
+18:03 -- Anyway, I'm proud to have solved this problem! I'm going to go walk, maybe eat dinner, and possibly meet a friend later tonight.
 
-
-
-
-// Note to self: Use this URL to get information about planet 3. https://swapi.co/api/planets/3/
-// Information from swapi documentation: A Planet resource is a large mass, planet or planetoid in the Star Wars Universe, at the time of 0 ABY.
-// Example response: {
-//     "climate": "Arid",
-//     "created": "2014-12-09T13:50:49.641000Z",
-//     "diameter": "10465",
-//     "edited": "2014-12-15T13:48:16.167217Z",
-//     "films": [
-//         "https://swapi.co/api/films/1/",
-//         ...
-//     ],
-//     "gravity": "1",
-//     "name": "Tatooine",
-//     "orbital_period": "304",
-//     "population": "120000",
-//     "residents": [
-//         "https://swapi.co/api/people/1/",
-//         ...
-//     ],
-//     "rotation_period": "23",
-//     "surface_water": "1",
-//     "terrain": "Dessert",
-//     "url": "https://swapi.co/api/planets/1/"
-// }
+Catch ya later!
+___
+Continue with Brad's fetch API video upon my return...
 
 ___
-
-
 
 **Total time spent coding today**: N/A
 ___
