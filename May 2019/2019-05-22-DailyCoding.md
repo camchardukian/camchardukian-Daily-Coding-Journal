@@ -94,9 +94,11 @@ export default App
 ```
 
 9:51 -- Something isn't write as the code inside of my h2 tags isn't rendering to the screen as I intended. I'll try to figure out what's going on in the next pomodoro session.
-___
-**Total time spent coding today**: N/A
-___
-**Total time spent coding thus far in May 2019**: N/A
 
-**Total lifetime hours of coding**: N/A
+23:32 -- Relaxed with my girl and began dealing with some complex fiscal issues today. Will try to get back on track with coding tomorrow.
+___
+**Total time spent coding today**: 1 hour 10 minutes
+___
+**Total time spent coding thus far in May 2019**: 53 hours 45 minutes
+
+**Total lifetime hours of coding**: 549 hours 39 minutes
