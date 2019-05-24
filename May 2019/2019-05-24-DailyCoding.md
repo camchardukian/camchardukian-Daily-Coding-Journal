@@ -130,9 +130,87 @@ export default App
 ```
 
 20:26 -- I'm going to take a walk and then I'll do some more programming.
+
 ___
-**Total time spent coding today**: N/A
+20:55 -- Let's continue the hustle. I'll build the form from scratch to prove I can replicate my success, and then I'll move on to the [forms part II video](https://scrimba.com/p/p7P5Hd/cGKqZUQ).
 
-**Total time spent coding thus far in May 2019**: N/A
+21:07 -- I did it again. Here's my code:
 
-**Total lifetime hours of coding**: N/A
+```
+import React from "react"
+
+class App extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            firstName: "",
+            lastName: ""
+        }
+        this.handleChange = this.handleChange.bind(this)
+    }
+    
+    handleChange (event) {
+        const {name, value} = event.target
+        this.setState({
+            [name]: value
+        })
+    }
+    
+    render () {
+        return (
+        <form>
+        <input type = "text" placeholder = "First Name" value = {this.state.firstName} name="firstName" onChange = {this.handleChange} />
+        
+        <br/>
+        
+        <input type = "text" placeholder = "Last Name" value = {this.state.lastName} name="lastName" onChange = {this.handleChange} / >
+        <h1> {this.state.firstName} {this.state.lastName} </h1>
+        </form>
+    )
+    }
+}
+
+export default App
+```
+
+21:08 -- I can now make forms that utilize text inputs with React. Let's learn more about other types of form inputs now. I'll watch the Forms Part II video all the way through first, and then I'll take notes.
+
+21:20 -- Wow, that video was pretty dense. I'm going to take a 5 minute break to go to the bathroom, and stretch. Then I'll take notes on it.
+___
+21:26 -- I'm back. The following notes are from [this video](https://scrimba.com/p/p7P5Hd/cGKqZUQ).
+
+* In HTML 5 the textarea element is different than the input element in that the input element is a self-closing element while the textarea element has a closing tag. In React, however, **both** are self-closing elements.
+
+* Because the textarea tag has been slightly modified in React (versus HTML) the textarea element is now compatible with the value property. This is useful because it allows us to set or modify the default text inside of our textarea element using state.
+
+* We do *not* use the value property with checkboxes.
+
+* The checkbox DOES, however utilize a checked property. This checked property will usually rely on the value of state being set to a boolean. If state is set to *true*, the checkbox will be checked.
+
+* Our handleChange method looks at the value property of our text inputs. This is not the case with checkboxes, however, because checkboxes don't have a value property.
+
+* Building off the previous note, it's important to understand the power of event.target within our handleChange method. Using event.target, we can pull out the type and checked properties of any elements that our onChange event handler and handleChange method are being applied to.
+
+* Because checkboxes and text inputs utilize the setState function with different properties, it is necessary for us to use a ternary operator in order to decide whether we are going to setState for an element based on a text input element procedure or a checkbox element procedure.
+
+* Radio buttons have  both a value property and a checked property.
+
+* By giving the same name to all of your radio buttons, you ensure that the user can only select one option at a time.
+
+* The select element has also incorporated the value property in React.
+
+* The course instructor stresses that it isn't necessary to remember the syntax for all of these different form elements. It's perfectly ok to rewatch this video, or look up old code you've written as you're learning. Over time you'll acquire muscle memory on the correct syntax and find yourself being able to do things from memory or off the top of your head easier and easier.
+
+* In HTML, when buttons are nexted within a form and clicked they will serve as a submit button for the form.
+
+21:53 -- I've finished the video. Tomorrow I'll write all of the code by hand once or twice to get it into my muscle memory. Then I'll see if I can reconstruct some of the different types of forms from scratch.
+
+21:54 -- On a quick side note, today was OK. I got a couple hours of programming in, but I feel as if I'm not pushing myself enough. **I need to GO ALL IN on code**.
+
+
+___
+**Total time spent coding today**: 2 hours 34 minutes
+
+**Total time spent coding thus far in May 2019**: 56 hours 54 minutes
+
+**Total lifetime hours of coding**: 552 hours 48 minutes
