@@ -87,10 +87,65 @@ Are you awake?
 ```
 
 21:09 -- It's been a good coding session. I'm going to take a break to walk and maybe meet my girl a bit now, and then I'll play with radio buttons, and select elements.
-
 ___
-**Total time spent coding today**:
+22:06 -- Let me be honest, fatigue is starting to set in. I just got back from a walk, and recording a video for my [daily developer Youtube channel](https://www.youtube.com/channel/UCRUPCpCWCL6Mr-0QWNje29Q).
 
-**Total time spent coding thus far in May 2019**:
+22:08 -- Let's start playing around with radio buttons.
 
-**Total lifetime hours of coding**:
+22:17 -- I've spent the last 10 minutes or so playing around with the radio buttons code. Now, let's try creating some radio buttons from scratch.
+
+22:22 -- Radio buttons are pretty simple. I've gotten the hang of them already having just recreated the instructor's example from scratch:
+```
+      <label>
+                <input type = "radio"
+                name = "gender"
+                value = "male"
+                checked = {this.state.gender === "male"}
+                onChange = {this.handleChange}
+                /> Male
+                </label>
+                <br/>
+                <label>
+                <input type = "radio"
+                name = "gender"
+                value = "female"
+                checked = {this.state.gender === "female"}
+                onChange = {this.handleChange}
+                /> Female
+                </label>
+```
+
+22:26 -- I quickly skimmed the material for adding select elements to our forms in React. I'm going to take a quick break, gain a decent understanding of select forms, and then post the daily developer video/eat/shower/night routine/sleep.
+___
+22:40 -- Alright I'm back. Let's go practice building the select form.
+
+22:53 -- I can't figure out what I'm doing wrong. I've gotten a surface level of functioning going in that I can select from amongst the different options within my select tags. What I'm having trouble doing, however, is actually changing the state of *favoriteAnimal*.
+```
+<label> Favorite Animal </label>
+                <select onChange = {this.handleChange}>
+              <option value = "cats" name= "favoriteAnimal"> Cats </option>
+              <option value = "dogs" name="favoriteAnimal">  Dogs </option>
+              <option value = "penguins" name = "favoriteAnimal"> Penguins </option>
+              <option value = "horses" name = "favoriteAnimal"> Horses </option>
+                </select>
+
+
+                
+                <h1>{this.state.favoriteAnimal} hello</h1>
+```
+
+In the above code hello will display, but I can't seem to get this.state.favoriteAnimal to display.
+
+22:58 -- I thought that maybe the problem was that I didn't give my select tag a value of {this.state.favoriteAnimal}. Even after I tried making this change, however, my application remained broken.
+
+23:01 -- It turns out the problem was that I forgot to give my select tags a name property. Once I did that my code started working fine.
+
+23:02 -- After watching the instructor's implementation of the form, it seems it was unnecessary for me to give all of the select options their own individual name properties.
+
+23:04 -- It's been a solid (though not EXCELLENT) day. Tomorrow I'll work on forms again and strive to do at least 2.5 hours of coding. Anyway, let's call it a day now and get some rest. I got over 20 hours of coding in this week! Let's shoot for a full 40 hours of coding in next week!
+___
+**Total time spent coding today**: 2 hours 19 minutes
+
+**Total time spent coding thus far in May 2019**: 59 hours 14 minutes
+
+**Total lifetime hours of coding**: 555 hours 8 minutes
