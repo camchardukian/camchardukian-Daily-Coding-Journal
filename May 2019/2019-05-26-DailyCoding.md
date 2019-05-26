@@ -182,11 +182,13 @@ export default App
 
 19:00 -- Later I'll finish the destination (select) and dietary restrictions (checkbox) part of the form.
 
+23:56 -- I just finished exercising and recording a video for the daily developer channel. Obviously I'm going to have to get to finishing the forms tomorrow.
+
 
 ___
-**Total time spent coding today**:
+**Total time spent coding today**: 46 minutes
 
-**Total time spent coding thus far in May 2019**:
+**Total time spent coding thus far in May 2019**: 60 hours 1 minute
 
-**Total lifetime hours of coding**:
+**Total lifetime hours of coding**: 555 hours 55 minutes
 
