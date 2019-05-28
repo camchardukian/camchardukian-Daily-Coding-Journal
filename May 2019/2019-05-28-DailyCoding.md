@@ -181,6 +181,50 @@ While I'm sure I would have realized my error if I would have proceeded to the n
 */
 ```
 Before I do that, however, I'm going to commit this journal to GitHub, and take a quick break to rest my eyes and stretch my body.
+___
+14:19 -- That break ended up being longer than expected. On the bright side, however, I got some walking in and my eyes are feeling refreshed.
+
+14:20 -- Anyway, let's get to adding input fields for our forms!
+
+14:24 -- The instructor said that after adding inputs the next challenge would be to add an onChange event handler and handleChange method. However, to be more efficient I'm going to also take care of these now.
+
+14:30 -- Finished! Here's what I've got inside my render method:
+
+```
+<input type = "text" name = "topText" value = {this.state.topText} onChange={this.handleChange}/>
+
+<input type = "text" name = "bottomText" value = {this.state.bottomText} onChange={this.handleChange} />
+```
+and here's the accompanying handleChange method:
+
+```
+handleChange (event) {
+    const {name, value} = event.target
+    this.setState({
+        [name]: value
+    })
+  }
+```
+14:34 -- Let's commit to GitHub and then see Bob's approach and if he recommends doing anything different.
+
+14:41 -- It looks like the only thing we did differently was that he included placeholders within his text fields while I forgot to do so.
+
+While my version of the application was still functional in every manner, it's always good to include placeholders to guide our users on what input they should provide.
+
+14:44 -- Wow, this came so fast. We're already onto the final challenge of the capstone! Here is it below:
+
+```
+/**
+* Create a method that, when the "Gen" button is clicked, chooses one of the
+* memes from our `allMemeImgs` array at random and makes it so that is the
+* meme image that shows up in the bottom portion of our meme generator site (`.url`)
+*/
+```
+
+14:46 -- After reading what this challenge is demanding, my immediate reaction is that I probably am going to need to use *Math.random()* along with *Math.floor()* in order to choose a random item from the array. I am not positive of course, but this seems like a reasonable place to start.
+
+14:49 -- I'm going to go to the bathroom, and take a quick break to stretch before tackling this final challenge!
+
 
 ___
 **Total time spent coding today**: 
