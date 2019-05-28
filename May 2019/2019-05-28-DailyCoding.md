@@ -224,7 +224,64 @@ While my version of the application was still functional in every manner, it's a
 14:46 -- After reading what this challenge is demanding, my immediate reaction is that I probably am going to need to use *Math.random()* along with *Math.floor()* in order to choose a random item from the array. I am not positive of course, but this seems like a reasonable place to start.
 
 14:49 -- I'm going to go to the bathroom, and take a quick break to stretch before tackling this final challenge!
+___
 
+15:11 -- I'm back. Let's doooooo it!
+
+15:14 -- Right away I figured out that to complete this challenge we were going to need to add an onSubmit event handler and an accompanying handleSubmit() method.
+
+I've added both and used a console.log() to confirm that they are properly wired. 
+
+15:15 -- I feel that at this point we need to solve an algorithm of sorts. I think that inside my submitHandle I should... 
+1. >use Math.random, and multiply it by the number of items in our array from the API.
+1. > Use Math.floor to round down (because JavaScript uses a zero-index system with arrays rather than starting at 1)
+1. Set the state of randomImg to allMemeImgs[randomNumber] with the variable randomNumber being the result of the various Math functions we performed earlier.
+
+I'm sure I'll have to adjust this plan as I begin to execute on it, but thus far it seems to make some degree of sense.
+
+15:29 -- It looks like the number of meme images we're getting from the API is 100.
+
+15:31 -- Here's the code I'm working on right now:
+
+```
+handleSubmit () {
+console.log(Math.floor(Math.random()*this.state.allMemeImgs.length))
+}
+```
+
+15:33 -- Next I think I'm going to save the result from the above code to a variable.
+
+15:34 -- Success! That was easy.
+
+15:39 -- Here's where I'm at now:
+```
+handleSubmit () {
+const randomNumber = Math.floor(Math.random()*this.state.allMemeImgs.length)
+console.log(this.state.allMemeImgs)
+}
+```
+
+15:40 -- I'm a bit stuck. I haven't yet figured out how to use dot or bracket notation to access only the image urls (written as having the property of url in the array).
+
+15:47 -- My code here merely logs null to the console:
+```
+handleSubmit () {
+const randomNumber = Math.floor(Math.random()*this.state.allMemeImgs.length)
+console.log(this.state.allMemeImgs["url"])
+}
+```
+
+15:54 -- I'm so baffled beyond baffled right now lol.
+
+15:58 -- I've tried changing the syntax, but I'm still stuck:
+```
+handleSubmit () {
+const randomNumber = Math.floor(Math.random()*this.state.allMemeImgs.length)
+console.log([this.state.allMemeImgs["url"]])
+}
+```
+
+15:59 -- I'll have to figure things out later. My battery is about to die. Bummer, I thought I was going to be able to finish the entire capstone in one session of grinding! :p
 
 ___
 **Total time spent coding today**: 
