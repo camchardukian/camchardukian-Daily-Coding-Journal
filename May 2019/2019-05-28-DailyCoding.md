@@ -282,12 +282,169 @@ console.log([this.state.allMemeImgs["url"]])
 ```
 
 15:59 -- I'll have to figure things out later. My battery is about to die. Bummer, I thought I was going to be able to finish the entire capstone in one session of grinding! :p
+___
+21:15 -- I'm back. The last several hours were spent going to the supermarket, eating lunch, taking a 1.5 hour nap, exercising, while listening to a few Grant Cardone videos throughout that time.
+
+Anyway, now let's figure out how to choose the random meme image!
+
+21:18 -- Random thought, could the .map() method be somehow useful in this conundrum I've found myself in? That's yet to be determined...
+
+21:35 -- Still stuck. Haven't seemed to make much progress. Could this google search lead me to the answer, however?
+> how to access properties of an object within an array
+
+21:50 -- I've read all kinds of suggestions:
+
+```
+//      for(var key in Result["customers"]) {
+//    // examples
+//    console.log( Result[key].customer );
+//    console.log( Result[key]["customer"] );
+//    console.log( Result[key]["customer"].customerID );
+```
+But I've yet to make sense of anything.
+
+21:52 -- It looks like one of the problems I was having earlier may have been trying to map from my allMemeImgs property before it finished making the API call. That would explain why I often was returned null.
 
 ___
-**Total time spent coding today**: 
+21:58 -- Just got back from the bathroom. Let's keep working.
 
-**Total time spent coding thus far in May 2019**: 
+21:59 -- So, if I need the API call to finish before I access the keys and values I need, perhaps I need to look into using some kind of lifecycle method here. Possibly *componentDidUpdate*?
 
-**Total lifetime hours of coding**: 
+22:08 -- I just finished watching the course's videos on lifecycle methods but I'm still not feeling clear about what needs to be done.
+
+22:14 -- I'm making some limited progress now:
+
+```
+console.log(this.state.allMemeImgs[Math.floor(Math.random()*this.state.allMemeImgs.length)])
+```
+The above code successfully takes a random object from allMemeImgs each time it is run. Here's a few examples of what it returns:
+1. >{id: "61579", name: "One Does Not Simply", url: "https://i.imgflip.com/1bij.jpg", width: 568, height: 335, box_count: 2}
+1. > {id: "61580", name: "Too Damn High", url: "https://i.imgflip.com/1bik.jpg", width: 420, height: 316, box_count: 2}
+1. > {id: "61539", name: "First World Problems", url: "https://i.imgflip.com/1bhf.jpg", width: 552, height: 367, box_count: 2}
+
+Of course, because I've used logic that dictates a random object will be returned each time, these specific results in this order are not replicable.
+
+Nonetheless, I hope you understand the general idea.
+
+22:20 -- I took an array of objects over to [repl.it](https://repl.it/@camchardukian), and seem to have made some progress.
+
+22:35 -- Coding like a mad man here and I've finally made some real progress. Check it out!
+```
+handleChange(event) {
+            const randomUrl = this.state.allMemeImgs[Math.floor(Math.random()*this.state.allMemeImgs.length)]["url"]
+    const {name, value} = event.target
+    this.setState({ [name]: value, randomImg: randomUrl })
+}
+```
+
+22:36 -- Granted, I'm still not finished. Right now, my randomImg is set to change whenever I type in my input boxes. We need to adjust the functionality so that *randomImg* instead updates state when a user clicks the onSubmit button.
+
+On second thought... now I'm wondering if I should have used an onClick event handler instead of onSubmit as no data is actually being submitted...
+
+22:41 -- Confirmed. We don't need a handle submit button for the intended use case in this project.
+
+22:44 -- Now, the problem is that because my button is nested within the form it submits by default -- even if not supplied an onSubmit handler.
+
+22:46 -- I tried to nest my button within a div to "shield" it from inheriting the onSubmit event handler from being nested within the form but was unsuccessful.
+
+22:51 -- Now I'm running more into CSS layout issues rather than dealing with React. I don't remember how to easily put both text inputs along with the button all on the same horizontal axis.
+
+23:11 -- Well except for my styling being a bit ugly, I've finally finished this project.
+
+I'm sure that if I come back to this project in a few months, there are certainly some things I'd do to refactor it.
+
+For now, however, I'm extremely proud to have completed the entire capstone in one day. I won't include all the code here, but here's a sample of my code from just the MemeGenerator.js file:
+```
+import React, {Component} from "react"
+
+class MemeGenerator extends Component {
+constructor() {
+super()
+this.state = {
+    topText: "",
+    bottomText: "",
+    randomImg: "http://i.imgflip.com/1bij.jpg",
+    allMemeImgs: []
+}
+this.handleChange = this.handleChange.bind(this)
+this.handleClick = this.handleClick.bind(this)
+}
+
+componentDidMount() {
+fetch("https://api.imgflip.com/get_memes")
+    .then(response => response.json())
+    .then(response => {
+        const {memes} = response.data
+        this.setState({
+            allMemeImgs: memes,
+        })
+    })
+}
+
+handleChange(event) {
+        
+const {name, value} = event.target
+this.setState({ [name]: value})
+}
+
+handleClick (event) {
+event.preventDefault();
+const randomNumber = Math.floor(Math.random()*this.state.allMemeImgs.length)
+    let randomUrl;
+    this.state.allMemeImgs[randomNumber]["url"] ? randomUrl = this.state.allMemeImgs[randomNumber]["url"] : randomUrl = "https://i.imgflip.com\/2cp1.jpg"
+    // above code attempts to keep users busy if they click generate meme before the API call has finished loading. It's a bit of a "hacky" solution, but it's the best I can figure out as of now.
+    this.setState({
+        randomImg: randomUrl
+    })
+    
+}   
+
+render() {
+return (
+    <div>
+        <form className="meme-form">
+            <input 
+                type="text"
+                name="topText"
+                placeholder="Top Text"
+                value={this.state.topText}
+                onChange={this.handleChange}
+            /> 
+            <input 
+                type="text"
+                name="bottomText"
+                placeholder="Bottom Text"
+                value={this.state.bottomText}
+                onChange={this.handleChange}
+            /> 
+        <div>
+            <button onClick = {this.handleClick}>Gen</button>
+            </div>
+        </form>
+        <div className="meme">
+        <img src={this.state.randomImg} alt="" />
+        
+            <h2 className="top">{this.state.topText}</h2>
+            <h2 className="bottom">{this.state.bottomText}</h2>
+        </div>
+    </div>
+)
+}
+}
+
+export default MemeGenerator
+
+```
+Apologies for the somewhat ugly formatting above. If you'd like to see my project in more detail, I've put it on [GitHub](https://github.com/camchardukian/ReactProjects/tree/master/meme-generator).
+
+
+23:30 -- I've just finished uploading the project to GitHub. Now I'm going to commit this journal entry to GitHub, get something to eat, go for a walk, and then probably come back to watch how the instructor implemented everything that I've spent the last half day working on.
+
+___
+**Total time spent coding today**: 6 hours 45 minutes
+
+**Total time spent coding thus far in May 2019**: 68 hours 59 minutes
+
+**Total lifetime hours of coding**: 564 hours 52 minutes
 
 
