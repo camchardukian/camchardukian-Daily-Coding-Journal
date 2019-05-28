@@ -94,7 +94,93 @@ It looks like we really are babystepping it with this project! ;)
 12:56 -- We did everything *exactly* the same except I initialized the state of *randomImage* and he instead chose to use a shorter name of *randomImg*.
 
 12:57 -- This was a great session. I'm going to commit this journal to GitHub, and then continue after a short break.
+___
+13:12 -- We gon' be hardcore today. Let's get back at it!
 
+13:13 -- The challenges are starting to get a bit more challenging now. Here's the next challenge:
+
+```
+/**
+* We'll be using an API that provides a bunch of meme images.
+* 
+* Your task:
+* make an API call to "https://api.imgflip.com/get_memes" and save the 
+* data that comes back (`response.data.memes`) to a new state property
+* called `allMemeImgs`. (The data that comes back is an array)
+*/
+```
+13:14 -- If I'm being perfectly honest, I do not remember too much about making API calls. I believe we need to use the *fetch* method and provide a URL but beyond that I'm not sure.
+
+For that reason, I'm going to spend a few minutes reviewing the API material covered earlier in this course.
+
+13:23 -- I just spent the last several minutes watching a [video about Fetching Data from an API](https://scrimba.com/p/p7P5Hd/c79Jask).
+
+13:27 -- Thus far I've created a componentDidMount() method and created a new property called allMemeImgs and initialized it to an empty array.
+
+13:29 -- It looks like the next thing I'm going to need to do is use the fetch method and resolve the resulting promise.
+
+13:33 -- Here's the code I've been working on for the last few minutes:
+
+```
+class MemeGenerator extends Component {
+constructor() {
+    super()
+    this.state = {
+        topText: "",
+        bottomText: "",
+        randomImg: "http://i.imgflip.com/1bij.jpg",
+        allMemeImgs: []
+    }
+}
+
+componentDidMount() {
+    fetch("https://api.imgflip.com/get_memes")
+    .then(response => response.json())
+    .then(data => {
+        this.setState({allMemeImgs: data})
+        console.log(this.state.allMemeImgs)
+    })
+}
+```
+Why is there a console.log() method you ask?I included it to verify that I successfully set the state of allMemeImgs to the data we received from the API.
+
+I can confirm to you that everything was successful! :)
+
+13:36 -- Added a comment to my code explaining why I included a console.log() method.
+
+13:37 -- I'm going to commit my project to GitHub and then see if the instructor did anything differently.
+
+13:43 -- Let's watch the instructor's approach.
+
+13:45 -- It looks like the instructor did things a bit differently. I'll show you their code, and then explain the difference:
+```
+componentDidMount() {
+fetch("https://api.imgflip.com/get_memes")
+    .then(response => response.json())
+    .then(response => {
+        const {memes} = response.data
+        console.log(memes[0])
+        this.setState({ allMemeImgs: memes })
+    })
+```
+
+13:48 -- It looks like the instructor just pulled the most relevant data out of the API by setting:
+> const {memes} = response.data
+
+and as a result when he initialized state he did so using only the array of memes, rather than also including some extraneous JSON data as I did.
+
+While I'm sure I would have realized my error if I would have proceeded to the next step on my own, watching the instructor's approach saved me a lot of time having to debug things on my own.
+
+13:52 -- Here's the next challenge I need to complete for the capstone project:
+
+```
+/**
+* Create 2 input fields, one for the topText and one for the bottomText
+* Remember that these will be "controlled forms", so make sure to add
+* all the attributes you'll need for that to work
+*/
+```
+Before I do that, however, I'm going to commit this journal to GitHub, and take a quick break to rest my eyes and stretch my body.
 
 ___
 **Total time spent coding today**: 
