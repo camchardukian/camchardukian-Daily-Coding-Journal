@@ -45,8 +45,91 @@ ReactDOM.render(<MyComponent/>, document.getElementById("challenge-node"))
 2:11 -- It has been good to review the basics. I was literally laughing out loud when I couldn't figure out why something wasn't rendering only to realize I forgot to include document.getElementById within my ReactDOM.render.
 
 2:12 -- How nerdy is the previous comment? Hahahahaa. Anyway, it's pretty late now and my left wrist is feeling pretty sore from typing well over 3,000 words today and hundreds upon hundreds of lines of code. Catch you in the morning!
+___
+
+20:59 -- YIKES. It has NOT been a productive day thus far. While I did 1-1.5 hours of work on my personal brand Youtube channel, the rest of the day was wasted up until this point. 
+
+I woke up after sleeping 5.5 hours, did some work for my personal brand, and then when I woke up the 2nd time (After 7.5-8 hours of total sleep), I rationalized not programming because my left wrist was still feeling pretty sore from the previous day.
+
+Anyway, forgot about that. I can't change the past. Let's be more productive starting now!
+
+21:03 -- Tonight we're going to continue working on FreeCodeCamp.
+
+21:11 -- I was stuck on the following block of code for over 5 minutes.
+
 ```
 
+const CurrentDate = (props) => {
+  return (
+    <div>
+      { /* change code below this line */ }
+      <p>The current date is: {props.date} </p>
+      { /* change code above this line */ }
+    </div>
+  );
+};
+
+class Calendar extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h3>What date is it?</h3>
+        { /* change code below this line */ }
+        <CurrentDate date = {Date()}/>
+        { /* change code above this line */ }
+      </div>
+    );
+  }
+};
+```
+Then I realized that the JavaScript **Date** object requires parentheses following it.
+
+19:19 -- I have to agree with my buddy [Steven Boutcher](https://boutchersj.github.io/portfolio/). Scrimba's *Learn React for Free* course does a **MUCH** better job at teaching React than FreeCodeCamp.
+
+19:26 -- FreeCodeCamp is dropping the knowledge. Listen up:
+>Arrays *can* be passed as props. It is important to note, however, that in order to pass an array to a JSX element it must be treated as a JavaScript object and wrapped in curly braces.
+
+19:38 -- Here's the code I wrote from the [exercise I just completed](https://learn.freecodecamp.org/front-end-libraries/react/pass-an-array-as-props):
+
+```
+
+const List= (props) => {
+  { /* change code below this line */ }
+  return <p>{props.tasks.join(', ')}</p>
+  { /* change code above this line */ }
+};
+
+class ToDo extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h1>To Do Lists</h1>
+        <h2>Today</h2>
+        
+        <List tasks = { ["eat", "work", "sleep"] }/>
+        <h2>Tomorrow</h2>
+        <List tasks = { ["do homework", "work", "exercise", "sleep"] }/>
+        
+      </div>
+    );
+  }
+};
+```
+
+19:42 -- I just learned how to set default props for components in React. The syntax is pretty simple:
+
+```
+YourComponentName.defaultProps = {property : 'value of property'}
+```
+
+19:44 -- I'm going to take a break now. Be back in 20 minutes or so.
+___
 
 ___
 **Total time spent coding today**: 
