@@ -87,9 +87,9 @@ class Calendar extends React.Component {
 ```
 Then I realized that the JavaScript **Date** object requires parentheses following it.
 
-19:19 -- I have to agree with my buddy [Steven Boutcher](https://boutchersj.github.io/portfolio/). Scrimba's *Learn React for Free* course does a **MUCH** better job at teaching React than FreeCodeCamp.
+21:19 -- I have to agree with my buddy [Steven Boutcher](https://boutchersj.github.io/portfolio/). Scrimba's *Learn React for Free* course does a **MUCH** better job at teaching React than FreeCodeCamp.
 
-19:26 -- FreeCodeCamp is dropping the knowledge. Listen up:
+21:26 -- FreeCodeCamp is dropping the knowledge. Listen up:
 >Arrays *can* be passed as props. It is important to note, however, that in order to pass an array to a JSX element it must be treated as a JavaScript object and wrapped in curly braces.
 
 19:38 -- Here's the code I wrote from the [exercise I just completed](https://learn.freecodecamp.org/front-end-libraries/react/pass-an-array-as-props):
@@ -122,19 +122,20 @@ class ToDo extends React.Component {
 };
 ```
 
-19:42 -- I just learned how to set default props for components in React. The syntax is pretty simple:
+21:42 -- I just learned how to set default props for components in React. The syntax is pretty simple:
 
 ```
 YourComponentName.defaultProps = {property : 'value of property'}
 ```
 
-19:44 -- I'm going to take a break now. Be back in 20 minutes or so.
+21:44 -- I'm going to take a break now. Be back in 20 minutes or so.
 ___
+23:51 -- That break was definitely not 20 minutes or so. Man oh man, I'm just out of it today. I'm going to commit today's journal entry to GitHub, record my video for the [daily developer channel](https://www.youtube.com/channel/UCRUPCpCWCL6Mr-0QWNje29Q), exercise, regroup for tomorrow and get some sleep.
 
 ___
-**Total time spent coding today**: 
+**Total time spent coding today**: 1 hour 46 minutes
 
-**Total time spent coding thus far in May 2019**: 
+**Total time spent coding thus far in May 2019**: 70 hours 48 minutes
 
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**: 566 hours 41 minutes
 
