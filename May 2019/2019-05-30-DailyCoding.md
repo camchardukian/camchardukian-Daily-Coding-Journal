@@ -50,6 +50,63 @@ Perhaps I am oversimplifying things, but this seems like it would be something F
 
 12:19 -- I'm burnt. I'm going to get lunch, take a nap, and get a few more pomodoro sessions in later!
 ___
+19:05 -- I ate a big lunch, took a 2-3 hour nap, exercised, tidied up my apartment a bit, and now it's time to get back to code!
+
+19:10 -- Just finished reviewing binding the 'this' keyword to a class function.
+
+19:14 -- Here's some code I just finished writing...
+```
+toggleVisibility () {
+  const opposite = !this.state.visibility
+  this.setState({
+    visibility: opposite
+  })
+}
+```
+This class method can be used to update the state of visibility to the opposite of whatever the previous state of visibility was. 
+
+I chose to implement this method using a *const* variable but I'm sure you could create a similar solution using *prevState*.
+
+19:35 -- It took a bit of reviewing old material, but I just coding some class methods that can be used to increase, decrease, or reset the this.count property in an application. Here's an exerpt of my code:
+```
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    }; 
+
+this.increment = this.increment.bind(this)
+this.decrement = this.decrement.bind(this)
+this.reset = this.reset.bind(this)
+  }
+
+increment () {
+this.setState(prevState => {
+  return {
+  count: prevState.count + 1
+  }
+})
+}
+
+decrement () {
+this.setState(prevState => {
+  return {
+    count: prevState.count - 1
+  }
+})
+}
+
+reset () {
+this.setState({ count: 0 })
+}
+
+// additional code blah blah blah
+}
+```
+19:38 -- Taking a quick break to eat food that just arrived.
+
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in May 2019**: 
