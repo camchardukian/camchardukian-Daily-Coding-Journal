@@ -118,9 +118,24 @@ This wasn't super easy, but it wasn't excessively difficult either.
 
 20:28 -- I'm going to quick run home and see what all the fuss is about. I'll get back for another pomodoro session later.
 ___
-**Total time spent coding today**: 
+22:52 -- The sweet girl I'm dating had an expensive dinner delivered to my house... Without asking if I was home or if I was hungry lol. 
+
+22:53 -- I'm feeling kind of sick from the fried chicken tonight (not the dinner the girl bought me). Hard to focus, but let's give it a go.
+
+22:57 -- Here's an important concept:
+> *Unidirectional data flow* -- "State flows in one direction down the tree of your application's components, from the stateful parent component to child components. The child components only receive the state data they need" 
+--FreeCodeCamp
+
+22:59 -- Another important idea is that a complex stateful application with dozens, or hundreds of state-based properties may require only a few (or even one!) stateful component.
+
+23:01 -- One of React's key principles is separating state logic from UI logic. This makes designing and maintaining complex applications much much easier.
+
+23:02 -- Unexpected interruption. Calling it a night here.
+___
+**Total time spent coding today**: 2 hours 20 minutes
 
 **Total time spent coding thus far in May 2019**: 
+73 hours 7 minutes
 
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**: 569 hours 1 minute
 
