@@ -105,7 +105,18 @@ this.setState({ count: 0 })
 }
 ```
 19:38 -- Taking a quick break to eat food that just arrived.
+___
+20:07 -- I'm back. I just finished dinner and had 3-4 strange numbers call me saying they have a present for me at my home?
 
+Weird, I don't understand what they are bringing or who they are. Whatever, I'll get to that later. More important is learning how to code! :)
+
+20:25 -- Trying to focus despite these strange calls.
+
+Anyway, I just finished an exercise where I had to create an input field, a submit button, and then render any text that was in my input field upon a user clicking the submit button.
+
+This wasn't super easy, but it wasn't excessively difficult either.
+
+20:28 -- I'm going to quick run home and see what all the fuss is about. I'll get back for another pomodoro session later.
 ___
 **Total time spent coding today**: 
 
