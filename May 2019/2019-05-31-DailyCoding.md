@@ -144,11 +144,12 @@ store.dispatch({type: "ATTACK", payload: "Iron Man"})
 
 22:54 -- I finished Hitesh's video. Now I'm going to commit this to Github, and then get ready for the recruiter meeting at 11.
 
+UPDATE: Skype call with recruiter went well. I even made a [video](https://www.youtube.com/watch?v=2OLKbww3oQ4) about it on YouTube! 
+
 ___
-**Total time spent coding today**: 
+**Total time spent coding today**: 2 hours 18 minutes
 
-**Total time spent coding thus far in May 2019**: 
+**Total time spent coding  in May 2019**: 75 hours 25 minutes
 
-
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**: 571 hours 19 minutes
 
