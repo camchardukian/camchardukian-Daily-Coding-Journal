@@ -102,7 +102,47 @@ Dispatch is basically the action that we need to take.
 const store = createStore(reducer), "Peace"
 ```
 17:52 -- When I come back later, I'll finish Hitesh's video and go through the other steps in Redux.
+___
+22:34 -- I'm going to try to get a quick 25 minute practice session before getting on a call with a recruiter.
 
+22:35 -- Now let's talk about the reducer. Here's some of the basic syntax:
+```
+const reducer = function(state, action) {
+
+}
+```
+The above could also be written using arrow function syntax.
+
+22:38 -- Here's a more complete example of the reducer syntax from Hitesh's video:
+```
+const reducer = function(state, action) {
+    if(action.type === "ATTACK") {
+        return action.payload
+    }
+}
+```
+
+22:40 -- Here's some example syntax from the subscribe step:
+```
+store.subscribe(() => {
+    console.log("Store is now", store.getState())
+})
+```
+If I'm being perfectly transparent, I do not fully understand why all of these steps are necessary.
+
+22:43 -- Next, moving onto dispatch... Dispatch is usually an object.
+
+22:44 -- Here's Hitesh's example syntax for dispatch:
+
+```
+store.dispatch({type: "ATTACK", payload: "Iron Man"})
+```
+
+22:48 -- It seems reducer, and dispatch must be put into their own separate files.
+
+22:52 -- Another important thing to note is that despite being step #2, reducer should still be listed at the top of your code (clarification: written first amongst the 4 redux steps we discussed.)
+
+22:54 -- I finished Hitesh's video. Now I'm going to commit this to Github, and then get ready for the recruiter meeting at 11.
 
 ___
 **Total time spent coding today**: 
