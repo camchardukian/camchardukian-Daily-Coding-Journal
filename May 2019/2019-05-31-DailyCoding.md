@@ -39,7 +39,71 @@ I'm sure that'll just require more exposure as they don't seem that complex :)
 
 I just set a 35 minute timer. I'm going to commit this journal to GitHub, stretch, walk to another convenience store, and get back to programming before time is up.
 ___
-continue here...
+16:41 -- I'm back. 
+
+16:48 -- This React material on FreeCodeCamp is just *too* dull. I'm going to move on to learning Redux and go back to FreeCodeCamp, or more likely Scrimba's *Learn React for Free* course if I need to review anything from React. 
+
+16:50 -- Like Dylan Israel says, you've got to be introspective. When learning material is just too dry or unengaging, you've got to move to something different to ensure you come back to coding tomorrow.
+
+16:51 -- I'm going to listen to and take notes on Traversy Media's [Redux Crash Course With React](https://www.youtube.com/watch?v=93p3LxR9xfM).
+
+His markdown crash course was excellent so I'm expecting only the same from this one!
+
+16:54 -- My notes from the video start below.
+
+Based on the first two minutes, Brad makes it sound like setting up Redux is a pain, and that it isn't much fun to learn.
+
+*Why learn Redux?*
+
+Apparently it is very helpful, and almost mandatory when dealing with large React applications.
+
+16:57 -- While in standalone React we get component level state, the implementation of Redux allows us to enjoy application level state.
+
+16:59 -- Brad just explained a concept and said, 
+>"Hopefully that didn't just confuse the shit out of you and turn you off of Redux forever."
+
+This has me fired up to continue hahaha.
+
+17:02 -- Anytime you want to share state between components... is a great opportunity for introducing Redux into your application.
+
+17:13 -- Taking a 5-10 minute break to restore focus.
+
+___
+17:25 -- 20 minutes into the video and he hasn't shown any Redux example implementations or done anything beyond merely discuss React Basics O_O.
+
+17:32 -- I'm giving up on that tutorial for now. I got almost nothing out of it. I felt like he just programmed in React normally without explaining why he was doing anything.
+
+17:33 -- I'm going to try watching this [Redux Fundamentals](https://www.youtube.com/watch?v=0ix_QLPkYhI) video instead.
+
+17:34 -- To install redux we can use the following command in our terminal:
+```
+npm install redux --save
+```
+
+17:36 -- If you want to create a Redux app or convert your existing application into Redux there are four steps you should follow:
+>#1 Create a Store
+
+It's important to note that creating a store requires two pieces of information from the developer -- A reducer, and a state (Hopefully we'll get an explanation of what this actually means later).
+
+>#2 Create a Reducer
+       
+Creating a reducer requires that we have two things -- state and an action.
+
+>#3 Subscribe
+
+In the video Hitesh says that subscribe basically just means to get the current state.
+
+>#4 Dispatch
+
+Dispatch is basically the action that we need to take.
+
+17:50 -- Here's some example syntax of creating a store from the video.
+``` 
+const store = createStore(reducer), "Peace"
+```
+17:52 -- When I come back later, I'll finish Hitesh's video and go through the other steps in Redux.
+
+
 ___
 **Total time spent coding today**: 
 
