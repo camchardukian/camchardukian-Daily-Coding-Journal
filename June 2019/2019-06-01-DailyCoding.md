@@ -62,11 +62,23 @@ import { connect } from 'react-redux'
 Many of the notes I took contain concepts that I may not yet be able to fully explain. With that being said, while I still feel Redux is far from simple, I am beginning to see patterns and THAT is encouraging.
 
 I'm going to take a break now, and continue with this series later.
-
 ___
-**Total time spent coding today**: 
+19:17 -- I'm back. Today I expect my total "coding" hours to be a bit low because I did a bunch of networking on Facebook, and I'm meeting a senior developer here in Saigon after this pomodoro session.
 
-**Total time spent coding  thus far in June 2019**: 
+Anyway, let's get back to Redux!
 
-**Total lifetime hours of coding**: 
+19:19 -- We're now on [part IV](https://www.youtube.com/watch?v=Lt4P9BKOPfI) of Techsith's *Learning Redux series*.
+
+19:22 -- Here are some of my notes from this video:
+* In React you should never mutate state directly.
+
+19:28 -- Senior developer arrived early, stopped coding.
+___
+23:49 -- Didn't get any additional code in. Planning to finish Techsith's series on Redux tomorrow.
+___
+**Total time spent coding today**: 1 hour 32 minutes
+
+**Total time spent coding  thus far in June 2019**: 1 hour 32 minutes
+
+**Total lifetime hours of coding**: 572 hours 51 minutes
 
