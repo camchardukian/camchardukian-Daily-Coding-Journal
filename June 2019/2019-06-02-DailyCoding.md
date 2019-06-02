@@ -61,8 +61,95 @@ const action = {type: 'LOGIN'}
  Given that we are likely to have multiple actions in our applications, however, I'm sure that we must have flexibility in naming our actions the same way we have flexibility in naming JS functions.
 
  12:23 -- I'm going to take a break for lunch. Today I'm teaching myself how to cook broccoli haha. See you later!
- ___
 
+ 12:40 -- Having to reconfigure a bunch of stuff on GIT due to having directly made a change on GitHub instead of using the terminal.
+ ___
+15:08 -- I'm back. Cooking the broccoli was interesting haha. I want to learn to cook to save money so that I can spend less time working for "fast cash", and instead spend more time investing in myself learning web development.
+
+15:10 -- Here are my notes for [Redux exercise #4](https://learn.freecodecamp.org/front-end-libraries/redux/define-an-action-creator):
+
+* After you create an action, the next step is to send that action into the Redux store so that the store can update its state.
+* Action creators are JavaScript functions that return an action.
+
+Here's an example of an action creator I wrote to pass this exercise's challenge:
+```
+function actionCreator () {
+    return action
+}
+```
+
+15:18 -- On to [Redux exercise #5](https://learn.freecodecamp.org/front-end-libraries/redux/dispatch-an-action-event):
+
+* The dispatch method is what you use to dispatch action to the Redux store.
+
+* It's important to note that when we're working with the dispatch method, we can pass it either an action object directly, or indirectly (via an action creator that will return an action)
+
+Here's an example (that I just finished writing) of calling the dispatch method on our store and passing in the action creator loginAction() (which would eventually return type: 'LOGIN')
+
+```
+const store = Redux.createStore(
+  (state = {login: false}) => state
+);
+
+const loginAction = () => {
+  return {
+    type: 'LOGIN'
+  }
+};
+
+store.dispatch(loginAction());
+```
+
+15:24 -- I'm going to take a quick break. Then, we'll continue with exercise #6...
+___
+
+15:37 -- I'm back. Let's continue with Redux exercise #6 (out of 17):
+
+* After an action is created and dispatched, the Redux store needs to know how to respond to that action. This is the job of a reducer function.
+* Basically, actions lead to a demand to modify state and the Reducer is responsible for executing on that demand.
+* A reducer takes two arguments -- state, and action.
+* A reducer always returns a new state.
+* A key principle in Redux is that state is read-only
+* Our reducer function must never modify state directly. It should instead return a new copy of state.
+* Redux does not enforce state immutability, though it is wise for you to force immutability using your reducer functions.
+
+Solving this exercise's challenge was a bit of a headache, but here's my solution:
+```
+const defaultState = {
+  login: false
+};
+
+const reducer = (state = defaultState, action) => {
+  // change code below this line
+if (action.type === 'LOGIN') {
+  return {login: true}
+}
+else {
+  return state
+}
+
+};
+
+const store = Redux.createStore(reducer);
+
+const loginAction = () => {
+  return {
+    type: 'LOGIN'
+  }
+};
+```
+
+15:54 -- I'm on [exercise #7](https://learn.freecodecamp.org/front-end-libraries/redux/use-a-switch-statement-to-handle-multiple-actions/) now. Here are my notes:
+
+* It's possible to tell the Redux store how to handle multiple action types.
+
+* It is very common to use a JavaScript switch statement when writing out reducers.
+
+* When our app has multiple reducers, they are all run any time an action dispatch is made... even when the action isn't related to that reducer.
+
+Feeling a bit stuck on this challenge...
+
+16:08 -- I'm feeling gassed right now. I'm going to have to come back when I have more energy.
 ___
 **Total time spent coding today**: 
 
