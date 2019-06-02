@@ -151,9 +151,9 @@ Feeling a bit stuck on this challenge...
 
 16:08 -- I'm feeling gassed right now. I'm going to have to come back when I have more energy.
 ___
-**Total time spent coding today**: 
+**Total time spent coding today**: 1 hour 54 minutes
 
-**Total time spent coding  thus far in June 2019**: 
+**Total time spent coding  thus far in June 2019**: 3 hours 29 minutes
 
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**:  574 hours 48 minutes
 
