@@ -201,6 +201,25 @@ In our program we can specify that in a situation such as this, we want the rest
 
 15:11 -- I'm going to take a bit of a break now to do some work on another project.
 ___
+
+16:00 -- I'm back, let's get another short pomodoro in.
+
+16:06 -- I'm currently watching a [Techsith video on Redux MiddleWare](https://www.youtube.com/watch?v=grZ4BVcFmeA).
+
+16:14 -- I didn't get much from that video. I guess I'll just go back to the FreeCodeCamp exercise and try to figure things out for myself.
+
+16:20 -- Got nowhere with my first attempt to pass the challenge:
+```
+dispatch requestingData()
+```
+I need to go relearn how to dispatch actions using Redux.
+
+16:32 -- I'm so lost beyond lost. I've watched several videos on this topic and everything seems to be going straight over my head.
+
+I'm going to take a break to go to the supermarket, and then I'll try to come back with a fresh perspective later.
+___
+
+___
 **Total time spent coding today**: 
 
 **Total time spent coding  thus far in June 2019**: 
