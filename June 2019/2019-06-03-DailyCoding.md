@@ -218,11 +218,26 @@ I need to go relearn how to dispatch actions using Redux.
 
 I'm going to take a break to go to the supermarket, and then I'll try to come back with a fresh perspective later.
 ___
+21:24 -- I'm going to try to get another 20-40 minutes of programming in before I call it a day.
 
+ Apart from actual "coding" today, I've also begun putting together my web developer resume.
+
+ Of course, building a resume doesn't contribute to my "total time spent coding" I'll talk about at the end of today's entry.
+ 
+ So... let's get back to coding!
+
+ 21:26 -- I've been getting really frustrated with Redux so I'm going to try working on another project.
+
+ 21:48 -- Could not get React running properly on Codepen nor could I use the reactboilerplate application without running into errors. 
+
+ 21:49 -- I am so frustrated.
+
+ 21:52 -- Tomorrow I'll either go back to learning Redux, or try to setup my own React app by following some tutorial. Maybe [this one](https://www.tutorialspoint.com/reactjs/reactjs_environment_setup.htm) for example.
 ___
-**Total time spent coding today**: 
+**Total time spent coding today**: 2 hours 50 minutes
 
 **Total time spent coding  thus far in June 2019**: 
+6 hours 55 minutes
 
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**: 577 hours 38 minutes
 
