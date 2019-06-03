@@ -168,6 +168,39 @@ console.log(store.getState());
 ```
 10:08 -- Anyway, I need to move apartments now. On the bright side, I've already got more than 50% of my practice time in from yesterday. Today will be better!
 ___
+14:42 -- I finished moving into my new apartment now. I still need to clean things up a bit, but it feels good to have settled that... at least temporarily.
+
+Let's get back to FreeCodeCamp!
+
+14:43 -- I thought I was on exercise #11, but it looks like I miscounted or forgot to take notes on one of the exercises. 
+
+Anyway, we're continuing with [exercise #12 Use Middleware to Handle Asynchronous Actions]() in the FreeCodeCamp Redux curriculm. :D
+
+Here are my notes from this exercise:
+* Asynchronous actions are an unavoidable part of web development.
+
+* We can use Redux Thunk middleware to deal with ocassions in which we need to call asynchronous endpoints in our Redux application.
+
+* To include Redux Thunk  middleware in our project, we pass it (usually in the form of ReduxThunk.default) as an argument to *Redux.applyMiddleWare()*.
+
+* Of course, it's also important for us to make sure we can actually access *Redux.applyMiddleWare*. We can do that by including Redux.applyMiddleWare() as an optional second parameter to the createStore() function.
+
+14:59 -- Overall, I don't really know much about asynchronous programming.
+
+I'm going to explore this concept in general before I proceed with trying to finish this challenge.
+
+15:01 -- Going off of some videos I just watched on YouTube, it looks like synchronous programs are those where the code runs completely in chronological order.
+
+In other words, if something in the code gets stuck, or requires a long time to load or process something, the process of having the program's logic evaluated will come to a halt.
+
+On the other hand, asynchronous programming is useful because let's say we make an API call to a server that is currently being overloaded.
+
+In our program we can specify that in a situation such as this, we want the rest of our program to continue running even while the API call is being made.
+
+15:09 -- While I'm inexperienced with asynchronous programming myself (I remember having used some promises in my React projects for example), I now understand the general concept of it, and why we would want to program asynchronously.
+
+15:11 -- I'm going to take a bit of a break now to do some work on another project.
+___
 **Total time spent coding today**: 
 
 **Total time spent coding  thus far in June 2019**: 
