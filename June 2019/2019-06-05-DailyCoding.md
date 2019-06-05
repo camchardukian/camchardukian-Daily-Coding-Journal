@@ -165,8 +165,12 @@ Overall, however, I think this solution is very decent.
 In any case, I'm feeling tired out now from all that typing. I'm going to take a break from all this code!
 
 P.S. I'm having a lot of fun solving these algorithms. Much more fun than React has been the last few days hahahaha!
+___
+22:08 -- I'm back home now. I'm going to make a GitHub repo for the algorithms I've solved thus far.
 
+22:57 -- Setup the github repo, added some additional explanations, reviewed the reduce methods, and made all my commits to the repo. It was a good session! 
 
+22:58 -- I'm going to take a quick break, and then I'll create a video about the first algorithm for the [daily developer channel](https://www.youtube.com/channel/UCRUPCpCWCL6Mr-0QWNje29Q)!
 
 ___
 **Total time spent coding today**: 
