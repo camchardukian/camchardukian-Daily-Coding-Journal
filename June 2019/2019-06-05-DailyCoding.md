@@ -173,10 +173,9 @@ ___
 22:58 -- I'm going to take a quick break, and then I'll create a video about the first algorithm for the [daily developer channel](https://www.youtube.com/channel/UCRUPCpCWCL6Mr-0QWNje29Q)!
 
 ___
-**Total time spent coding today**: 
+**Total time spent coding today**: 3 hours 50 minutees
 
-**Total time spent coding  thus far in June 2019**: 
+**Total time spent coding  thus far in June 2019**: 11 hours 17 minutes
 
-
-**Total lifetime hours of coding**:
+**Total lifetime hours of coding**: 582 hours 36 minutes
 
