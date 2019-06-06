@@ -1,4 +1,4 @@
-# Tuesday June 5th, 2019 Daily Coding Journal
+# Wednesday June 5th, 2019 Daily Coding Journal
 
 17:45 -- From about 2pm-3pm today I pair programmed with a Vietnamese "fresher" developer. In Vietnam, fresher is basically a term that means someone is hirable, but that they are a low-level junior developer.
 
