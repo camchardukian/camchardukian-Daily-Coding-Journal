@@ -271,9 +271,11 @@ If their instructions continue to be poorly communicated and I continue to have 
 
 18:14 -- In any case, I feel I need a break now hahaha. I've got some client work to catch up on tonight as well as the daily developer show so I'm not sure if I'll get another coding session in tonight...
 ___
-**Total time spent coding today**: 
+23:08 -- I've spent the last hour or so working on my resume. I'm not going to be able to get another "hardcore" coding session in tonight, but I will of course record another episode of the [daily developer show](https://www.youtube.com/channel/UCRUPCpCWCL6Mr-0QWNje29Q).
+___
+**Total time spent coding today**: 3 hours 41 minutes
 
-**Total time spent coding  thus far in June 2019**: 
+**Total time spent coding  thus far in June 2019**: 14 hours 57 minutes
 
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**: 586 hours 16 minutes
 
