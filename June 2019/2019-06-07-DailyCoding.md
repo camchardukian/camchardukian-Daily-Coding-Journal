@@ -1,4 +1,4 @@
-# Thursday June 6th, 2019 Daily Coding Journal
+# Friday June 7th, 2019 Daily Coding Journal
 
 12:36 -- I spent an hour walking across the city this morning. It's always good to get exercise.
 
@@ -155,10 +155,11 @@ function plusMinus(arr) {
 ```
 
 14:56 -- It's been a good run. I'm going to commit this to GitHub and then maybe get some exercise or sleep. See you later!
-
 ___
-**Total time spent coding today**: 
+UPDATE: Recorded a video for the daily developer show, but didn't get any more coding in.
+___
+**Total time spent coding today**: 1 hour 22 minutes
 
-**Total time spent coding  thus far in June 2019**: 
+**Total time spent coding thus far in June 2019**: 16 hours 22 minutes
 
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**: 587 hours 41 minutes
