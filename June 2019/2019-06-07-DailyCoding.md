@@ -73,8 +73,88 @@ plusMinus([1, 2, -9, 0, 3])
 13:33 -- I took power nap at the coffee shop, but I'm feeling like it's quite enough to get me up and going again. I need to change my environment. I'm going to go for a walk, and maybe grab lunch to get my energy back again.
 ___
 
+14:17 -- Tried to go to an old bun bo (beef soup) place I liked eating at, but apparently it closed and moved to the outskirts of the city.
 
+Oh well, I got this huge korean lunch. I just ordered curry rice, but after their complimentary soup, side of kimchi (which I didn't eat), eggs, and vegetables I felt full even before I started the main dish hahaha. 
 
+Anyway, back to the problem.
+
+14:30 -- I used a for in loop to divide the value of each key by the length of our array. Then, I pushed the resulting value into a results loop.
+```
+function plusMinus(arr) {
+let counter = {
+  positiveCount: 0,
+  negativeCount: 0,
+  zeroCount: 0
+};
+let results = [];
+
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] > 0) {
+    counter.positiveCount++
+  }
+  else if (arr[i] < 0) {
+    counter.negativeCount ++
+  }
+  else {
+    counter.zeroCount++
+  }
+}
+for (let key in counter) {
+  results.push(counter[key] / arr.length)
+}
+console.log(results)
+}
+
+plusMinus([1, 2, -9, 0, 3])
+```
+14:31 -- It looks like there are still two more things I have to do. The first is that I need to be sure to loop through my results array and round each value to the 6th decimal place. Then, I have to print each value to the console on its own line.
+
+14:36 -- I updated my for in loop to ensure that it would round each result to the 6th decimal place:
+```
+for (let key in counter) {
+  results.push(Math.round(counter[key] / arr.length*1000000)/1000000)
+}
+```
+14:42 -- I tried using the following code:
+> console.log(results.join("").replace(",", \<br/>))
+
+But then I remembered that I'm operating inside of JavaScript and not JSX. Hmmm... I'll try again using document.write.
+
+14:45 -- Unfortunately, it seems document.write doesn't work in repl.it. I got an error that:
+> ReferenceError: document is not defined
+
+14:49 -- While it's not the most elegant solution I ended up solving the problem by just writing console.log() three times. Here's my final solution:
+```
+function plusMinus(arr) {
+    let counter = {
+        positiveCount: 0,
+        negativeCount: 0,
+        zeroCount: 0
+    };
+    let results = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) {
+            counter.positiveCount++
+        }
+        else if (arr[i] < 0) {
+            counter.negativeCount++
+        }
+        else {
+            counter.zeroCount++
+        }
+    }
+    for (let key in counter) {
+        results.push(Math.round(counter[key] / arr.length * 1000000) / 1000000)
+    }
+    console.log(results[0])
+    console.log(results[1])
+    console.log(results[2])
+}
+```
+
+14:56 -- It's been a good run. I'm going to commit this to GitHub and then maybe get some exercise or sleep. See you later!
 
 ___
 **Total time spent coding today**: 
