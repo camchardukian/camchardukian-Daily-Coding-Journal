@@ -154,8 +154,8 @@ staircase(4)
 16:59 -- WOW! That was a lot of thinking. I'm feeling pretty tired now. I'm going to commit this journal entry to GitHub, commit the solution to my hackerrank repo, and then take a break.
 
 ___
-**Total time spent coding today**: 
+**Total time spent coding today**: 1 hour 57 minutes
 
-**Total time spent coding thus far in June 2019**: 
+**Total time spent coding thus far in June 2019**: 18 hours 19 minutes
 
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**: 589 hours 37 minutes
