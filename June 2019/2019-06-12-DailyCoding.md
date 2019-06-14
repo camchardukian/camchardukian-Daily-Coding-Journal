@@ -8,9 +8,11 @@
 
 2:51 -- In any case, I still haven't gotten any sleep yet (it's almost 3am!), but I thought it was important I at least commit this to GitHub to maintain my coding habit and walk the walk to demonstrate just how passionate I am about becoming a better developer.
 
+UPDATE: Wasn't able to get any time in on Wednesday.
+
 ___
 **Total time spent coding today**: N/A
 
-**Total time spent coding thus far in June 2019**: 
+**Total time spent coding thus far in June 2019**: 21 hours 29 minutes
 
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**: 593 hours 12 minutes
