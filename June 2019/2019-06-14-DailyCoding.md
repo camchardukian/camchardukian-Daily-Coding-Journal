@@ -1,4 +1,4 @@
-# Monday June 10th, 2019 Daily Coding Journal
+# Friday June 14th, 2019 Daily Coding Journal
 
 8:27 -- Here we go. I'm finally in one spot for a while, let's get to coding!
 
@@ -149,8 +149,10 @@ Niceeee!
 
 12:03 -- I'm going to commit everything to GitHub, and then take a quick break.
 ___
-**Total time spent coding today**: 
+UPDATE: Honestly, squandered some time yesterday, but also spent a lot of time with family I hadn't seen in a few years.
+___
+**Total time spent coding today**: 1 hour 10 minutes
 
-**Total time spent coding thus far in June 2019**: 
+**Total time spent coding thus far in June 2019**: 22 hours 36 minutes
 
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**: 594 hours 19 minutes 
