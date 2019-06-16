@@ -144,6 +144,30 @@ return (maxMinRecord.join(" "))
 
 8:07 -- In the next pomodoro session, I'll solve the [Divisible Sum Pairs algorithm on HackerRank](https://www.hackerrank.com/challenges/divisible-sum-pairs/problem).
 ___
+10:01 -- I'm back. I'm going to try to do a quick pomodoro session before heading out to see some family that's leaving for the airport later.
+
+10:04 -- This problem is a little bit complicated to wrap one's head around. It seems... actually, I can't explain things off the top of my head.
+
+I'm going to have to play around with this function and spend some more time reading to fully understand what is happening.
+
+10:11 -- Writing the following code has helped me visually understand the variables that we are working with:
+```
+function divisibleSumPairs(n, k, ar) {
+console.log(`n = ${n} and is the integer length of the array "ar"`)
+
+console.log(`k = ${k} and is the integer we are performing division with`)
+
+console.log(`ar = ${ar} and is our array of integers`)
+}
+
+divisibleSumPairs(3, 12, [2, 3, 5, 1, 5])
+```
+10:14 -- I'm starting to understand the problem now. We need to see which combinations of two integers are divisible by *k* (or technically speaking, the value we pass to k).
+
+10:15 -- I think we can do this by looping through our array, adding up every possible pair of numbers, and in the process increment a counter variable whenever we find a pair of two numbers in the array that are divisible by *k*.
+
+10:17 -- Unfortunately, it's time to go so I'll have to work on the implementation later. See you then!
+
 ___
 **Total time spent coding today**: 
 
