@@ -167,10 +167,11 @@ divisibleSumPairs(3, 12, [2, 3, 5, 1, 5])
 10:15 -- I think we can do this by looping through our array, adding up every possible pair of numbers, and in the process increment a counter variable whenever we find a pair of two numbers in the array that are divisible by *k*.
 
 10:17 -- Unfortunately, it's time to go so I'll have to work on the implementation later. See you then!
-
 ___
-**Total time spent coding today**: 
+UPDATE: Didn't spend any additional time programming on Sunday.
+___
+**Total time spent coding today**: 1 hour 31 minutes
 
-**Total time spent coding thus far in June 2019**: 
+**Total time spent coding thus far in June 2019**: 25 hours 58 minutes
 
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**: 597 hours 41 minutes
