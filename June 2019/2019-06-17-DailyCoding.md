@@ -512,6 +512,121 @@ There we go, a comprehensive explanation of this algorithm. Hopefully breaking t
 
 19:24 -- P.S. I currently have 161 points on HackerRank and my global rank is now 447,529.
 ___
+20:40 -- I'm back. Just had a nice hour-long dinner with my parents. I'm feeling a little bit tired, but I think I can push through and get 6 hours of coding in today! :D
+
+20:43 -- I'm trying to understand what we're trying to do in this problem...
+
+20:45 -- It looks like the person in this scenario (Gary) starts walking at sea level. He then walks up a number of mountains and down in a number of valleys.
+
+It looks like mountains are defined as any sequence of steps entirely above sea level and valleys are defined as any series of steps entirely below sea level.
+
+20:51 -- Here's the basic setup for this algorithm:
+```
+function countingValleys(n, s) {
+console.log(n, s)
+
+}
+```
+20:55 -- I've spent the last 5 minutes or so writing pseudocode for this problem.
+```
+// initialize a valleyCount variable to 0.
+// initialize a currentPosition variable to 0.
+// for loop through the string 's'
+// If s[i] === 'U' increment currentPosition.
+// If s[i] === 'D' decrement currentPosition.
+// if currentPosition == -1 && s[i] == 'U' increment our valleyCount variable by 1.
+```
+20:56 -- Now I'm going to try to translate my pseudocode into actual JavaScript.
+
+21:09 -- I thought I'd come up with the solution. Unfortunately, I only passed 10/22 test cases...
+
+21:16 -- Finished. Here's my final solution:
+```
+function countingValleys(n, s) {
+s = s.toUpperCase();
+let valleyCount = 0;
+let currentPosition = 0;
+for (let i = 0; i < n; i++) {
+  if (currentPosition === -1 && s[i] === 'U') {
+    currentPosition+=1
+    valleyCount+=1
+  }
+ else if (s[i] === 'U') {
+    currentPosition+=1
+  }
+  else if (s[i] === 'D') {
+    currentPosition-=1
+  }
+  else {
+    console.log("error")
+  }
+}
+return valleyCount
+}
+```
+It turns out that the issue I was having before wasthat in my first *if statement* I was incrementing the valleyCount but I was forgetting to also increment my *currentPosition* variable by one.
+
+Once I added that change, hackerRank quickly accepted my solution. In any case, I'm going to take a break.
+
+When I come back, I'll help you understand my solution for this algorithm.
+___
+21:48 -- Let's understand what's going on here.
+
+21:49 -- First we define a function *countingValleys()* that has two parameters *n* and *s*. *n* is an integer that represents how many steps Gary takes throughout his hike. *s* is a string of characters that describes  Gary's path and when he took steps upward or downwards.
+```
+function countingValleys(n, s) {
+
+}
+```
+21:53 -- Moving forward, we can opt to set our string *s* equal to the results of s.toUpperCase(). This enables us to not have to worry about whether a user incorrectly passed lowercase characters to *s*.
+
+We also need to initialize a few variables to 0. *valleyCount* which represents how many valleys Gary walked through, and *currentPosition* which represents Gary's current position in regards to whether he is at, below, or above sea level.
+
+Finally, we're going to add a for loop to loop through each of Gary's steps (we'll build upon this in the next step.)
+```
+function countingValleys(n, s) {
+s = s.toUpperCase();
+let valleyCount = 0;
+let currentPosition = 0;
+for (let i = 0; i < n; i++) {
+}
+}
+```
+21:57 -- The only thing we need to do now is add some conditional logic. If Gary's current position is one unit below sealevel (-1) and he walks upwards ('U'), we'll increment *currentPosition* and *valleyCount* by one.
+
+If Gary walks upwards but he is not currently one unit below sealevel, we'll merely increment his *currentPosition* by one.
+
+Likewise, is Gary walks downward we'll decrement his *currentPosition* by one.
+
+Else, we ran into some kind of error along the way and we'll log error to the console.
+
+Finally, after we eventually break out of our for loop we'll return *valleyCount* as our solution to this algorithm.
+
+```
+function countingValleys(n, s) {
+s = s.toUpperCase();
+let valleyCount = 0;
+let currentPosition = 0;
+for (let i = 0; i < n; i++) {
+  if (currentPosition === -1 && s[i] === 'U') {
+    currentPosition+=1
+    valleyCount+=1
+  }
+ else if (s[i] === 'U') {
+    currentPosition+=1
+  }
+  else if (s[i] === 'D') {
+    currentPosition-=1
+  }
+  else {
+    console.log("error")
+  }
+}
+return valleyCount
+}
+```
+22:08 -- I'm going to commit this journal entry to GitHub, rest, regather some energy, and put forth some effort to get one more pomodoro session in today for a total of 6+ hours of coding! O_O
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in June 2019**: 
