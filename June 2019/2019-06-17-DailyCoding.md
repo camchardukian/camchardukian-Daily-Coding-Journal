@@ -381,9 +381,136 @@ return numberOfPairs
 17:03 -- That was a lot of typing. My hands are getting too cold sitting in the basement now, and my back is getting a bit sore.
 
 I'm going to exercise a bit, then come back after I've taken care of my body.
+___
+17:58 -- I got some exercise, warmed my hands up, and chatted with my parents a bit. Now, it's time to get back to work.
 
+17:59 -- I now have 146 points on HackerRank for a global rank of 479,710.
 
+18:00 -- I'm now working on the [Cats and a Mouse algorithm on HackerRank](https://www.hackerrank.com/challenges/cats-and-a-mouse/problem).
 
+18:03 -- This problem isn't too difficult. We've got a mouse that's running away from two cats. The two cats travel at equal speeds. The mouse doesn't move. Our job is to determine which cat will catch the mouse first. Or, if they both reach the mouse at the same time, the cats will fight and we'll log 'Mouse C' to the console.
+
+18:05 -- I'm going to document my progress as I solve this problem and then I'll explain my solution after I've finished everything.
+
+18:11 -- I'm making progress...
+```
+function catAndMouse(x, y, z) {
+console.log(`Cat A is at ${x} Cat B is at ${y} and the mouse is at ${z}`)
+console.log(Math.abs(x-z))
+console.log(Math.abs(y-z))
+}
+
+catAndMouse(-1, 3, 1)
+```
+18:16 -- My solution seems to work in repl.it, but is getting rejected on HackerRank for some reason. Let's do some investigating...
+```
+function catAndMouse(x, y, z) {
+console.log(`Cat A is at ${x} Cat B is at ${y} and the mouse is at ${z}`)
+if (Math.abs(x-z) > Math.abs(y-z)) {
+  console.log("Cat B")
+}
+else if (Math.abs(x-z) < Math.abs(y-z)) {
+  console.log("Cat A")
+}
+else if (Math.abs(x-z) === Math.abs(y-z)) {
+  console.log('Mouse C')
+}
+else {
+  console.log("error: unexpected input")
+}
+}
+```
+18:19 -- That was easy enough. It looks like I just had to remove my console.log() calls and replace them with equivalent return statements:
+```
+function catAndMouse(x, y, z) {
+if (Math.abs(x-z) > Math.abs(y-z)) {
+  return ("Cat B")
+}
+else if (Math.abs(x-z) < Math.abs(y-z)) {
+  return ("Cat A")
+}
+else if (Math.abs(x-z) === Math.abs(y-z)) {
+  return ('Mouse C')
+}
+else {
+  return ("error: unexpected input")
+}
+}
+```
+18:20 -- I'm going to go to the bathroom, and stretch. Then I'll explain my solution and commit everything to GitHub.
+
+18:27 -- Going to do a little exercise. Back soon...
+___
+18:51 -- I'm back. Body is feeling good. Let's explain the [HackerRank Cats and a Mouse algorithm](https://www.hackerrank.com/challenges/cats-and-a-mouse/problem).
+
+18:52 -- To start with, we define a function *catAndMouse* that has three parameters *x*, *y*, and *z*. Our variables represent the starting points of our different animals. *x* represents 'Cat A', *y* represents 'Cat B', and *z* represents 'Mouse C'.
+```
+function catAndMouse(x, y, z) {
+
+}
+```
+Now, we need to see which cat is further away from the mouse. It's important to remember that we're thinking about distance here, and not money for example.
+
+For that reason, it doesn't really matter if our cat is on a negative position on the number line or a positive position.
+
+All that matters is how many "places"
+on the number line our cat is away from the mouse.
+
+Let's look at an example:
+
+> CatA(3) - Mouse(1) = 2
+
+Whereas:
+>CatB(-100) - Mouse(1) = -101
+
+Obviously CatA is closer to the mouse and will catch it far before CatB. CatA is only 2 "steps" in the positive direction away from the mouse while CatB is 101 "steps" away in the negative direction.
+
+However, let's change the numbers a bit:
+>CatA[50] - mouse(-100) = 150
+
+versus
+>CatB(-99) - mouse(-100) = 1
+
+In this scenario CatA is 150 "steps" away from the mouse while CatB is only 1 "step" away from the mouse.
+
+As you can see, it doesn't matter whether our cats are sitting a given number of steps away in the "positive" direction or the "negative" direction.
+
+Far more vital is the absolute number of steps away from the mouse that they are.
+
+For that reason, and because we do not know if either or both of our cats will be starting at a negative position, we need to find the absolute value of the distance between *x-z* and *y-z*. We can do that using the Math.abs() method.
+
+And here's our final solution!
+```
+function catAndMouse(x, y, z) {
+if (Math.abs(x-z) > Math.abs(y-z)) {
+  return ("Cat B")
+}
+else if (Math.abs(x-z) < Math.abs(y-z)) {
+  return ("Cat A")
+}
+else if (Math.abs(x-z) === Math.abs(y-z)) {
+  return ('Mouse C')
+}
+else {
+  return ("error: unexpected input")
+}
+}
+```
+If the distance between CatA and the mouse is greater than CatB and the mouse, we return "Cat B".
+
+If the distance between CatA and the mouse is less than the distance between CatB and the mouse, we return "Cat A".
+
+If the distances are the same, we return "Mouse C".
+
+And in any other situation, we return "error: unexpected input".
+
+There we go, a comprehensive explanation of this algorithm. Hopefully breaking things down helped you understand! :D
+
+19:20 -- Finished commiting that solution to GitHub.
+
+19:23 -- I've gotten in 4 hours of coding so I will finally give myself permission to eat O_O. When I come back I'll work on the Counting Valleys algorithm on HackerRank(https://www.hackerrank.com/challenges/counting-valleys/problem).
+
+19:24 -- P.S. I currently have 161 points on HackerRank and my global rank is now 447,529.
 ___
 **Total time spent coding today**: 
 
