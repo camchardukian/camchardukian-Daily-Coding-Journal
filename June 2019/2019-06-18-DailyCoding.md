@@ -385,6 +385,86 @@ We're finished!
 
 15:59 -- In my next coding session I'll work on the [Utopian Tree algorithm](https://www.hackerrank.com/challenges/utopian-tree/problem).
 ___
+16:55 -- I'm back. I just spent the last 45 minutes or so standing, stretching, and talking with my mom. Now, I'll solve the next algorithm!
+
+16:56 -- It looks like in this problem we're working with some kind of magical tree. This "Utopian Tree" doubles in height every spring, and also gets one meter taller each summer.
+
+We have a function *utopianTree* with a parameter *n* which takes in a number and represents the number of growth cycles we are simulating.
+
+In other words, our basic setup for this algorithm looks like this:
+```
+function utopianTree(n) {
+
+}
+```
+17:05 -- I'm thinking that we may be able to use the modulus operator for this problem. If our value of *n* divided by modulus operator 2 has a remainder of 0 I think we will double our tree's height, if the remainder is 1 I think we'll simply add 1 to the height.
+
+Or maybe vice versa, I'm not 100% sure yet. Let me try to implement this idea...
+
+Also, I just noticed we're going to need a for loop because we're going to add 1 and double our height multiple times in most use cases.
+
+17:14 -- Finished! Here's my solution:
+```
+function utopianTree(n) {
+  let treeHeight = 0
+  for (let i = 0; i <= n; i++) {
+
+if (i % 2 === 0) {
+  treeHeight+=1
+}
+else {
+  treeHeight*=2
+}
+  }
+  return treeHeight
+}
+```
+17:15 -- We have a function *utopianTree* which has a parameter *n* which takes in an integer representing the number of growth cycles we will go through. I've also defined a variable *treeHeight* which represents the height of our Utopian Tree.
+```
+function utopianTree(n) {
+    let treeHeight = 0
+}
+```
+17:17 -- Moving forward, we use a for loop. Our number of iterations is equal to the number of growth cycles *n* passed to our function.
+
+On iterations which feature **0** or an even number (defined as an integer having a remainder of 0 after dividing by 2 with the modulus operator) we increment our tree height by one.
+
+```
+function utopianTree(n) {
+    let treeHeight = 0
+    for (let i = 0; i <= n; i++) {
+
+        if (i % 2 === 0) {
+            treeHeight += 1
+        }
+    }
+}
+```
+If the iteration features an odd number, however (defined as an integer having a remainder of 0 after dividing by 2 with the modulus operator) we set the value of *treeHeight* to double its current value.
+
+Finally, after we've finished running through our loop the specified number of times, we then return our *treeHeight* variable as the solution to our algorithm.
+```
+function utopianTree(n) {
+    let treeHeight = 0
+    for (let i = 0; i <= n; i++) {
+
+        if (i % 2 === 0) {
+            treeHeight += 1
+        }
+        else {
+            treeHeight *= 2
+        }
+    }
+    return treeHeight
+}
+```
+We're done!
+
+17:30 -- I've finished committing the Utopian Tree algorithm solution to GitHub. I'm going to take a quick break to commit my journal entry to GitHub, go to the bathroom, and do a little exercise.
+
+When I come back, I'll work on the [Angry Professor algorithm](https://www.hackerrank.com/challenges/angry-professor/problem).
+
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in June 2019**: 
