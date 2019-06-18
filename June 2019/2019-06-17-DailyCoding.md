@@ -626,9 +626,115 @@ return valleyCount
 }
 ```
 22:08 -- I'm going to commit this journal entry to GitHub, rest, regather some energy, and put forth some effort to get one more pomodoro session in today for a total of 6+ hours of coding! O_O
+
+22:12 -- When I come back I'm going to work on the [Designer PDF Viewer algorithm on HackerRank](https://www.hackerrank.com/challenges/designer-pdf-viewer/problem).
 ___
-**Total time spent coding today**: 
+22:51 -- Just went for a 1.1 mile run. I thought it'd be good to get a little cardio in as I've had trouble breathing in recent weeks.
 
-**Total time spent coding thus far in June 2019**: 
+Anyway, let's solve this algorithm!
 
-**Total lifetime hours of coding**: 
+22:52 -- It looks like what we're trying to do in this problem is figure out how large of a "selection" rectangle we should draw around a given "selected" word based on the length of the word and its tallest letter.
+
+22:58 -- Quick setup and sanity test to ensure everything is working:
+```
+function designerPdfViewer(h, word) {
+console.log(h, word)
+}
+```
+23:04 -- Do you see where I'm going here? ;)
+```
+function designerPdfViewer(h, word) {
+  let alphaObj = [
+    {letter: 'a', height:''}
+  ]
+for (let i = 0; i < 26; i++) {
+  
+}
+}
+```
+23:08 -- Some more progress:
+```
+function designerPdfViewer(h, word) {
+  let alphaObj = [
+    {letter: 'a', height:''},
+    {letter: 'b', height:''},
+    {letter: 'c', height:''},
+    {letter: 'd', height:''},
+    {letter: 'e', height:''},
+    {letter: 'f', height:''},
+    {letter: 'g', height:''},
+    {letter: 'h', height:''},
+    {letter: 'i', height:''},
+    {letter: 'j', height:''},
+    {letter: 'k', height:''},
+    {letter: 'l', height:''},
+    {letter: 'm', height:''},
+    {letter: 'n', height:''},
+    {letter: 'o', height:''},
+    {letter: 'p', height:''},
+    {letter: 'q', height:''},
+    {letter: 'r', height:''},
+    {letter: 's', height:''},
+    {letter: 't', height:''},
+    {letter: 'u', height:''},
+    {letter: 'v', height:''},
+    {letter: 'w', height:''},
+    {letter: 'x', height:''},
+    {letter: 'y', height:''},
+    {letter: 'z', height:''}
+  ]
+for (let i = 0; i < 26; i++) {
+alphaObj[i]['height'] = h[i];
+console.log(alphaObj[i]['height'])
+}
+}
+```
+23:21 -- I'm struggling a bit. I may need to ditch my object...
+```
+function designerPdfViewer(h, word) {
+  let alphaObj = [
+    {letter: 'a', height:''},
+    {letter: 'b', height:''},
+    {letter: 'c', height:''},
+    {letter: 'd', height:''},
+    {letter: 'e', height:''},
+    {letter: 'f', height:''},
+    {letter: 'g', height:''},
+    {letter: 'h', height:''},
+    {letter: 'i', height:''},
+    {letter: 'j', height:''},
+    {letter: 'k', height:''},
+    {letter: 'l', height:''},
+    {letter: 'm', height:''},
+    {letter: 'n', height:''},
+    {letter: 'o', height:''},
+    {letter: 'p', height:''},
+    {letter: 'q', height:''},
+    {letter: 'r', height:''},
+    {letter: 's', height:''},
+    {letter: 't', height:''},
+    {letter: 'u', height:''},
+    {letter: 'v', height:''},
+    {letter: 'w', height:''},
+    {letter: 'x', height:''},
+    {letter: 'y', height:''},
+    {letter: 'z', height:''}
+  ]
+for (let i = 0; i < 26; i++) {
+alphaObj[i]['height'] = h[i];
+// console.log(alphaObj[i]['height'])
+}
+for (let i = 0; i < word.length; i++) {
+  console.log(alphaObj['height']['a'])
+}
+}
+```
+11:31 -- Man, I'm just too gassed. I'm going to need to call it a night and try to tackle this problem again from scratch tomorrow morning.
+
+Hopefully being fresh and rested makes things easier.
+___
+**Total time spent coding today**: 6 hours 13 minutes
+
+**Total time spent coding thus far in June 2019**: 32 hours 11 minutes
+
+**Total lifetime hours of coding**: 603 hours 53 minutes
