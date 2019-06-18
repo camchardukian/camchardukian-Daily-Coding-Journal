@@ -279,6 +279,112 @@ We're finished!
 
 13:42 -- I now have 211 points on HackerRank which is good enough for a global rank of 365,040. In my next coding session I'm going to work on the [Electronics Shop algorithm](https://www.hackerrank.com/challenges/electronics-shop/problem).
 ___
+
+15:03 -- Just got back from almost an hour of exercising. Let's start working on the next algorithm.
+
+15:05 -- It looks like in this problem we're dealing with a girl named Monica who is either a shopaholic or someone who is short on cash, but has an expiring gift card at a store.
+
+Monica wants to buy both a keyboard and a USB drive. The store has a number of keyboards and USB drives at different price points.
+
+Monica's goal is to buy exactly one keyboard, and one USB drive while spending as much money as possible in the process.
+
+We need to print an integer representing the maximum amount of money Monica can spend while buying exactly one keyboard and one USB drive.
+
+If Monica cannot afford both a keyboard and a USB drive, we'll simply print *-1*.
+
+15:17 -- Basic function setup...
+```
+function getMoneySpent(keyboards, drives, b) {
+
+console.log(`Monica's budget is ${b} the different keyboards cost ${keyboards} and the USB drives cost ${drives}`)
+
+}
+```
+15:24 -- We're nearing the promise land...
+```
+function getMoneySpent(keyboards, drives, b) {
+let mostExpensiveCombo = 0;
+
+for (let i = 0; i < keyboards.length; i++) {
+
+for (let ii = 0; ii < drives.length; ii++) {
+  console.log(`i is ${keyboards[i]} and ii is ${drives[ii]}`)
+}
+
+}
+
+}
+```
+15:33 -- I finished! Here's my final solution:
+```
+function getMoneySpent(keyboards, drives, b) {
+let mostExpensiveCombo = 0;
+
+for (let i = 0; i < keyboards.length; i++) {
+
+for (let ii = 0; ii < drives.length; ii++) {
+  if(keyboards[i] + drives[ii] > mostExpensiveCombo && keyboards[i] + drives[ii] <= b) {
+    mostExpensiveCombo = keyboards[i] + drives[ii]
+  } 
+}
+}
+return (mostExpensiveCombo > 0 ? mostExpensiveCombo : -1)
+}
+```
+15:34 -- Let's break things down. First, we define a function *getMoneySpent* which has three parameters *keyboards*, *drives*, and *b*.
+
+*keyboards* and *drives* have arrays passed to them that represent respectively the costs of the stores' various keyboards and USB drives.
+
+*b* represents Monica's budget.
+
+I've also defined a new variable *mostExpensiveCombo* which is an integer representing the costliest combination of keyboards and USB drives Monica could purchase.
+```
+function getMoneySpent(keyboards, drives, b) {
+let mostExpensiveCombo = 0;
+}
+```
+15:40 -- Now, the first thing we need to do is loop through all of the different keyboards. As we go through each item in the *keyboards* array, we'll use a nested for loop to also go through all of the items in the *drives* array.
+
+The reason we're doing this is to evaluate every possible combination of keyboards and USB drives.
+```
+function getMoneySpent(keyboards, drives, b) {
+let mostExpensiveCombo = 0;
+
+for (let i = 0; i < keyboards.length; i++) {
+
+for (let ii = 0; ii < drives.length; ii++) {
+}
+}
+}
+```
+15:43 -- Of course, we also need to add some logic. Our logic is as follows... If the cost of the given keyboard and USB drive is greater than the current value of *mostExpensiveCombo*, AND less than or equal to Monica's budget *b*, we will set the value of *mostExpensiveCombo* equal to the sum cost of the keyboard and USB drive we are currently looking at.
+
+After going through every possible combination, we will then break out of our loops and utilize a return statement.
+
+That return statement utilizes a ternary operator with the following logic:
+> If the value of *mostExpensiveCombo* is greater than 0, it means Monica is capable of buying both a keyboard and a USB drive and we can return the value of *mostExpensiveCombo*. If not, it means Monica's budget wasn't large enough to purchase both a keyboard and a USB drive and we will instead return -1 as requested in this algorithm's explanation.
+
+```
+function getMoneySpent(keyboards, drives, b) {
+let mostExpensiveCombo = 0;
+
+for (let i = 0; i < keyboards.length; i++) {
+
+for (let ii = 0; ii < drives.length; ii++) {
+  if(keyboards[i] + drives[ii] > mostExpensiveCombo && keyboards[i] + drives[ii] <= b) {
+    mostExpensiveCombo = keyboards[i] + drives[ii]
+  } 
+}
+}
+return (mostExpensiveCombo > 0 ? mostExpensiveCombo : -1)
+}
+```
+We're finished!
+
+15:58 -- I'm soooo hungry, but I guess I'll just use that as motivation (I've made a rule that I'm not allowed to eat until I've spent 4 hours doing deeply focused development work each day) to hustle.
+
+15:59 -- In my next coding session I'll work on the [Utopian Tree algorithm](https://www.hackerrank.com/challenges/utopian-tree/problem).
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in June 2019**: 
