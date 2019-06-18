@@ -184,6 +184,101 @@ Aaaaaand we're done!
 
 9:27 -- I currently have 196 points on HackerRank which is good enough for a global rank of 388,896. When I come back later today, I'm going to tackle an algorithm called [The Hurdle Race](https://www.hackerrank.com/challenges/the-hurdle-race/problem).
 ___
+13:02 -- I guess I really was tired. I just woke up from a 3 hour nap! O_O 
+
+13:03 -- Let's try to understand what we're working with for this algorithm...
+
+13:05 -- This algorithm seems pretty simple. We've got a boy named Dan. He's playing a video game. Dan's character can jump a certain height which is represented by a variable *k* that is passed an integer.
+
+We also have another parameter *height* which is passed an array of integers that represent how tall each individual hurdle Dan's character is required to jump over.
+
+Finally, we have a magic potion that Dan's character can take which would increase how high he could jump by 1 unit.
+
+Our job is to figure out the minimum numbers of doses (if any) Dan's character needs to take in order to jump over all of the hurdles (one at a time).
+
+13:14 -- Just completed basic setup of the problem:
+```
+function hurdleRace(k, height) {
+console.log(k, height)
+}
+```
+13:17 -- Getting close...
+```
+function hurdleRace(k, height) {
+  let tallestHurdle = 0;
+for (let i = 0; i < height.length; i++) {
+  if (tallestHurdle < height[i]) {
+    tallestHurdle = height[i]
+  }
+}
+return tallestHurdle
+}
+```
+13:21 -- Wow, we're already finished! Here's my final solution:
+```
+function hurdleRace(k, height) {
+  let tallestHurdle = 0;
+  let potionsNeeded = 0;
+for (let i = 0; i < height.length; i++) {
+  if (tallestHurdle < height[i]) {
+    tallestHurdle = height[i]
+  }
+}
+if (tallestHurdle > k) {
+  potionsNeeded = tallestHurdle - k
+}
+return potionsNeeded
+}
+```
+13:22 -- Let's walk through it. First, we have a function *hurdleRace* which has two parameters *k* (an integer representing how high Dan's character can jump), and *height* (an array of integers representing the height of each individual hurdle Dan must jump over).
+
+I've also defined a couple additional variables. *tallestHurdle* and *potionsNeeded*, both of which are initialized to 0.
+```
+function hurdleRace(k, height) {
+  let tallestHurdle = 0;
+  let potionsNeeded = 0;
+}
+```
+The next thing we need to do is figure out which hurdle is tallest. We can do that by looping through our *height* array and seeing if each item's value is larger than the value which *tallestHurdle* is currently set to.
+```
+function hurdleRace(k, height) {
+  let tallestHurdle = 0;
+  let potionsNeeded = 0;
+for (let i = 0; i < height.length; i++) {
+  if (tallestHurdle < height[i]) {
+    tallestHurdle = height[i]
+  }
+}
+}
+```
+Finally, we can compare the values of *tallestHurdle* and *k* (which is the maximum height Dan can jump without potions).
+
+If *tallestHurdle* is greater than *k* the height Dan can jump, we subtract *k* the height Dan can jump from our *tallestHurdle* variable and set our *potionsNeeded* variable equal to this integer.
+
+Finally, we return our *potionsNeeded* variable as our solution to this algorithm.
+
+Of course, if *tallestHurdle* was not greater than *k*, we would've simply broken out of our if statement, and returned potionsNeeded as the value it was initialized to (**0**).
+```
+function hurdleRace(k, height) {
+  let tallestHurdle = 0;
+  let potionsNeeded = 0;
+for (let i = 0; i < height.length; i++) {
+  if (tallestHurdle < height[i]) {
+    tallestHurdle = height[i]
+  }
+}
+if (tallestHurdle > k) {
+  potionsNeeded = tallestHurdle - k
+}
+return potionsNeeded
+}
+```
+We're finished!
+
+13:41 -- I just finished commiting The Hurdle Race algorithm solution to my [HackerRank GitHub repo](https://github.com/camchardukian/hackerrank-algorithms).
+
+13:42 -- I now have 211 points on HackerRank which is good enough for a global rank of 365,040. In my next coding session I'm going to work on the [Electronics Shop algorithm](https://www.hackerrank.com/challenges/electronics-shop/problem).
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in June 2019**: 
