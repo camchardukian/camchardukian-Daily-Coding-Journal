@@ -263,6 +263,81 @@ return energy
 
 12:58 -- In my next coding session I'll solve the [Find Digits](https://www.hackerrank.com/challenges/find-digits/problem) algorithm.
 ___
+13:52 -- Just put my clothes into the wash and cleaned one of the pantry shelves in my parents' house (including sorting out all the expired stuff) to surprise my mom when she comes home.
+
+13:53 -- Anyway, on to the next algorithm!
+
+13:55 -- It looks like we're taking a number and seeing how many of its individual digits its divisble by.
+
+Seems pretty self-explantory to me. I'll document my progress as I work to solve it, then I'll explain my solution after I finish.
+
+14:05 -- Mother was totally ungrateful. Did not say thank you and was more annoyed than anything else with my help.
+
+I will retreat back into the world of code, where a right is a right, and is always recognized as such.
+
+14:15 -- Getting close...
+```
+function findDigits(n) {
+let divisorCount = 0;
+let dividend = n;
+let divisors;
+divisors = String(n).split("");
+console.log(divisors)
+for (let i = 0; i < n; i++) {
+}
+}
+```
+14:21 -- Anyway, I've solved the algorithm. Here's the solution:
+```
+function findDigits(n) {
+let divisorCount = 0;
+let dividend = n;
+let divisors;
+divisors = String(n).split("");
+for (let i = 0; i < divisors.length; i++) {
+  if (dividend % divisors[i] === 0) {
+    divisorCount+=1
+  }
+}
+return divisorCount
+}
+```
+14:22 -- I'm going to take a quick break 15 minutes or so to get my clothes out of the dryer and put them away. Then I'll explain my solution.
+
+14:44 -- We have a function *findDigits* that has a single parameter *n* which takes in an integer that represents the number we will perform division operations on.
+
+I've also declared a few other variables: *divisorCount*: initialized to 0, *dividend* initialized to the value passed to *n*, and *divisors* initialized to the value of String(n).split("").
+
+In other words, divisors will be set to the value of an array in which each item is an individual character taken from the integer passed to *n*.
+```
+function findDigits(n) {
+let divisorCount = 0;
+let dividend = n;
+let divisors = String(n).split("");
+}
+```
+14:56 -- Next, we'll use a for loop to go through each value in our *divisors* array. Then we have the logic that if our dividend is divisible by our divisor (*divisors[i]) without a remainder, we'll increment divisorCount by 1.
+
+After we finishing iterating through our array we'll break out of our loop and return our variable *divisorCount* as our solution to this algorithm!
+```
+function findDigits(n) {
+let divisorCount = 0;
+let dividend = n;
+let divisors = String(n).split("");
+for (let i = 0; i < divisors.length; i++) {
+  if (dividend % Number(divisors[i]) === 0) {
+    divisorCount+=1
+  }
+}
+return divisorCount
+}
+```
+Nice job!
+
+15:03 -- I've finished committing the 'Find Digits' algorithm to GitHub. I now have 346 points on HackerRank which is good enough for a global rank of 235,720.
+
+15:06 -- In my next coding session I'll solve the [Cut the sticks](https://www.hackerrank.com/challenges/cut-the-sticks/problem) algorithm.
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in June 2019**: 
