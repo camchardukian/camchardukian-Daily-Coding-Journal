@@ -544,6 +544,76 @@ That wasn't too bad was it? :D
 
 18:38 -- Before I get to that though, I think I've earned myself a nice dinner :D. I'll commit this journal entry to GitHub, enjoy dinner and conversing with my family, and then come back to the grind.
 ___
+20:27 -- I'm back. Now let's solve the Viral Advertising algorithm.
+
+20:28 -- It looks like we're making a post about a new product on social media. On the first day, our company shares that post with exactly 5 people.
+
+On the first day half of those people (rounded down) like our advertisment/post and each of those 2 people share the ad with exactly three of their friends. The next day 6 people see the advertisment, 3 like the advertisement. The day after 9 people see the ad, 4 like it... and so on.
+
+Our job is to write a function to determine the cummulative number of likes our ad has received.
+
+Our function *viralAdvertising* has a parameter *n* for how many days have passed since our company initially shared the advertisment.
+
+20:34 -- Here's our function's basic setup:
+```
+function viralAdvertising(n) {
+
+}
+```
+20:36 -- I've solved this algorithm already! The solution is:
+```
+function viralAdvertising(n) {
+  let viewers = 5;
+  let currentLikers = 0;
+  let cummulativeLikes = 0;
+for (let i = 0; i < n; i++) {
+  currentLikers = Math.floor(viewers/2)
+  cummulativeLikes+= currentLikers;
+  viewers = currentLikers * 3
+}
+return cummulativeLikes
+}
+```
+20:44 -- I'm going to take a quick 5-10 minute break, then I'll explain how you could come to this solution.
+
+20:55 -- Here we go. We have a function *viralAdvertising* with a single parameter *n* which will be passed an integer that represents how many days have passed since our advertising campaign begun.
+```
+function viralAdvertising(n) {
+
+}
+```
+20:58 -- I've also defined several variables. Initialized to 5 is our *viewers* variable, because that's how many people we shared our ad with on the first day. *currentLikers* and *cummulativeLikes* on the other hand are initialized to 0 because we will calculate these values based upon the number of viewers we have each day.
+```
+function viralAdvertising(n) {
+  let viewers = 5;
+  let currentLikers = 0;
+  let cummulativeLikes = 0;
+}
+```
+21:00 -- Now that we've gotten all of our variables initialized, we need to create a for loop that'll perform our calculations a given number of times based upon the value of *n*, or how many days have passed since our advertising campaign began.
+
+As for the calculations themselves, they are pretty straightforward. We set our *currentLikers* equal to the result of Math.floor(viewers/2). We then increment our *cummulativeLikes* by *currentLikers*.
+
+Finally, to determine the number of people that will view our ad on the next day, we set *viewers* equal to the result of *currentLikers* times 3 (because each of the people that liked our post will share it with three of their friends).
+
+Then we repeat the process. After we eventually break out of this loop, we'll return the value of *cummulativeLikes* as the solution to this algorithm.
+```
+function viralAdvertising(n) {
+  let viewers = 5;
+  let currentLikers = 0;
+  let cummulativeLikes = 0;
+for (let i = 0; i < n; i++) {
+  currentLikers = Math.floor(viewers/2)
+  cummulativeLikes+= currentLikers;
+  viewers = currentLikers * 3
+}
+return cummulativeLikes
+}
+```
+That's it! You're finished!
+
+21:12 -- I now have 281 points on HackerRank which is good enough for a global rank of 285,456. In my next coding session, I'll work on the [Beautiful Days at the Movies algorithm](https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem).
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in June 2019**: 
