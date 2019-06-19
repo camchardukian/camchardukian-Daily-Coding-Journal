@@ -614,8 +614,126 @@ That's it! You're finished!
 
 21:12 -- I now have 281 points on HackerRank which is good enough for a global rank of 285,456. In my next coding session, I'll work on the [Beautiful Days at the Movies algorithm](https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem).
 ___
-**Total time spent coding today**: 
+21:36 -- I'm back! Let's go and knock out (at least) one more algorithm tonight.
 
-**Total time spent coding thus far in June 2019**: 
+21:37 -- In this algorithm we've got a girl named Lily. Lily likes to play a game where she subtracts a number from its inverse. Here are a few examples:
+> 12 - 21 = 9; 120 - 21 = 99
 
-**Total lifetime hours of coding**: 
+Lily has made the decision that she will build upon this game by saying that a number is beautiful if the number subtracted by its inverse is divisible by a certain number passed to our parameter *k*.
+
+To clear things up a bit let's go over what we're given. We have a function *beautifulDays* which has the following parameters *i* which represents the starting day number, *j* which represents the ending day number, and *k* which represents our divisor.
+
+21:44 -- I'm going to stop writing and focus on solving this problem now. I'll update you as I go along.
+
+21:47 -- Here's my basic setup:
+```
+function beautifulDays(i, j, k) {
+  let beautifulDays = [];
+for (let inc = i; inc <= j; inc++) {
+  console.log(inc)
+}
+
+}
+```
+21:55 -- Making progress...
+```
+function beautifulDays(i, j, k) {
+  let beautifulDays = [];
+  let reversedDays = []
+for (let inc = i; inc <= j; inc++) {
+  reversedDays.push(String(inc).split("").reverse().join(""))
+}
+console.log(reversedDays)
+}
+```
+22:03 -- I've solved the algorithm! Here's my solution:
+```
+function beautifulDays(i, j, k) {
+  let beautifulDays = [];
+  let reversedDays = [];
+  let days = [];
+for (let inc = i; inc <= j; inc++) {
+days.push(inc);
+  reversedDays.push(String(inc).split("").reverse().join(""))
+}
+
+
+for (let inc = 0; inc < days.length; inc++) {
+  if ((days[inc] - parseInt(reversedDays[inc])) % k === 0) {
+    beautifulDays.push(days[inc])
+  }
+}
+return beautifulDays.length
+}
+```
+I'm going to take a quick break because my eyes are getting sore. When I come back I'll explain my solution.
+___
+22:55 -- I ate a snack, shaved, and did a little bit of walking. Now, let's explain the Beautiful Days algorithm.
+
+22:58 --  We have a function *beautifulDays* which has three parameters -- *i*, an integer which represents the start date, *j*, an integer which represents the end date, and *k*, an integer which represents the "magical divisor" which will help us evaluate whether a day is beautiful or not.
+
+```
+function beautifulDays(i, j, k) {
+
+}
+```
+23:04 -- I've also defined three additional variables *beautifulDays*, *reversedDays*, and *days*, all of which are initialized to empty arrays.
+```
+function beautifulDays(i, j, k) {
+  let beautifulDays = [];
+  let reversedDays = [];
+  let days = [];
+}
+```
+23:05 -- Next, with our first for loop we're going to loop through all of the integers between and including *i* and *j*, pushing each integer to our *days* array in the process. 
+
+We'll also take each integer's inverse (21 --> 12 for example), and push said inverse to the *reversedDays* array.
+```
+function beautifulDays(i, j, k) {
+  let beautifulDays = [];
+  let reversedDays = [];
+  let days = [];
+for (let inc = i; inc <= j; inc++) {
+days.push(inc);
+  reversedDays.push(String(inc).split("").reverse().join(""))
+}
+```
+23:08 -- Now that we have completed *days* and *reversedDays* arrays, we can loop through them and subtract the value of each item in the *reversedDays* array from its corresponding value in the *days*.
+
+Note: During this process, we need to use the *parseInt* method because the items in our *reversedDays* array are actually strings and not integers. Thus, we need to convert said strings into integers.
+
+If
+>(days[inc] - parseInt(reversedDays[inc])) is divisible by *k* without having any remainder, we'll push the value of days[inc] to our *beautifulDays* array.
+
+Finally, after we break out of our for loop, we'll return beautifulDays.length as the solution to our algorithm!
+```
+function beautifulDays(i, j, k) {
+  let beautifulDays = [];
+  let reversedDays = [];
+  let days = [];
+for (let inc = i; inc <= j; inc++) {
+days.push(inc);
+  reversedDays.push(String(inc).split("").reverse().join(""))
+}
+
+for (let inc = 0; inc < days.length; inc++) {
+  if ((days[inc] - parseInt(reversedDays[inc])) % k === 0) {
+    beautifulDays.push(days[inc])
+  }
+}
+return beautifulDays.length
+}
+```
+Way to go on making it through our entire walkthrough of this algorithm!
+
+23:19 -- Man oh man, I'm feeling burnt. We did a lot of coding today.
+
+23:21 -- Tomorrow I'm going to start working on the [Birthday Chocolate algorithm](https://www.hackerrank.com/challenges/the-birthday-bar/problem). For now though, let's get a late night snack and relax :))
+
+After getting 6 hours of deeply focused coding in today, we've definitely earned some relaxation!
+___
+**Total time spent coding today**: 6 hours 11 minutes
+
+**Total time spent coding thus far in June 2019**: 38 hours 23 minutes
+
+**Total lifetime hours of coding**: 610 hours 6 minutes
