@@ -114,6 +114,53 @@ Way to go!
 
 9:31 -- During my next coding session I'll solve the [Drawing Book](https://www.hackerrank.com/challenges/drawing-book/problem) algorithm.
 ___
+10:37 -- Here we go. 2nd coding session of the day.
+
+10:38 -- We have a girl named Brie. Brie has to follow her teacher's direction to open her book to page *p*. Given that the book is *n* pages long, we must determine the minimum number of pages Brie must turn to arrive at *p*.
+
+Here's the catch. Brie can start turning pages from either the front or the back of the book.
+
+10:42 -- I'm going to try to solve this algorithm, while documenting my progress along the way. After I've found a solution, I'll share it with you here and explain how I came to it.
+
+10:44 -- Basic function setup:
+```
+function pageCount(n, p) {
+
+}
+```
+10:49 -- Figured out how many page turns from front to back. Now I think I can create a similar for loop to calculate page turns from back to front. Then, I can write a ternary statement to compare the two counts and set my variable *result* to the lesser of the two.
+```
+function pageCount(n, p) {
+let frontToBack = 0;
+let backToFront = 0;
+let result;
+for (let i = 1; i < p; i+=2) {
+  frontToBack+=1
+}
+console.log(frontToBack)
+}
+```
+11:01 -- Getting very close. Passed 26 out of 27 test cases:
+```
+function pageCount(n, p) {
+let frontToBack = 0;
+let backToFront = 0;
+let result;
+for (let i = 1; i < p; i+=2) {
+  frontToBack+=1
+}
+for (let i = n - 1; i > p; i-=2) {
+  backToFront+=1
+}
+frontToBack > backToFront? result = backToFront : result = frontToBack;
+
+return result
+}
+```
+11:30 -- I'm stuck. I'm going to take a break to try to clear my head.
+
+
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in June 2019**: 
