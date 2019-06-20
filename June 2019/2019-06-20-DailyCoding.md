@@ -274,7 +274,100 @@ I can't believe this algorithm was only 10 points. It was a bit of a handful ;).
 This helps me to understand why I'm solving a problem in a certain way rather than just hacking things together.
 
 12:35 -- During my next coding session, I'll work to solve the [Service Lane](https://www.hackerrank.com/challenges/service-lane/problem) algorithm.
+___
+16:10 -- Doing all this programming must be really mentally intensive. Apart from sleeping 6.75 hours last night, my body also just took a 3 hour nap! O_O
 
+But now that we're done with that, let's get back to the grind.
+
+16:12 -- Defining this problem feels a little bit confusing for me. It looks like we have a man named Calvin that is driving on the freeway.
+
+Unfortunately, his check engine light is on and he wants to service his vehicle immediately.
+
+Keeping in mind that the service lane is of varying widths at various points, our job is to help Calvin calculate the maximum size vehicle that can travel through each segment of the service lane safely.
+
+16:21 -- Here's our basic function setup:
+```
+function serviceLane(n, cases) {
+
+} 
+```
+16:24 -- I really don't like how this problem is worded. Either I understand the problem and feel they could have phrased things less ambiguously, or I don't understand the problem and I made things too simple in my head.
+
+Anyway, here's where I'm at now.
+```
+function serviceLane(n, cases) {
+console.log(`n is the various widths within the service lane: ${n}`)
+
+console.log(`cases are various test cases where we're trying to pull into the service lane, and we need to see how wide the service lane is thoughout to see the maximum width a vehicle could possibly be for it to be capable of driving through the service lane: ${cases}`)
+
+}
+```
+16:32 -- Now that we understand the problem a bit more clearly, let's get to work. I'll update you on my progress as I go along. After I finish, I'll explain to you how my solution works.
+
+16:42 -- Quick update...
+```
+function serviceLane(n, cases) {
+for (let i = 0; i < cases.length; i++) {
+  for (let ii = cases[i][0]; ii < cases[i][i])
+ console.log(`${cases[i][0]} and ${cases[i][1]}`)
+ }
+}
+```
+16:45 -- I feel like a shark smelling blood in the water...
+```
+function serviceLane(n, cases) {
+for (let i = 0; i < cases.length; i++) {
+  for (let ii = cases[i][0]; ii < cases[i][1]; ii++) {
+    console.log(`i equals: ${i} and ii equals: ${ii}`)
+  }
+ console.log(`${cases[i][0]} and ${cases[i][1]}`)
+ }
+}
+```
+16:50 -- Now I just need to figure out if this algorithm wants me to return all of the "answers" into an array, or just log them to the console one by one.
+
+16:53 -- HackerRank has me feeling a bit annoyed. My solution works fine in repl.it, returning *resultsArray* as my answer, and an answer that perfectly matches what HackerRank is asking for.
+
+On HackerRank, however, it's simply logging 'Infinity' to the console, completely ignoring my return statement to return *resultsArray*
+```
+function serviceLane(n, cases) {
+  let minimumWidth = Infinity;
+  let resultsArray = []
+for (let i = 0; i < cases.length; i++) {
+  minimumWidth = Infinity;
+  for (let ii = cases[i][0]; ii <= cases[i][1]; ii++) {
+    if (n[ii] < minimumWidth) {
+      minimumWidth = n[ii]
+    }
+  }
+ resultsArray.push(minimumWidth)
+}
+return resultsArray
+}
+```
+17:00 -- The only issue I can think of is that perhaps the explanation on HackerRank was unclear and that perhaps the variables I'm receiving are not arrays, but simply a list of integers that I need to convert to an array??
+
+17:06 -- As I suspected, the issue wasn't with my solution but with the test cases themselves. I went to the discussion area and while many commented that this problem was poorly defined (as I said earlier), others commented that the test cases were written incorrectly.
+
+One user shared his modified test cases that would correctly display whether your answer was correct or not. After adopting his test cases, I've now passed the challenge.
+
+HackerRank really does make you work on your problem solving, even going so far as to creating problems with the problems themselves :p.
+
+In any case, my previous solution will pass as expected if you change the main function around line 43 to the following:
+```
+function main() {
+    const ws = fs.createWriteStream(process.env.OUTPUT_PATH)
+
+    const [n, t] = [...readLine().split(' ')].map(x => parseInt(x, 10))
+    const width = readLine().split(' ').map(x => parseInt(x, 10))
+    const cases = Array(t).fill(0).map(x => readLine().split(' ').map(y => parseInt(y, 10)))
+    let result = serviceLane(width, cases)
+
+    ws.write(result.join("\n") + "\n")
+    ws.end()
+}
+```
+17:09 -- Wow, that was a good session. I'm going to take a break to exercise, and then I'llexplain my solution during my next coding session.
 ___
 **Total time spent coding today**: 
 
