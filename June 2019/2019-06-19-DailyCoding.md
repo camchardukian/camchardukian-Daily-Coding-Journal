@@ -549,6 +549,110 @@ This has the potential to save countless unnecessary iterations of our array and
 19:32 -- During my next coding session, I'll work on the [Jumping on the Clouds](https://www.hackerrank.com/challenges/jumping-on-the-clouds/problem) algorithm.
 
 19:34 -- Let's commit this journal entry to GitHub, stretch, and give my eyes a little well-deserved rest!
+___
+20:52 -- Made a green smoothie, went to the bathroom, talked to my brother on the phone a little, got some exercise in.
+
+That's how the last hour or so went. Now, it's time for the next algorithm.
+
+20:56 -- It looks like we have a girl named Emma who is playing a video game where there are consecutively numbered clouds.
+
+Emma's character can jump either 1 or 2 clouds beyond the cloud she is currently standing on.
+
+We have to find the minimum numbers of jumps required for Emma's character to make it from her starting position to the final cloud.
+
+According to the algorithm's instructions, it is always possible to win the game.
+
+21:00 -- I'm going to solve this algorithm while documenting my progress along the way. When I reach my final solution, I'll guide you along my way of thinking and help you understand how I came to that conclusion.
+
+21:05 -- Initial setup:
+```
+function jumpingOnClouds(c) {
+console.log(c)
+}
+```
+21:16 -- I'm a little bit surprised, but it looks like I've found a solution already:
+```
+function jumpingOnClouds(c) {
+  let jumpCount = 0;
+for (let i = 0; i <= c.length -2;) {
+  if (c[i + 2] === 1) {
+    i+=1
+  }
+  else {
+    i+=2
+  }
+  jumpCount+=1
+  console.log(i)
+}
+return jumpCount
+}
+```
+Let me explain.
+
+21:17 -- We have a function *jumpingOnClouds* that has a single parameter *c* which takes in an array of integers that represent cloud types that are either safe (0) or must be avoided (1).
+
+I've also initialized another variable *jumpCount* to 0.
+```
+function jumpingOnClouds(c) {
+  let jumpCount = 0;
+for (let i = 0; i <= c.length -2;) {
+  if (c[i + 2] === 1) {
+    i+=1
+  }
+  else {
+    i+=2
+  }
+  jumpCount+=1
+  console.log(i)
+}
+return jumpCount
+}
+```
+21:21 -- Moving forward, I've created a for loop that starts at 0, and continues for as long as our variable *i* is less than or equal to the length of our *c* array minus two.
+
+*Why (c.length - 2)?* Because we want our character to continue jumping all the way to the end of our array of clouds. We subtract 2 in this case, because the greatest length our character is capable of jumping is 2 clouds.
+
+Also, notice that I didn't utilize the third optional expression in our for loop.
+
+While normally we would increment *i* at this point, in this case, doing so is not necessary because we will increment *i* within the loop itself.
+
+More on that later...
+```
+function jumpingOnClouds(c) {
+  let jumpCount = 0;
+for (let i = 0; i <= c.length -2;) {
+    }
+}
+```
+21:27 -- Are you still following along? Hopefully I haven't lost you yet ;) Anyway, within our for loop, we'll create an expression that states:
+> If c[i+2] equals 1, we'll only increment *i* by one. This is because we know that if our character jumps two clouds forward (c[i+2]), that our character would jump onto a cloud that isn't safe to jump on. Thus, we only increment *i* by one because we only want our character to jump one cloud forward.
+
+If on the other hand, c[i+2] **DID NOT** equal 1, we'd know that our character would be safe in jumping two clouds forward. Thus, we'd have no problem incrementing *i* by two.
+
+Regardless of whether we increment *i* by one or two, we should increment *jumpCount* by one because we know our character just took another jump forward.
+
+As long as our character has yet to reach the final cloud, we'll continue to loop through this process incrementing *i* by one or two.
+
+Eventually, however, we'll reach the final cloud and break out of this loop. When that happens, we can return *jumpCount* as our solution to this algorithm!
+```
+function jumpingOnClouds(c) {
+  let jumpCount = 0;
+for (let i = 0; i <= c.length -2;) {
+  if (c[i + 2] === 1) {
+    i+=1
+  }
+  else {
+    i+=2
+  }
+  jumpCount+=1
+}
+return jumpCount
+}
+```
+Nice work!
+
+21:43 -- Almost hit 6 hours of coding... Going to take a break now. In my final coding session later tonight, I'll work to solve the [Minimum Distances](https://www.hackerrank.com/challenges/minimum-distances/problem) algorithm.
+
 
 ___
 **Total time spent coding today**: 
