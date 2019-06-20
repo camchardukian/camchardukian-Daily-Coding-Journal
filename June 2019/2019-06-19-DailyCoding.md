@@ -338,6 +338,219 @@ Nice job!
 
 15:06 -- In my next coding session I'll solve the [Cut the sticks](https://www.hackerrank.com/challenges/cut-the-sticks/problem) algorithm.
 ___
+16:38 -- I'm back. I'm going to start working on the Cut the Sticks algorithm.
+
+16:40 -- Here's what we're working with. We have a number of sticks. Our job is to take the length of the shortest stick, and subtract that number from all of our sticks. 
+
+Then we repeat the same process until we're left with nothing.
+
+Before each cut, we should note how many sticks we still have left.
+
+As usual, I'm going to solve this algorithm, document my progress, and then explain everything in more detail after I've solved it.
+
+16:48 -- Basic setup...
+```
+function cutTheSticks(arr) {
+  let numberOfSticks = [];
+  let smallestStick = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    console.log(smallestStick)
+  }
+}
+```
+16:57 -- Current progress... Feeling a bit confused:
+```
+function cutTheSticks(arr) {
+  let numberOfSticks = [];
+  let smallestStick = Infinity;
+  for (let i = 0; i < arr.length; i++) {
+    for (let ii = 0; ii < arr.length; ii++) {
+    if (arr[i] < smallestStick) {
+      smallestStick = arr[i]
+    }
+    }
+      console.log(smallestStick)
+  }
+}
+```
+17:13 -- Things were starting to get reeeealy messy:
+```
+function cutTheSticks(arr) {
+  let numberOfSticks = [];
+  let smallestStick = Infinity;
+  for (let i = 0; i < arr.length; i++) {
+    smallestStick = Infinity;
+    numberOfSticks.push(arr.length)
+console.log("im the first loop")
+console.log(smallestStick)
+    for (let ii = 0; ii < arr.length; ii++) {
+    if (arr[ii] < smallestStick) {
+      smallestStick = arr[ii]
+    }
+    console.log(`im the second loop + arr[ii] is ${arr[ii]}`)
+    }
+for (let j = 0; j < arr.length; j++) {
+  arr[j]-=smallestStick
+  console.log("im the third loop")
+}
+  console.log(arr)
+  }
+}
+```
+Then I realized something important:
+>if the value of our sticks is 0 we need to remove them from our array. Of course, instead of removing items from an array, it may be more simple to create a remainingSticks array, and simply not to push any "0 sticks" to that array.
+
+17:24 -- Such a headache trying to solve this problem...
+
+15:32 -- I've solved the algorithm. Here's my not-so-perfect solution:
+```
+function cutTheSticks(arr) {
+  let numberOfSticks = [arr.length];
+  let smallestStick = Infinity;
+  let remainingSticks = []
+  for (let i = 0; i < arr.length; i++) {
+    smallestStick = Infinity;
+
+    for (let ii = 0; ii < arr.length; ii++) {
+      if (arr[ii] < smallestStick && arr[ii] > 0) {
+        smallestStick = arr[ii]
+      }
+    }
+  
+  for (let j = 0; j < arr.length; j++) {
+    arr[j]-= smallestStick
+    if (arr[j] > 0) {
+      remainingSticks.push(arr[j])
+    } 
+  }
+    if (remainingSticks.length > 0) {
+    numberOfSticks.push(remainingSticks.length)
+    }
+        remainingSticks = []
+  }
+  return (numberOfSticks)
+}
+```
+While my solution works, I think that you  could probably solve this algorithm in a more efficient manner.
+
+17:34 -- Regardless, I'm feeling pretty burnt at this point. I'm going to take a break for dinner, and I'll explain my solution when I get back.
+___
+
+18:51 -- I had dinner, juggled clubs for 25 minutes, now I'm back! Let's go over the last algorithm.
+
+18:53 -- We have a function *cutTheSticks* which has a single parameter *arr* which takes in an array of integers representing the lengths of our various sticks.
+
+I've also defined a few additional variables *numberOfSticks*: initialized to the length of *arr*, *smallestStick*: initialized to **Infinity**. and *remainingSticks*: initialized to an empty array.
+```
+function cutTheSticks(arr) {
+  let numberOfSticks = [arr.length];
+  let smallestStick = Infinity;
+  let remainingSticks = [];
+}
+```
+18:58 -- Next, we use a for loop to iterate through all of the items in our array.
+
+Within our first for loop we're going to update the value of *smallestStick* to **Infinity**.
+
+While this may seem somewhat redundant at this point (*smallestStick* was already set to the value of **Infinity** after all), you'll see later on why this step was necessary.
+```
+function cutTheSticks(arr) {
+  let numberOfSticks = [arr.length];
+  let smallestStick = Infinity;
+  let remainingSticks = [];
+  for (let i = 0; i < arr.length; i++) {
+    smallestStick = Infinity;
+  }
+}
+```
+19:04 -- We've still got quite a ways to go. Now, we're going to create a second for loop.
+
+This nested for loop will be used for determining the smallest stick in our array that *DOES NOT* have a value of 0.
+
+Once we find a value of *arr[ii]* that is smaller than *smallestStick*, which if there are any positive integer values left in our array, they will be larger than *smallestStick* because *smallestStick* was just set to **Infinity** in the previous step, we'll then update *smallestStick* to the value of *arr[ii]*.
+
+That was a loooong sentence, maybe it'll be more simple to just show you the code:
+```
+function cutTheSticks(arr) {
+  let numberOfSticks = [arr.length];
+  let smallestStick = Infinity;
+  let remainingSticks = [];
+  for (let i = 0; i < arr.length; i++) {
+    smallestStick = Infinity;
+
+    for (let ii = 0; ii < arr.length; ii++) {
+      if (arr[ii] < smallestStick && arr[ii] > 0) {
+        smallestStick = arr[ii]
+      }
+    }
+  }
+}
+```
+19:11 -- Now, we're going to need a third loop. Our final loop will iterate through our array, subtracting the value of *smallestStick* from each of our array items.
+
+Then, if a given array item's value is larger than 0, we'll push that array item to *remainingSticks*.
+
+After breaking out of our final loop, we have a conditional statement that says,
+> if the length of our *remainingSticks* array is greater than 0, we'll push the length of *remainingSticks* to *numberofSticks*, update the value of *remainingSticks* to an empty array (and then continue through our various loops once again).
+
+Otherwise, we'll return *numberOfSticks* as our solution to this algorithm!
+
+```
+function cutTheSticks(arr) {
+  let numberOfSticks = [arr.length];
+  let smallestStick = Infinity;
+  let remainingSticks = [];
+  for (let i = 0; i < arr.length; i++) {
+    smallestStick = Infinity;
+
+    for (let ii = 0; ii < arr.length; ii++) {
+      if (arr[ii] < smallestStick && arr[ii] > 0) {
+        smallestStick = arr[ii]
+      }
+    }
+  for (let j = 0; j < arr.length; j++) {
+    arr[j]-= smallestStick
+    if (arr[j] > 0) {
+      remainingSticks.push(arr[j])
+    } 
+  }
+    if (remainingSticks.length > 0) {
+    numberOfSticks.push(remainingSticks.length)
+    }
+    else {
+      return (numberOfSticks)
+    }
+        remainingSticks = []
+  }
+}
+```
+19:24 -- If you were reading carefully, you may have noticed that my solution to the algorithm evolved as I was explaining it.
+
+My algorithm is now more efficient because I changed some of the logic at the end. After our final loop my code is now written as:
+```
+    if (remainingSticks.length > 0) {
+    numberOfSticks.push(remainingSticks.length)
+    }
+    else {
+      return (numberOfSticks)
+    }
+        remainingSticks = []
+  }
+}
+```
+This is significantly more efficient than the code I'd written before because now when we no longer have sticks remaining we can simply return *numberOfSticks* as our solution and break out of our function.
+
+This has the potential to save countless unnecessary iterations of our array and greatly improves the performance of our function when it is called!
+
+19:29 -- I just finished commiting the 'Cut the sticks' algorithm solution to [my HackerRank GitHub repo](https://github.com/camchardukian/hackerrank-algorithms).
+
+19:31 -- I now have 371 points on HackerRank which is good enough for a global rank of 220,809.
+
+19:32 -- During my next coding session, I'll work on the [Jumping on the Clouds](https://www.hackerrank.com/challenges/jumping-on-the-clouds/problem) algorithm.
+
+19:34 -- Let's commit this journal entry to GitHub, stretch, and give my eyes a little well-deserved rest!
+
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in June 2019**: 
