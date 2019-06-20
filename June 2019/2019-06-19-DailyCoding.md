@@ -652,11 +652,101 @@ return jumpCount
 Nice work!
 
 21:43 -- Almost hit 6 hours of coding... Going to take a break now. In my final coding session later tonight, I'll work to solve the [Minimum Distances](https://www.hackerrank.com/challenges/minimum-distances/problem) algorithm.
+___
+22:39 -- One. More. Coding. Session. I. Can. Do. It.
 
+22:40 -- I'm working on the 'Minimum Distances' algorithm now. It seems pretty simple. We're given an array of integers and our job is to find any matching pair of integers (for example, 3 & 3 or 11 & 11).
+
+If there are multiple pairs of matching integers, we return the distance between the matching pair that is closest together.
+
+If there is only one pair of matching integers, we simply return the distance between the pair.
+
+If there are no pairs of matching integers, we just return -1.
+
+22:43 -- I don't expect this algorithm to take more than 10-15 minutes to solve. But who knows, maybe I'll jinx my progress by predicting it ;)
+
+In any case, I'll solve the algorithm, document my progress, and explain my solution afterwards.
+
+22:46 -- Initial setup:
+```
+function minimumDistances(a) {
+
+}
+```
+22:53 -- Feeling a little confused now...
+```
+function minimumDistances(a) {
+
+for (let i = 0; i < a.length; i++) {
+  for (let ii = 0; a[ii] !== a[i] && ii < a.length; ii++) {
+    console.log(`a[i] is: ${a[i]} and a[ii] is: ${a[ii]}`)
+  }
+}
+}
+```
+23:03 -- Straightening things out...
+```
+function minimumDistances(a) {
+
+for (let i = 0; i < a.length; i++) {
+  for (let ii = i+1; [ii] < a.length+1 ; ii++) {
+    if (a[i] === a[ii]) {
+      console.log("pair")
+    }
+  }
+}
+}
+```
+23:05 -- My *pairsArray* has the pairs I need, but now I have to loop through my *pairsArray* and do some subtracting...
+```
+function minimumDistances(a) {
+let pairsArray = [];
+
+for (let i = 0; i < a.length; i++) {
+  for (let ii = i+1; [ii] < a.length+1 ; ii++) {
+    if (a[i] === a[ii]) {
+      pairsArray.push([i, ii])
+    }
+  }
+}
+console.log(pairsArray)
+}
+```
+23:17 -- Man I really did jinx things lol. This one looked simply but took me quite a bit longer than I expected. On the bright side, I'm finished now. Here's my solution for this algorithm:
+```
+function minimumDistances(a) {
+let pairsArray = [];
+let minimumDistance = Infinity;
+let result;
+
+for (let i = 0; i < a.length; i++) {
+  for (let ii = i+1; [ii] < a.length+1 ; ii++) {
+    if (a[i] === a[ii]) {
+      pairsArray.push([i, ii])
+    }
+  }
+}
+if (pairsArray) {
+for (let i = 0; i < pairsArray.length; i++) {
+  if ((pairsArray[i][1]) - pairsArray[i][0] < minimumDistance) {
+    minimumDistance = pairsArray[i][1] - pairsArray[i][0]
+  }
+}
+}
+minimumDistance < Infinity ? result = minimumDistance : result = -1
+
+return result
+}
+```
+23:18 -- I'm well over my daily challenge of 6 hours of daily coding already. That along with feeling pretty burnt and my wrists starting to get sore means it's time to call it a day!
+
+I'll explain this algorithm's solution tomorrow.
+
+For now, I'm going to tally up my coding hours, commit this journal entry to GitHub, and then record a video for the [Daily Developer show](https://www.youtube.com/channel/UCRUPCpCWCL6Mr-0QWNje29Q).
 
 ___
-**Total time spent coding today**: 
+**Total time spent coding today**: 6 hours 30 minutes
 
-**Total time spent coding thus far in June 2019**: 
+**Total time spent coding thus far in June 2019**: 44 hours 52 minutes
 
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**: 616 hours 35 minutes
