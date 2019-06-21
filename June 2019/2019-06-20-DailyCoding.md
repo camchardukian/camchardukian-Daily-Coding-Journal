@@ -501,6 +501,87 @@ if (wrappers >= m) {
 ```
 My brother just brought dinner over so I'll work on passing the other test cases after dinner.
 ___
+21:09 -- I'm back. Let's try to refactor our code so that we can pass all of the test cases.
+
+21:14 -- The test cases aren't very useful because there are so many situations (~100), it would be basically impossible to go through all of them one by one to see what went wrong.
+
+From the 4-5 scenarios I've tried out of the failing test cases, my code output exactly what it needed to. That's why I'm feeling confused about what is wrong.
+
+21:30 -- It was a lot of work, but I finally found a solution that passes every test case. Here it is:
+```
+function chocolateFeast(n, c, m) {
+  let chocolateBars = 0;
+  let wrappers = Math.floor(n/c);
+for (let i = n; i >= 0; i-= c) {
+  if (i != n) {
+  chocolateBars+=1
+  }
+}
+
+for (let i = wrappers; wrappers >= m; i -= m) {
+if (wrappers >= m) {
+  chocolateBars+=1
+  wrappers-= m;
+  wrappers+=1
+}
+ }
+ return (chocolateBars)
+}
+```
+21:31 -- Let's go over everything. First, we have a function *chocolateFeast* that has three parameters: *n*: an integer representing the amount of money Bobby is starting with, *c*: an integer representing the cost of a chocolate bar, and *m*: an integer representing the number of wrappers Bobby can turn in for a free chocolate bar.
+
+Our job is to figure out how many chocolate bars Bobby can get.
+
+Note that we're making a few assumptions. The first assumption is that Bobby will use all of his money. The second assumption is that Bobby will immediately turn in his wrappers for a free bar of chocolate if he has enough wrappers.
+
+With that being the case, let's look at our problem's basic setup:
+```
+function chocolateFeast(n, c, m) {
+
+}
+```
+21:34 -- I've also defined a few additional variables: *chocolateBars* and *wrappers*, both of which are initialized to the result of Math.floor(n/c).
+
+In other words, we're initializing those two variables to the value of our money divided by the cost of a chocolate bar, and we're taking that result and rounding it down to the nearest integer.
+```
+function chocolateFeast(n, c, m) {
+  let chocolateBars = Math.floor(n/c);
+  let wrappers = Math.floor(n/c);
+```
+21:41 -- Next, we're going to use a for loop. Our for loop has a variable *i* which is initialized to the value of *wrappers*.
+
+Our for loop will continue running for as long as *wrappers* is greater than or equal to *m* (the number of wrappers Bobby need to exchange for a free chocolate.) Finally, we're decrementing *i* by *m*.
+
+Now that we've finished talking about the three expressions governing this for loop, let's talk about the contents within the loop. Everytime our loop runs, we increment *chocolateBars* by one, and decrement *wrappers* by *m*.
+
+This is because our wrappers should decrease everytime we successfully exchange them for a chocolate bar, and our number of chocolate bars should increase by one everytime we make a successful exchange.
+
+After we finish decrementing *wrappers*, we'll then increment *wrappers* by one because after getting a free chocolate bar we can eat the chocolate bar and have an additional wrapper to trade in.
+
+Finally, after we eventually break out of this loop, we'll return *chocolateBars* as our solution to this algorithm!
+```
+function chocolateFeast(n, c, m) {
+    let chocolateBars = Math.floor(n / c);
+    let wrappers = Math.floor(n / c);
+
+    for (let i = wrappers; wrappers >= m; i -= m) {
+        chocolateBars += 1
+        wrappers -= m;
+        wrappers += 1
+    }
+    return (chocolateBars)
+}
+```
+We did it!
+
+21:54 -- If you were paying attention, you probably noticed that while explaining my solution to the 'Chocolate Feast' algorithm that I found many ways to refactor my code.
+
+That's why I love teaching others and explaining coding concepts to others -- doing so also help you yourself internalize the various concepts.
+
+21:56 -- Anyway, I now have 466 points which is good enough for a rank of 178,222 on HackerRank's global leaderboard for algorithms and data structures.
+
+22:03 -- I was reading and seeing what I was going to be working with during my next coding session. When I come back, I'll work on the [Beautiful Triplets](https://www.hackerrank.com/challenges/beautiful-triplets/problem) algorithm.
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in June 2019**: 
