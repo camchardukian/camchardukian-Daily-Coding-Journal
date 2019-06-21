@@ -66,6 +66,77 @@ Thanks for following along. I hope you found my instructions useful! :D
 
 14:14 -- In any case, I now have 501 points which is good enough for a rank of 164,532 on HackerRank's global algorithm leaderboard.
 ___
+14:37 -- Just got back from a quick break talking with my parents and walking around the house to get the blood flowing. Now, let's try to solve that Diagonal Difference algorithm once and for all!
+
+14:40 -- Just spent the last few minutes making some sketches to remember exactly what this algorithm was asking. Now, I'll try to write some code and see if I can solve it.
+
+14:45 -- Basic setup:
+```
+function diagonalDifference(arr) {
+let primary = 0
+let secondary = 0;
+
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i])
+ }
+}
+```
+14:54 -- Still working...
+```
+function diagonalDifference(arr) {
+let primary = 0
+let secondary = 0;
+let squareRoot = Math.sqrt(arr.length)
+for (let i = 0; i < arr.length; i+=(squareRoot+1)) {
+  primary+=arr[i]
+ }
+
+ for (let i = squareRoot-1; i < arr.length -1; i+=(squareRoot-1)) {
+secondary+=arr[i]
+ }
+ console.log(`primary is ${primary} and secondary is ${secondary}`)
+}
+```
+15:01 -- My solution appears to work in repl.it, but things are buggy thus far on HackerRank:
+```
+function diagonalDifference(arr) {
+let primary = 0
+let secondary = 0;
+let squareRoot = Math.sqrt(arr.length)
+for (let i = 0; i < arr.length; i+=(squareRoot+1)) {
+  primary+=arr[i]
+ }
+
+ for (let i = squareRoot-1; i < arr.length -1; i+=(squareRoot-1)) {
+secondary+=arr[i]
+ }
+
+ return Math.abs(primary-secondary)
+}
+```
+15:19 -- *Sigh* it looks like where I've been going wrong is that this problem says that function *diagonalDifference* has a parameter *arr* which takes in an array of integers, but this "array" is actually a 2-d array.
+
+15:21 -- Back to the drawing board, it's like we're basically having to go solve a whole different algorithm.
+
+15:32 -- I'm so over this problem. On my own I created a working solution:
+```
+function diagonalDifference(arr) {
+let primary = 0;
+let secondary = 0;
+let result;
+for (let i = 0; i < arr.length; i++) {
+  primary+=arr[i][i]
+}
+for (let i = 0; i < arr.length; i++) {
+  secondary+= arr[i][arr.length-i-1]
+}
+return Math.abs(primary-secondary)
+}
+```
+I must have failed too many times along the way, however, because depite successfully passing all of this problem's user tests and having a 10 points submission, no points actually got credited to my account.
+
+15:34 -- I need to take a break. I'm about to go Hulk rage mode lol.
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in June 2019**: 
