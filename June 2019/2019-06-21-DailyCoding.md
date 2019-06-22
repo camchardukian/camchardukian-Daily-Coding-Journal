@@ -361,8 +361,56 @@ Keep putting the time in everyday, and gradually over time things will begin to 
 
 21:09 -- During my next coding session, I'll solve the Kangaroo algorithm.
 ___
-**Total time spent coding today**: 
+23:35 -- I'm back. Just ate a few apples, got a haircut, and spent some time talking with my dad. Now it's time for 25+ minutes of coding so that we can hit 6+ hours of productive work today.
 
-**Total time spent coding thus far in June 2019**: 
+23:36 -- I'm working on the [Kangaroo](https://www.hackerrank.com/challenges/kangaroo/problem) algorithm on HackerRank.
 
-**Total lifetime hours of coding**: 
+23:37 -- It looks like we have two kangaroos, and our job is to determine will the two kangaroos ever land in the same position after taking the same number of jumps.
+
+23:39 -- Logically, my initial thought is that we can take the kangaroo with a larger jump distance, and when that kangaroo is further along, we know to terminate our loop and print "NO" (because if one kangaroo is already behind AND it's slower, it will never catch up).
+
+If the "fast" kangaroo, and the "slow" kangaroo are ever in the same position, however, we can check if they've taken the same number of jumps. If so, we'll print "YES" to the console.
+
+If not, we'll print "NO".
+
+So far, I've yet to identify a problem with my logic. But, I'll try to implement my solution now, and see if any issues come up.
+
+23:46 -- Initial setup:
+```
+function kangaroo(x1, v1, x2, v2) {
+
+}
+```
+23:57 -- Here's my current code:
+```
+function kangaroo(x1, v1, x2, v2) {
+if (v1 > v2) {
+  while (x1 < x2) {
+    x1+= v1;
+    x2+= v2;
+    if (x1 === x2) {
+    return "YES1"
+    }
+  }
+}
+  else if (v1 < v2) {
+    while (x1 > x2) {
+      x1+= v1;
+      x2+= v2;
+      if (x1 === x2) {
+        return "YES2"
+      }
+    }
+  }
+  return "NO"
+}
+```
+It passed 17/30 of the user tests. I couldn't figure out why it didn't pass all the tests. Then, I realized I forgot to change return "YES1" and "YES2" to a simple yes lol.
+
+23:59 -- In any case, the algorithm is solved, and I'll see you in tomorrow's daily coding journal entry!
+___
+**Total time spent coding today**: 3 hours 39 minutes
+
+**Total time spent coding thus far in June 2019**: 54 hours 51 minutes
+
+**Total lifetime hours of coding**: 626 hours 34 minutes
