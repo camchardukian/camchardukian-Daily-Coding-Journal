@@ -201,6 +201,71 @@ At the very least, I've learned a lesson and if in the future my code isn't work
 
 16:21 -- It looks a little bit challenging, but during my next coding session I'll try to solve the 'Equalize the Array' algorithm.
 ___
+18:44 -- Ate a few apples and took a long late afternoon nap. Now it's time to work.
+
+18:47 -- For this problem, we have an array, and we need to count the minimum number of deletions it would take for us to modify our array to contain items of only a single value. In other words, we'd like to go from:
+> [0, 2, 4, 4, 5] --> [4, 4]
+
+I'm wondering if all we need to do, is simply find the number in the array that occurs most often, and simply take the length of our array minus the number of times our most frequently appearing item occured...
+
+16:56 -- Some progress...
+```
+function equalizeArray(arr) {
+let currentFrequency = 0;
+let greatestFrequency = [0, 0];
+
+for (let i = 0; i < arr.length; i++) {
+  for (let ii = i + 1; ii < arr.length; ii++) {
+    console.log()
+  }
+ }
+}
+```
+19:06 -- Still chugging along:
+```
+function equalizeArray(arr) {
+let currentFrequency = 1;
+let mostFrequentNumber;
+let highestOccurenceCount = 1;
+
+for (let i = 0; i < arr.length; i++) {
+  currentFrequency = 1
+  for (let ii = i + 1; ii < arr.length; ii++) {
+    console.log(`arr[i] is: ${arr[i]} and arr[ii] is: ${arr[ii]}`)
+    if (arr[i] === arr[ii]) {
+      currentFrequency+=1
+    }
+  }
+  if (currentFrequency > highestOccurenceCount) {
+    highestOccurenceCount = currentFrequency;
+    mostFrequentNumber = arr[i]
+  }
+}
+  console.log(`most frequent number is ${mostFrequentNumber} and highest occurence count is ${highestOccurenceCount}`)
+}
+```
+19:09 -- I solved the algorithm! Here's my final solution:
+```
+function equalizeArray(arr) {
+let currentFrequency = 1;
+let highestOccurenceCount = 1;
+
+for (let i = 0; i < arr.length; i++) {
+  currentFrequency = 1
+  for (let ii = i + 1; ii < arr.length; ii++) {
+    if (arr[i] === arr[ii]) {
+      currentFrequency+=1
+    }
+  }
+  if (currentFrequency > highestOccurenceCount) {
+    highestOccurenceCount = currentFrequency;
+  }
+}
+  return (arr.length - highestOccurenceCount)
+}
+```
+19:10 -- I'm feeling a bit mentally drained right now. I'm going to go eat dinner (or just make a green smoothie haha), and then I'll explain this algorithm's solution when I return.
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in June 2019**: 
