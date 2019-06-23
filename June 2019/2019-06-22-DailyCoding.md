@@ -113,9 +113,13 @@ if (v1 > v2) {
 21:08 -- Man I'm feeling exhausted now. I'm going to take a break. I'm not sure if I'll get more coding in tonight or if I'm just going to try to get to bed early. 
 
 At least we've stopped things from going completely off-course, however, and can head into tomorrow (or our next coding session) with positive momentum.
+
 ___
-**Total time spent coding today**: 
 
-**Total time spent coding thus far in June 2019**: 
+UPDATE: Didn't end up getting any additional coding time in.
+___
+**Total time spent coding today**: 40 minutes
 
-**Total lifetime hours of coding**: 
+**Total time spent coding thus far in June 2019**: 55 hours 32 minutes
+
+**Total lifetime hours of coding**: 627 hours 15 minutes
