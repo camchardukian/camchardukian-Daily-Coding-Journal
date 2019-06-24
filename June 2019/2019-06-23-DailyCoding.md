@@ -207,10 +207,12 @@ return ((numberOfFullReps*initialLowerCaseACount) + remainderACount)
 Anyway, I now have 551 points which is good enough for a global rank of 148,201 on HackerRank's algorithm leaderboard.
 
 18:25 -- During my next coding session, I'll focus on solving the [HackerRank in a String](https://www.hackerrank.com/challenges/hackerrank-in-a-string/problem) algorithm.
-
 ___
-**Total time spent coding today**: 
 
-**Total time spent coding thus far in June 2019**: 
+UPDATE: I ended up spending the rest of the evening finishing my resume.
+___
+**Total time spent coding today**: 2 hours 5 minutes
 
-**Total lifetime hours of coding**: 
+**Total time spent coding thus far in June 2019**: 57 hours 36 minutes
+
+**Total lifetime hours of coding**: 629 hours 19 minutes
