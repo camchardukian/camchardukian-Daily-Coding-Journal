@@ -250,6 +250,74 @@ return (specialProblems)
 13:00 -- I now have 596 points which is good enough for a rank of 135,871 on HackerRank's global algorithm leaderboard.
 
 13:01 -- During the next coding session, I'll work on solving the [Fair Rations](https://www.hackerrank.com/challenges/fair-rations/problem) algorithm.
+___
+17:47 -- I got some exercise. That's good. I also caught up on sleep that I allowed myself to fall behind on yesterday. Also good. I've been doing a good job since 11:15 today. 
+
+Let's keep the momentum going. 1 hour at a time.
+
+17:49 -- For the 'Fair Rations' algorithm, it looks like we're the ruler of some kingdom and we need to distribute bread.
+
+Some of our subjects already have some loaves of bread, and because food is scarce, we need to distribute as few loaves as possible.
+
+However, anytime we give someone a loaf of bread, subject *i* for example, we must also give a loaf of bread to the person immediately in front of or behind them (i+1 or i-1).
+
+Our goal is make sure each subject has an even number of loaves of bread (Note: When we say even number of loaves we don't mean equivalent number of loaves, we're referring to even numbers, AKA not odd numbers).
+
+If we can achieve the above, our function should return the minimum number of loaves necessary to meet the above conditions. 
+
+If we cannot ensure every citizen has an even number of loaves, our function should return the string "NO".
+
+17:58 -- Now that we've defined the problem, I'm going to start working on a solution. I'll update you as I progress, and then after I solve this algorithm we'll go over everything in more detail.
+
+18:01 -- Here's our basic setup:
+```
+function fairRations(B) {
+
+}
+```
+18:09 -- Here's some pseudocode I wrote to try to start thinking about the answer to this problem:
+```
+// Starting from the front of the array, skip over any numbers that are even.
+
+// When we encounter an array item that has an odd value, increment that array item by 1, and increment loavesDistributed by 1.
+
+// Then, increment the following item by 1, and increment loavesDistributed by 1 again. Repeat the process, until all items are even. Then return the number of loaves we had to give out.
+
+// If we get to the end of the array and all items are not even, return "NO".
+```
+18:18 -- Almost finished...
+```
+function fairRations(B) {
+  let loavesDistributed = 0;
+for (let i = 0; i < B.length - 1; i++) {
+  if (B[i] % 2 === 1) {
+    B[i]+=1;
+    B[i+1]+=1;
+  loavesDistributed+=2
+  }
+ }
+}
+```
+18:22 -- My solution passed all of HackerRank's tests! Here's my final solution:
+```
+function fairRations(B) {
+  let loavesDistributed = 0;
+for (let i = 0; i < B.length - 1; i++) {
+  if (B[i] % 2 === 1) {
+    B[i]+=1;
+    B[i+1]+=1;
+  loavesDistributed+=2
+  }
+ }
+if ((B[B.length-1]) % 2 === 0) {
+ return (loavesDistributed)
+ }
+else {
+  return "NO"
+ }
+}
+```
+18:23 -- I'm going to go get a little more exercise (juggling a soccer ball outside), then I'll explain the above solution to you!
 
 ___
 **Total time spent coding today**: 
