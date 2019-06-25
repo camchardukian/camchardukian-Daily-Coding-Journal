@@ -109,11 +109,13 @@ Keep practicing, and you'll slowly internalize different concepts. Given enough 
 17:25 -- I now have 571 points which is good enough for a rank of 142,407 on HackerRank's global leaderboard.
 
 17:27 -- During my next coding session I'll solve the "[Lisa's Workbook](https://www.hackerrank.com/challenges/lisa-workbook/problem)" algorithm.
+___
+UPDATE: After my last coding session, I ended up having dinner, spending a couple hours showing my parents some pictures of my travels and life abroad, and then unfortunately I wasted a few hours.
 
 
 ___
-**Total time spent coding today**: 
+**Total time spent coding today**: 58 minutes
 
-**Total time spent coding thus far in June 2019**: 
+**Total time spent coding thus far in June 2019**: 58 hours 33 minutes
 
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**: 630 hours 16 minutes
