@@ -148,6 +148,80 @@ I now have 666 points which is good enough for a rank of 119,836 on HackerRank's
 
 11:08 -- During my next coding session I'll attempt to solve HackerRank's [Library Fine algorithm](https://www.hackerrank.com/challenges/library-fine/problem).
 ___
+18:11 -- Got some exercise in, did a few hours of work on a personal obligation, got a few hours of sleep in, and now we're here!
+
+18:13 -- Let's start working on the algorithm!
+
+18:14 -- It looks like we have a local library that wants us to build an application that calculates the fee (if any is applicable) to books that are returned after their expected return date.
+
+We have a function *libraryFine* that has several parameters:
+* *d1*, *m1*, *y1*: Integers representing the day, month, and year on which the book was returned.
+* *d2*, *m2*, *y2*: Integers representing the day, month, and year on which the book was *supposed* to be returned by.
+
+To see full details on how this algorithm wants us to calculate fines, please [see its page on HackerRank](https://www.hackerrank.com/challenges/library-fine/problem).
+
+Otherwise, here are the basic elements to keep in mind:
+
+1. If the book is returned on or before the expected return date, no fine will be charged (fine = 0)
+
+1. If the book is returned after the expected return day but still within the same calendar month and year as the expected return date (fine = 15 Hackos x number of days late)
+
+1. If the book is returned after the expected return month but still within the same calendar year as the expected return date, (fine = 500 Hackos x number of months late)
+
+1. If the book is returned after the calendar year in which it was expected, there is a fixed fine of
+(fine = 10000 Hackos)
+
+18:24 -- I'm going to solve this problem, documenting my progress along the way. When I reach a final solution, we'll then go over everything together.
+
+18:26 -- Basic problem setup:
+```
+function libraryFine(d1, m1, y1, d2, m2, y2) {
+
+}
+```
+18:33 -- My function now knows to assess a fine of 10,000 if the book is returned at any point after the year in which it was due:
+```
+function libraryFine(d1, m1, y1, d2, m2, y2) {
+let fine;
+
+if (y1 > y2) {
+  fine = 10000;
+  return fine;
+}
+console.log("not yet able to calculate fine for said dates")
+}
+```
+18:43 -- I did it! Here's my final working solution:
+```
+function libraryFine(d1, m1, y1, d2, m2, y2) {
+let fine;
+
+if (y1 > y2) {
+  fine = 10000;
+  return fine;
+}
+if (y1 === y2) {
+if (m1 > m2) {
+  fine = (m1-m2)*500
+  return fine
+    }
+
+ else if (m1 === m2) {
+  if (d1 > d2) {
+    fine = (d1-d2)*15
+    return fine
+   }
+  }
+ }
+
+fine = 0
+return fine
+}
+```
+18:44 -- The only thing that tripped me up for a minute about this problem was that I initially forgot to consider the possibility that our return date may be in the year prior to our due date.
+
+Once I accounted for that possibility, however, everything was smooth sailing. I'll explain my solution to you during my next coding session!
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in June 2019**: 
