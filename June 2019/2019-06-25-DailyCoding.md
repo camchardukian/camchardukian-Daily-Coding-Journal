@@ -375,7 +375,109 @@ else {
 19:50 -- I now have 621 points which is good enough for a rank of 129,717 on HackerRank's global leaderboard!
 
 19:51 -- During my next coding session, I'll focus on solving the [Lonely Integer](https://www.hackerrank.com/challenges/lonely-integer/problem) algorithm.
+___
+20:37 -- Made a green smoothie, and did some walking plus 20 or pushups to keep my body fresh. Now, it's time to solve the next algorithm.
 
+20:38 -- This algorithm seems pretty simple. We have an array of integers, with each integer except one occuring twice. Our job is to find, and print (or return) the unique element (the one that is never repeated) in the array.
+
+I'll solve the problem, documenting my progress along the way. We'll go over this algorithm's solution together once I reach it! :D
+
+20:42 -- Basic problem setup:
+```
+function lonelyinteger(a) {
+
+ }
+```
+20:50 -- I think I need to change things up a bit. Nonetheless, here's what I've put together thus far:
+```
+function lonelyinteger(a) {
+  let currentValue;
+for (let i = 0; i < a.length; i++) {
+  currentValue = a[i];
+  a.shift();
+  console.log(`currentValue is ${currentValue} and our array is ${a}`)
+ }
+}
+```
+20:59 -- Getting closer ...
+```
+function lonelyinteger(a) {
+  let currentValue;
+  let shiftedArray = [];
+while (a.length > 2) {
+  currentValue = a[0];
+  shiftedArray.push(a.shift());
+  if (a.indexOf(currentValue) != -1) {
+    console.log("not lonely")
+  }
+  else {
+    console.log("LONELLLY!")
+  }
+console.log(shiftedArray)
+ }
+}
+```
+21:29 -- I'm still typing away. My current solution passed 3/9 user tests:
+```
+function lonelyinteger(a) {
+  let currentValue;
+  let lonelyChecker = true;
+  let shiftedArray = ['hi'];
+while (a.length > 0) {
+  currentValue = a[0];
+  if (shiftedArray.indexOf(currentValue) !== -1) {
+
+  }
+  else {
+    lonelyChecker = true
+    for (let i = 0; i < a.length; i++) {
+      if (lonelyChecker === true) {
+      if (a[i] === a[i+1]) {
+        lonelyChecker = false
+      }
+      }
+    }
+    if (lonelyChecker === true) {
+      return a[0]
+    }
+  }
+    shiftedArray.push(a.shift());
+ }
+}
+```
+21:44 -- I finally solved this algorithm! It seems that before I had the small oversight of evaluating whether a[i] was equivalent to a[i+1]. This resulted in me repeatedly making different comparisons, rather than comparing our single potential lonely integer with all of the other items remaining in our array *a*.
+
+Once I changed the if statement to evaluate whether currentValue was equivalent to a[i+1], my solution was instantly accepted! :D
+
+Here's my final solution:
+```
+function lonelyinteger(a) {
+  let currentValue;
+  let lonelyChecker = true;
+  let shiftedArray = [ ];
+while (a.length > 0) {
+  currentValue = a[0];
+  if (shiftedArray.indexOf(currentValue) !== -1) {
+  }
+  else {
+    lonelyChecker = true
+    for (let i = 0; i < a.length; i++) {
+      if (lonelyChecker === true) {
+      if (currentValue === a[i+1]) {
+        lonelyChecker = false
+      }
+  
+      }
+    }
+    if (lonelyChecker === true) {
+      return a[0]
+    }
+  }
+    shiftedArray.push(a.shift());
+ }
+}
+```
+21:46 -- I must be honest now, this has been a long coding session. I'm feeling a bit burnt out by this problem at this point. For that reason, I'm going to take a break, and then explain everything in my final coding session of the day later.
 ___
 **Total time spent coding today**: 
 
