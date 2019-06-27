@@ -343,8 +343,110 @@ return fine
 
 21:44 -- During my next coding session, I'll try to solve the [Picking Numbers](https://www.hackerrank.com/challenges/picking-numbers/problem) algorithm on HackerRank.
 ___
-**Total time spent coding today**: 
+23:14 -- Last coding session of the day!
 
-**Total time spent coding thus far in June 2019**: 
+23:15 -- I'll go straight into solving the problem and explain everything later.
 
-**Total lifetime hours of coding**: 
+23:17 -- Here's our basic setup:
+```
+function pickingNumbers(a) {
+
+}
+```
+23:24 -- A little bit of progress:
+```
+function pickingNumbers(a) {
+  let firstArray = [];
+for (let i = 0; i < a.length; i++) {
+  if (Math.abs(a[0] - a[i+1]) <= 1) {
+    console.log(`success with ${a[0]} and ${a[i+1]}`)
+  }
+ }
+}
+```
+23:33 -- I thought I'd solved the problem with the following solution:
+```
+function pickingNumbers(a) {
+  let firstArray = [];
+  let counter = 0;
+  let result = 0
+for (let i = 0; i < a.length; i++) {
+  counter = 0
+  for (let ii = 0; ii < a.length; ii++) {
+  if (Math.abs(a[i] - a[ii]) <= 1) {
+    counter+=1
+  }
+  }
+if (counter > result) {
+ result = counter
+}
+}
+return result
+}
+```
+Nope. It seems I forgot to account for the fact that we should not be comparing a number to itself when we use our nested for loop.
+
+23:37 -- My new solution passed slightly more of the user tests, but more refactoring is still necessary:
+```
+function pickingNumbers(a) {
+  let counter = 0;
+  let result = 0
+for (let i = 0; i < a.length; i++) {
+  counter = 0
+  for (let ii = 0; ii < a.length; ii++) {
+    if (ii !== i) {
+      console.log(i, ii)
+  if (Math.abs(a[i] - a[ii]) <= 1) {
+    counter+=1
+  }
+    }
+  }
+if (counter > result) {
+ result = counter
+}
+}
+return result
+}
+```
+23:43 -- I guess the issue is that I've only been checking the absolute value of a[i] and a[ii]. This is a only a single comparison when in reality we need to make comparisons with the entire group.
+
+23:59 -- Solution passed all but one test case:
+```
+function pickingNumbers(a) {
+  let result = 0;
+  let testArray = [];
+  let groupAbsolChecker = true
+for (let i = 0; i < a.length; i++) {
+  testArray = []
+  for (let ii = 0; ii < a.length; ii++) {
+    if (ii !== i) {
+  if (Math.abs(a[i] - a[ii]) <= 1) {
+    if (testArray.length > 0) {
+      groupAbsolChecker = true
+      for (let j = 0; j < testArray.length && groupAbsolChecker === true; j++) {
+        if (Math.abs(testArray[j] - a[ii]) > 1 ) {
+          groupAbsolChecker = false
+        }
+      }
+    }
+    else {
+      testArray.push(a[ii])
+    }
+        if (groupAbsolChecker === true) {testArray.push(a[ii])}
+  }
+    }
+  
+   }
+if (testArray.length > result) {
+ result = testArray.length
+   }
+ }
+return result
+}
+```
+___
+**Total time spent coding today**: 3 hours 43 minutes
+
+**Total time spent coding thus far in June 2019**: 66 hours 54 minutes
+
+**Total lifetime hours of coding**: 638 hours 36 minutes
