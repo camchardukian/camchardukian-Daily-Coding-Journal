@@ -53,6 +53,49 @@ It's late, I'm going to commit yesterday's entry and today's to GitHub before ca
 
 0:57 -- See you tomorrow!
 ___
+9:19 -- I got a little bit of sleep. Let's try to solve this problem now again.
+
+9:26 -- I'm going to try rebuilding everything from scratch for a different perspective:
+```
+function pickingNumbers(a) {
+for (let i = 0; i < a.length; i++) {
+  if (Math.abs(a[0] - a[i]) <= 1) {
+    console.log('less')
+  }
+  else {
+    console.log('more')
+  }
+ }
+}
+```
+9:33 -- Moving forward...
+```
+function pickingNumbers(a) {
+let longestArrayOfAbsols = [];
+let currentArray = []
+
+for (let i = 0; i < a.length; i++) {
+  currentArray = [];
+  for (let ii = 0; ii < a.length; ii++){
+      if (Math.abs(a[i] - a[ii]) <= 1) {
+        console.log(Math.abs(a[i] - a[ii]))
+        currentArray.push(a[ii])
+      }
+    }
+    console.log(currentArray)
+ }
+}
+```
+9:52 -- I don't know why, but I just can't seem to figure out this problem.
+
+10:01 -- I'm banging my head against the wall and not getting anything out of this algorithm anymore.
+
+10:02 -- I now have 698.5 points, which is good enough for a rank of 113,641 on HackerRank's global algorithm leaderboard.
+
+During my next coding session, I'll try to solve the [Alternating Characters](https://www.hackerrank.com/challenges/alternating-characters/problem) algorithm.
+
+For now, however, I'm going to take a break and try to let go of some of this frustration.
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in June 2019**: 
