@@ -188,8 +188,129 @@ In any case, I now have 718.5 points on HackerRank, which is good enough for a r
 A couple more algorithms and I'll be in the top 100,000! :D
 
 17:40 -- During my next coding session I'll work to solve the [Pangrams](https://www.hackerrank.com/challenges/pangrams/problem) algorithms.
+___
+21:57 -- I'm back. I just finished getting dinner with my family, exercising, and doing a bit of socializing. Now, it's time to work on the next algorithm.
 
+22:00 -- It seems we have a boy named Roy who wants to improve his typing speed. For that reason, he wants to practice typing pangrams (a single sentence which contains every letter of the alphabet).
 
+We have a function *pangrams* that has a single parameter *s*, which will take in a string.
+
+We need to evaluate whether the string *s* is a pangram -- ignoring cases (whether the letters are lower or uppercase).
+
+Here's our basic setup:
+```
+function pangrams(s) {
+
+}
+```
+22:14 -- Progress...
+```
+function pangrams(s) {
+  let inProgress = true;
+s = s.toLowerCase();
+const alphabet =
+  { 'a': 1,
+   'b': 2,
+   'c': 3,
+   'd': 4,
+   'e': 5,
+   'f': 6,
+   'g': 7,
+   'h': 8,
+   'i': 9,
+   'j': 10,
+   'k': 11,
+   'l': 12,
+   'm': 13,
+   'n': 14,
+   'o': 15,
+   'p': 16,
+   'q': 17,
+   'r': 18,
+   's': 19,
+   't': 20,
+   'u': 21,
+   'v': 22,
+   'w': 23,
+   'x': 24,
+   'y': 25,
+   'z': 26
+  }
+
+  while (inProgress === true) {
+for (let i = 0;)
+  }
+}
+```
+22:17 -- Just realized I switched the keys and values in my *alphabet* object. Bummer. Well, I deserve this for my laziness.
+
+I'll go look up the code to see the numbers for the different html-8 characters.
+
+Ahh... [ASCII](http://www.asciitable.com/). That's what I was thinking about.
+
+22:26 -- I'm wondering whether I need to remove the spaces from this string to loop over it more efficiently...
+```
+function pangrams(s) {
+  let inProgress = true;
+s = s.toLowerCase();
+
+for (let i = 0; i < s.length; i++) {
+console.log(`${s[i]}`.charCodeAt(0));
+  }
+ }
+```
+22:32 -- Getting close...
+```
+function pangrams(s) {
+  let inProgress = true;
+s = s.replace(/\s/g, "");
+s = s.toLowerCase();
+
+for (let i = 0; i < s.length; i++) {
+console.log(`${s[i]}`.charCodeAt(0));
+  }
+ }
+```
+22:49 -- Gotta clean up a little bit of stuff, but I'm almost finished.
+```
+function pangrams(s) {
+  let inProgress = true;
+  let result;
+s = s.replace(/\s/g, "").toLowerCase().split("");
+let testArray = s.map(s => s.charCodeAt(0))
+
+  for (let i = 97; i <= 122; i++) {
+    if (testArray.indexOf(i) > -1) {
+      console.log("true")
+    }
+    else {
+      result = "not a pangram"
+      return result
+    }
+  }
+result = 'mfanofdjnwon'
+ }
+```
+22:54 -- I've passed all the test cases! Here's my final solution:
+```
+function pangrams(s) {
+  let result = 'pangram';
+s = s.replace(/\s/g, "").toLowerCase().split("");
+let testArray = s.map(s => s.charCodeAt(0))
+
+  for (let i = 97; i <= 122; i++) {
+    if (testArray.indexOf(i) > -1) {
+
+    }
+    else {
+      result = "not pangram"
+      return result
+    }
+  }
+return result
+}
+```
+22:55 -- I need to take a break now. I'm going to stetch my body, maybe get a snack, and then I'll come back and explain my solution to you during my final coding session of the day! :D
 ___
 **Total time spent coding today**: 
 
