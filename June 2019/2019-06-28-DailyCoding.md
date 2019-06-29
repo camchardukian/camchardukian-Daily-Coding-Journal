@@ -251,8 +251,79 @@ Forcing yourself to rationalize the purpose for including each line of coding co
 
 See you then!
 ___
-**Total time spent coding today**: 
+21:57 -- Visited my sister's house for lunch which ended up being a 6-hour ordeal because of traffic lol. Also got some exercise and played basketball with my dad.
 
-**Total time spent coding thus far in June 2019**: 
+In another 1-1.5 hours my aunt will also be coming into town. Thus, today's been quite a busy day seeing everyone as long as I'm still in Wisconsin.
 
-**Total lifetime hours of coding**: 
+In any case, it's now time to solve the Mars Exploration algorithm!
+
+21:59 -- Sami's spaceship has crashed on Mars. She's trying to send 'SOS' messages to Earth.
+
+Unfortunately, some of the 'SOS' messages have gotten altered from cosmic radiation. We have a function *marsExploration*.
+
+Given the string *s*, our job is to evaluate how many characters got altered during the message transmission process.
+
+Here's our basic setup:
+```
+function marsExploration(s) {
+
+}
+```
+22:17 -- I'm tired and it seems my thinking is NOT clear right now.
+
+22:20 -- Getting close now...
+```
+function marsExploration(s) {
+let counter = 0;
+defaultString = '';
+while (defaultString.length < s.length) 
+{
+  defaultString = defaultString.concat('SOS')
+}
+
+for (let i = 0; i < s.length; i++) {
+  if (s[i] === defaultString[i]) {
+    console.log('match')
+  }
+  else {
+    console.log('off')
+  }
+ }
+}
+```
+22:31 -- My solution seems valid, but won't pass in HackerRank. Strangely enough, it passes two test user cases.
+
+23:07 -- Took a 20 minute nap, but then tried to solve this algorithm more. It's so frustrating that my algorithm produces the right answer, but HackerRank won't accept it or show me what's wrong with it.
+```
+function marsExploration(s) {
+let counter = 0;
+let defaultString = '';
+while (defaultString.length < s.length) 
+{
+  defaultString = defaultString.concat('SOS')
+}
+for (let i = 0; i < s.length; i++) {
+  if (s[i] !== defaultString[i]) {
+    counter+=1
+  }
+}
+return counter
+}
+```
+23:14 -- I've produced multiple working solutions using concat(), +=, etc. Now I'm going to try to change my while loop to a for loop to handle HackerRank's fickleness.
+
+23:18 -- It definitely looks like the issue is on HackerRank's side. I've tried two web browsers, four solutions of my own, and two of the solutions posted by others.
+
+Each time, the sample test cases all pass. However, submitting our code (for any of the 6 solutions I've tried) simply results in a perpetual loading state.
+
+23:35 -- I'm done with problem. It's too frustrating. I have roughly 20 solution attempts, and none of them have even been processed.
+
+23:42 -- Maybe tomorrow I'll try to solve the [Marc's Cakewalk](https://www.hackerrank.com/challenges/marcs-cakewalk/problem) algorithm. I just know that I've had my patience tested enough by HackerRank for one day lol.
+
+23:43 -- See you tomorrow!
+___
+**Total time spent coding today**: 3 hours 22 minutes
+
+**Total time spent coding thus far in June 2019**: 74 hours 26 minutes
+
+**Total lifetime hours of coding**: 646 hours 9 minutes
