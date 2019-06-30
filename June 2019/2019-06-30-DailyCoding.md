@@ -109,6 +109,86 @@ function marcsCakewalk(calorie) {
 
 8:16 -- Although it has a relatively low successful completion percentage (78%), during my next coding session I'll attempt to solve the [Save the Prisoner!](https://www.hackerrank.com/challenges/save-the-prisoner/problem) algorithm.
 ___
+16:38 -- Since the last journal entry I was able to get a couple hours of sleep in, go through my morning routine, and also head to the annual Armenian picnic in my hometown.
+
+With all of that out of the way, let's start working on solving the next algorithm!
+
+16:41 -- It looks like we're hanging out at a jail that has a number of prisoners. We're handing out candy to the prisoners in order from smallest to largest (1 to 4).
+
+If there are any additional candies remaining after prisoner #4 receives a candy, we'll repeat the process.
+
+Here's the catch... Sometimes prisoner #1 will not be the first person to receive candy.
+
+If the prison guard draws the number 3 out of his hat for example, prisoner #3 would be the first to draw candy.
+
+Oh, and one more thing. The last person to receive candy will receive a "fake" candy that tastes horrible.
+
+Our job is to determine which prisoner will receive the fake candy.
+
+To do so, we have a function *saveThePrisoner* to help us. This function has several parameters including:
+* *n*: an integer representing the number of prisoners.
+* *m*: an integer representing the number of candies.
+* *s*: an integer representing the chair number to begin passing sweets out at.
+
+Here's our basic setup:
+```
+function saveThePrisoner(n, m, s) {
+
+}
+```
+16:47 -- As usual, I'll work to solve this algorithm, documenting my progress along the way. After I reach a final solution, I'll walk you through how I reached my solution and aim to help you understand how a developer may think about solving this problem. :)
+
+Let's go!
+
+16:52 -- Here's some very basic conceptual thinking and pseduocode:
+```
+// Determine how many prisoners there are.
+
+// Figure out which prisoner we'll start handing our candy out at.
+
+// Loop through our list of prisoners decrementing our remainingCandies variable by one each time our loop runs.
+
+// Return our current prisoner as our solution to this algorithm.
+```
+16:57 -- One issue I'm having is that I'm not sure how I can iterate over my array of prisoners multiple times...
+
+I suppose I could just use an if statement to update the value of *i* if necessary.
+
+17:00 -- Here we go. Making progress:
+```
+function saveThePrisoner(n, m, s) {
+let remainingCandies = m;
+
+for (let i = 1; i <= n; i++) {
+  console.log(`I am the ${i} prisoner`)
+  if (i === 4) {
+  i = 0;
+  }
+ }
+}
+```
+17:15 -- I've created a solution that works for small numbers:
+```
+function saveThePrisoner(n, m, s) {
+let remainingCandies = m;
+
+for (let i = s; i <= n; i++) {
+remainingCandies -=1
+  if (remainingCandies === 0) {
+    return i
+  }
+  if (i === n) {
+  i = 0;
+  }
+ }
+}
+```
+17:16 -- Unfortunately, I'm having issues with some of the user tests on HackerRank that deal with larger numbers.
+
+Perhaps I need to think of some way to use the modulus operator to process things more efficiently.
+
+17:20 -- I'm going to take a break now and visit with my family before some of them return home.
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in June 2019**: 
