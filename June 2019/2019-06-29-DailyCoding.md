@@ -63,8 +63,12 @@ function marsExploration(s) {
 
 During my next coding session, I'll solve the [Marc's Cakewalk](https://www.hackerrank.com/challenges/marcs-cakewalk/problem) algorithm.
 ___
-**Total time spent coding today**: 
+23:34 -- It's been a super busy day. Lots of family time, working on another business project unrelated to coding (getting fairly close to completing it... I hope), and also spent some time talking with my old soccer coach and his family that I used to be close with.
 
-**Total time spent coding thus far in June 2019**: 
+23:35 -- In any case, I'll get to the Marc's Cakewalk algorithm tomorrow.
+___
+**Total time spent coding today**: 42 minutes
 
-**Total lifetime hours of coding**: 
+**Total time spent coding thus far in June 2019**: 75 hours 10 minutes
+
+**Total lifetime hours of coding**: 646 hours 53 minutes
