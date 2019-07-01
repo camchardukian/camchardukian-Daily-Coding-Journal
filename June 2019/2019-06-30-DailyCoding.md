@@ -188,6 +188,85 @@ remainingCandies -=1
 Perhaps I need to think of some way to use the modulus operator to process things more efficiently.
 
 17:20 -- I'm going to take a break now and visit with my family before some of them return home.
+
+21:06 -- Exercised for an hour and spent some time with family. Let's get back to coding now.
+
+21:13 -- I've produced a new solution now:
+```
+function saveThePrisoner(n, m, s) {
+let remainingCandies = m;
+
+for (let i = s; i <= n; i++) {
+  while (remainingCandies > n) {
+    remainingCandies -= n
+  }
+remainingCandies -=1
+  if (remainingCandies === 0) {
+    return i
+  }
+  if (i === n) {
+  i = 0;
+  }
+ }
+```
+This solution is efficient enough to individually solve one input of large numbers at a time.
+
+When there are 100+ sets of large numbers, however, it seems my current solution is still not efficient enough.
+
+It seems I need to increase my function's efficiency yet again to avoid anything timing out.
+
+21:23 -- Here's some rough pseudocode I wrote while trying to brainstorm a solution that requires less looping:
+```
+// 1    2     3    $4     5    6     7   8  9
+// number of prisoners = 9
+// current position = 4
+// remaining candies = 6
+
+// if s + remainingCandies is less than the length of our prisoners array, add that value to our current position.
+
+// If s + remainingCandies is MORE than the length of our prisoners array, take number of prisoners - current position, then take the result of that and do (math.abs(result - remainingCandies))
+```
+21:29 -- Halfway finished with implementing the new solution...
+```
+function saveThePrisoner(n, m, s) {
+let remainingCandies = m;
+while (remainingCandies > n) {
+    remainingCandies -= n
+  }
+console.log(`candy count is ${remainingCandies} and position is ${s}`)
+  if ((s + remainingCandies) < n) {
+    return s + remainingCandies
+  }
+}
+```
+Also, a mistake I made in my pseudocode was that we should be more concerned with the value of *n*. *n.length* is irrelevant as we're dealing with an integer and not an array of a specific length.
+
+21:50 -- I have now passed 5 of the 12 test cases with the following solution:
+```
+function saveThePrisoner(n, m, s) {
+    let remainingCandies = m;
+    while (remainingCandies > n) {
+        remainingCandies -= n
+    }
+    console.log(`candy count is ${remainingCandies} and position is ${s}`)
+
+    if (remainingCandies === 1) {
+        return s
+    }
+    if ((s + remainingCandies) <= n) {
+        return (s + remainingCandies) - 1
+    }
+    else if ((s + remainingCandies) > n) {
+        return Math.abs((n - s) - remainingCandies) - 1
+    }
+    else {
+        return "Error"
+    }
+}
+```
+21:55 -- I can't seem to figure out why things aren't working. I'm going to take a break. I think I'll be back for one more coding session later tonight.
+
+I haven't yet decided if I'll give it one more go or not yet. In any case, see you later...
 ___
 **Total time spent coding today**: 
 
