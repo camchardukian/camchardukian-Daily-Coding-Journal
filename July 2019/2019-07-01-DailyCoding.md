@@ -109,6 +109,36 @@ return (updatedString.length > 0 ? updatedString.join("") : 'Empty String');
 
 9:52 -- Oh well, I'll see you later!
 ___
+10:41 -- I'm back. Let's try to solve things again.
+
+10:59 -- I'm quite lost trying to figure out how I should be using the slice() method to solve this algorithm.
+```
+function superReducedString(s) {
+  let array = s.split("");
+for (let i = 0; i < s.length; i++) {
+  if (array[i] === array[i+1]) {
+array = array.slice(i, i+2)
+  }
+} 
+  console.log(array)
+}
+```
+11:13 -- I've finally solved the algorithm! Here's my final solution:
+```
+function superReducedString(s) {
+  let array = s.split("");
+  let b = 0
+for (let i = 0; i < array.length; i++) {
+  if (array[i] === array[i + 1]) {
+ array.splice(i, 2)
+ i = -1;
+  } 
+}
+return (array.length > 0? array.join(""): 'Empty String')
+}
+```
+11:14 -- During my next coding session I'll format my code a little bit more cleanly, and explain my solution to you.
+___
 **Total time spent coding today**: 
 
 **Total time spent coding in July 2019**: 
