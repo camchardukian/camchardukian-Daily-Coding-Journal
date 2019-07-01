@@ -268,8 +268,61 @@ function saveThePrisoner(n, m, s) {
 
 I haven't yet decided if I'll give it one more go or not yet. In any case, see you later...
 ___
-**Total time spent coding today**: 
+23:15 -- Let's give this algorithm one more go. This time, we'll try to handle things using the modulus operator.
 
-**Total time spent coding thus far in June 2019**: 
+23:32 -- Trying to create a different solution from scratch.
+```
+function saveThePrisoner(n, m, s) {
+let leftovers;
+let result;
+if (m === n) {
+  leftovers = 0
+}
+else if (m > n) {
+  leftovers = m % n
+}
+else {
+  leftovers = false;
+}
+if (leftovers === 0) {
+  s - 1 > 0? result = s - 1 : result = n
+console.log(result)
+}
+}
+```
+23:42 -- A little bit more progress. Just trying to wrap my head around everything...
+```
+function saveThePrisoner(n, m, s) {
+let leftovers;
+let result;
+if (m === n) {
+  leftovers = 0
+}
+else if (m > n) {
+  leftovers = m % n
+}
+else {
+  leftovers = false;
+}
+if (leftovers === 0) {
+  s - 1 > 0? result = s - 1 : result = n
+console.log(result)
+}
+if (leftovers) {
+  if ((s + leftovers) <= n) {
+    result = (leftovers + s) -1
+  }
+  console.log('orocess')
+}
+console.log(result)
+}
+```
+UPDATE: In the end, I wasn't able to solve the algorithm in a satisfactory manner. As a result, I was only able to claim a small percentage of the points available for this algorithm.
 
-**Total lifetime hours of coding**: 
+Maybe when my skills improve I'll be able to solve the algorithm more effectively and get more points. In any case, I'll see you in tomorrow's journal entry!
+___
+**Total time spent coding today**: 3 hours 28 minutes
+
+**Total time spent coding in June 2019**: 78 hours 38 minutes
+
+**Total lifetime hours of coding**: 650 hours 20 minutes
