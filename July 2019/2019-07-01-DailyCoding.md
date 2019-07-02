@@ -231,6 +231,69 @@ Keep working hard everyday and you and your developer skills are sure to improve
 18:20 -- I now have 790.7 points, which is good enough for a rank of 98,841 on HackerRank's global algorithm leaderboard.
 
 18:22 -- During my next coding session, I'll try to solve the [Halloween Sale](https://www.hackerrank.com/challenges/halloween-sale/problem) algorithm.
+___
+21:08 -- I'm back. Let's try to knock out that Halloween Sale algorithm.
+
+21:09 -- It looks like we're trying to buy video games from an online video game store. We're in good luck, however, because the store has a Halloween sale going on.
+
+Our job is to determine how many video games we can purchase based on the following parameters:
+* *p* -- An integer representing the  price for the first video game one purchases during the sale.
+* *d* -- An integer representing the discount applied (with discount stacking possible) for each additional game purchased after the first video game.
+* *m* -- An integer representing the minimum cost for a single video game. Once this price is reached, the discounts from *d* can no longer be applied.
+* *s* -- An integer representing the number of dollars we have available for spending.
+
+Here's our basic setup:
+```
+function howManyGames(p, d, m, s) {
+
+}
+```
+21:19 -- As usual, I'll document my progress as I go about trying to solve this problem. I'll explain everything in more detail later when I actually reach a final solution.
+
+Here's some basic pseudocode I wrote to get me thinking about the problem:
+```
+// Initialize a variable finalCount to 0.
+
+// Initialize a currentCost variable to p.
+
+// Create a loop that continues looping for as long as our variable 's' is greater than 0.
+
+// When currentCost > s, break out of our loop and return finalCount as our solution to this algorithm!
+```
+21:24 -- Some basic progress...
+```
+function howManyGames(p, d, m, s) {
+let finalCount = 0;
+let currentCost = p;
+while (s >= currentCost) {
+s-= currentCost
+  console.log(currentCost)
+  console.log(finalCount)
+  }
+}
+```
+21:28 -- We did it! Here's my final solution:
+```
+function howManyGames(p, d, m, s) {
+let finalCount = 0;
+let currentCost = p;
+while (s >= currentCost) {
+s-= currentCost
+if (currentCost - d >= m) {
+  currentCost-=d
+}
+else {
+  currentCost = m
+}
+finalCount+=1
+  }
+  return finalCount
+}
+```
+21:29 -- I'm going to eat a quick (healthy)snack as a reward for solving this algorithm.
+
+When I finish eating my mango I'll come back and explain my solution.
+
 
 ___
 **Total time spent coding today**: 
