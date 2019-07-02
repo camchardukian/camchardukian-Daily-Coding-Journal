@@ -120,6 +120,107 @@ return gemstoneCount
 For that reason, during my next coding session I'll try to solve the [ACM ICPC Team](https://www.hackerrank.com/challenges/acm-icpc-team/problem) algorithm on HackerRank.
 
 Then, maybe I'll finally move on to the data structure problems on HackerRank...
+___
+16:21 -- Caught up on some sleep, amongst other things. Let's get to solving the 'ACM ICPC Team' algorithm.
+
+16:22 -- It looks like we have some people attending the ACM-ICPC World Finals (a programming contest).
+
+Given a list of topics known by each attendee (zeros represent not known while ones represent known), determine the maximum numbers of topics a 2-person team can know.
+
+We also need to determine how many different ways a team could be formed that would know the maximum number of topics we just calculated.
+
+We have a function *acmTeam* that has a single parameter *topic*, which takes in a string of binary digits.
+
+Here's our basic setup:
+```
+function acmTeam(topic) {
+
+}
+```
+16:37 -- One thing I was initially a little bit confused by was whether we were receiving a string, or array of binary digits.
+
+I've since used the console to determine *topic* is indeed an array of integers.
+
+I'll document more of my progress as I actually have something more concrete to show.
+
+16:44 -- It's not much, but here's where I'm at now:
+```
+function acmTeam(topic) {
+let result = [];
+for (let i = 0; i < topic.length; i++) {
+  for (let ii = 0; ii < topic[i].length; ii++) {
+    console.log(`we are on person number ${i} and topic number ${ii}`)
+  }
+ }
+}
+```
+16:49 -- Just trying to visualize everything at this point:
+```
+function acmTeam(topic) {
+let result = [];
+for (let i = 0; i < topic.length; i++) {
+  for (let ii = i + 1; ii < topic.length; ii++) {
+    for (let j = 0; j < topic[i].length; j++) {
+    console.log(`person number ${i} and person number ${ii} and topic ${j} `)
+    }
+  }
+ }
+}
+```
+16:55 -- Well on my way to the solution...
+```
+function acmTeam(topic) {
+let highestTopicsKnown = 0;
+let numberOfTopTeams = 0;
+let currentTopicsKnown = 0;
+for (let i = 0; i < topic.length; i++) {
+  for (let ii = i + 1; ii < topic.length; ii++) {
+      currentTopicsKnown = 0
+    for (let j = 0; j < topic[i].length; j++) {
+    console.log(`person number ${i} and person number ${ii} and topic ${j} `)
+    if (topic[i][j] === '1' || topic[ii][j] === '1') {
+      currentTopicsKnown+=1
+    }
+   }
+   console.log(`person ${i} and person ${ii} knew ${currentTopicsKnown} topics`)
+  }
+ }
+}
+```
+17:02 -- I has a solution that passed 3 out of the 9 test cases. The test cases it didn't pass seem to be due to performance issues and timeouts.
+
+Because I know I'm on the right track, I'm going to delete all my console.log() statements and see if that improves my performance at all.
+
+17:03 -- Sure enough, removing the console.log() statements for better performance was exactly what we needed!
+
+Heres's my solution that passes all of the test cases:
+```
+function acmTeam(topic) {
+let highestTopicsKnown = 0;
+let numberOfTopTeams = 0;
+let currentTopicsKnown = 0;
+for (let i = 0; i < topic.length; i++) {
+  for (let ii = i + 1; ii < topic.length; ii++) {
+      currentTopicsKnown = 0
+    for (let j = 0; j < topic[i].length; j++) {
+    if (topic[i][j] === '1' || topic[ii][j] === '1') {
+      currentTopicsKnown+=1
+    }
+   }
+   if (currentTopicsKnown > highestTopicsKnown) {
+     highestTopicsKnown = currentTopicsKnown
+     numberOfTopTeams = 1
+   }
+   else if (currentTopicsKnown === highestTopicsKnown) {
+     numberOfTopTeams +=1
+   }
+  }
+ }
+ return [highestTopicsKnown, numberOfTopTeams]
+}
+```
+17:04 -- At this point, I'm feeling a bit tired out. I'm going to take a break and maybe do a little exercise before coming back and explaining my solution to this algorithm.
+
 
 ___
 **Total time spent coding today**: 
