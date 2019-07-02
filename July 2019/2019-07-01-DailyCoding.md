@@ -386,8 +386,124 @@ else {
 
 22:14 -- During my next coding session, I'll start working on the [Gemstones](https://www.hackerrank.com/challenges/gem-stones/problem) algorithm.
 ___
-**Total time spent coding today**: 
+23:12 -- Last coding session of the day. Let's see what kind of progress we can make on this 'Gemstones' algorithm.
 
-**Total time spent coding in July 2019**: 
+23:14 -- It looks like we have a boy named Josh that has a rock collection. Each rock consists of different minerals.
 
-**Total lifetime hours of coding**: 
+Minerals are represented using lowercase letters (a-z).
+
+A mineral is considered a gemstone if it occurs at least once in each of the rocks in John's collection.
+
+Given an array *arr*, our job is to create a function *gemstones* that returns an integer representing the number of gemstones found in John's collection.
+
+Here's our basic setup:
+```
+function gemstones(arr) {
+
+}
+```
+23:24 -- Here's some pseudocode I wrote:
+```
+// first for loop will loop through all the characters in arr[0].
+
+// Each time our initial for loop loops over a character, we'll add that character to an already looped array. Each time through our loop, we'll have indexOf() verify that we haven't already looped through a certain mineral.
+
+// nested for loop will use the indexOf() method on all strings in our array. If at any point indexOf returns false, we'll break out of our nested for loop without incrementing gemstones. If we make it all through our array, however, we'll increment gemstones by 1.
+
+// After we break out of both loops we'll return gemstones as our solution to this algorithm.
+```
+23:25 -- Now I'll try to implement those ideas from above...
+
+23:32 -- I've got a lot of cleaning up to do...
+
+23:42 -- Getting closer:
+```
+function gemstones(arr) {
+  let gemstoneCount = 0
+  let isGemstone = true;
+for (let i = 0; i < arr[0].length; i++) {
+  isGemstone = true
+  for (let ii = 1; ii < arr.length; ii++)
+  {
+        console.log(i, ii)
+    if (arr[ii].indexOf(arr[0][i]) > -1) {
+      console.log('ok')
+    }
+    else {
+      isGemstone = false
+      console.log(`failed because arr[ii] ${arr[ii]} did not contain arr[0][i] ${arr[0][i]}`)
+    }
+
+  }
+  console.log(isGemstone)
+  if (isGemstone === true) {
+    gemstoneCount+=1
+  }
+  }
+}
+```
+23:49 -- I thought I was finished, but my solution passed only 4/30 test cases. Here was my solution:
+```
+function gemstones(arr) {
+  let gemstoneCount = 0
+  let isGemstone = true;
+  let alreadyEvaluated = []
+for (let i = 0; i < arr[0].length; i++) {
+  isGemstone = true
+  if (alreadyEvaluated.indexOf(arr[0][i]) < 0) {
+  for (let ii = 1; ii < arr.length; ii++)
+  {
+    if (arr[ii].indexOf(arr[0][i]) < 0) {
+      isGemstone = false
+    }
+
+  }
+  if (isGemstone === true) {
+    gemstoneCount+=1
+  }
+  alreadyEvaluated.push(arr[i])
+  }
+}
+return gemstoneCount
+}
+```
+23:51 -- I hate these sample test cases that are 100 strings long. It makes it basically impossible to directly see where you went wrong.
+
+Maybe they do that intentionally...
+
+23:53 -- I figured it out! It turns our that when I was pushing a value to *alreadyEvaluated*, I was accidentally pushing an entire item (arr[i]), rather than just a single character (arr[0][i]).
+
+In any case, I've now passed all 30 user tests. Here's my final solution:
+```
+function gemstones(arr) {
+  let gemstoneCount = 0
+  let isGemstone = true;
+  let alreadyEvaluated = []
+for (let i = 0; i < arr[0].length; i++) {
+  isGemstone = true
+  if (alreadyEvaluated.indexOf(arr[0][i]) < 0) {
+  for (let ii = 1; ii < arr.length; ii++)
+  {
+    if (arr[ii].indexOf(arr[0][i]) < 0) {
+      isGemstone = false
+    }
+  }
+  if (isGemstone === true) {
+    gemstoneCount+=1
+  }
+  alreadyEvaluated.push(arr[0][i])
+  }
+}
+return gemstoneCount
+}
+```
+23:55 -- It's been a decent day of programming considering I still had some time to exercise, go to the dentist, and spend a little time with family.
+
+23:56 -- Tomorrow, I'll explain to you my solution for the 'Gemstones' algorithm. For now, however, I'm going to commit this journal entry to GitHub and then be done for the day.
+
+___
+**Total time spent coding today**: 4 hours and 2 minutes
+
+**Total time spent coding thus far in July 2019**: 4 hours and 2 minutes
+
+**Total lifetime hours of coding**: 654 hours 22 minutes
