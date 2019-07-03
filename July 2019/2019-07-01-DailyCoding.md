@@ -1,10 +1,394 @@
-# Tuesday July 2nd, 2019 Daily Coding Journal
+# Monday July 1st, 2019 Daily Coding Journal
+0:04 -- Man I'm stuck. I've worked on this algorithm for more than 2.5 hours already and I'm just not advancing any further. I'm calling it quits.
+```
+function saveThePrisoner(n, m, s) {
+let leftovers;
+let result;
+if (m === n) {
+leftovers = 0
+}
+else if (m > n) {
+leftovers = m % n
+}
+else {
+leftovers = false;
+}
+if (leftovers === 0) {
+s - 1 > 0? result = s - 1 : result = n
+return result
+}
+if (leftovers) {
+if ((s + leftovers) <= n) {
+result = (s + leftovers) -1
+return result
+}
+else if ((s + leftovers) > n) {
+result = s - leftovers + 1
+return result
+}
+}
+else {
+if (leftovers === false) {
+if ((s + m) <= n) {
+result = (s + m) - 1
+}
+else {
+result = s - n + m
+}
+return result
+}
+}
+}
+```
+0:05 -- Anyway, I now have 780.7 points on HackerRank, which is good enough for a rank of 100,219 on HackerRank's global algorithm leaderboard.
 
-0:00 -- I just set up this journal entry for the morning. When I come to the computer in the morning, my first coding session will be dedicated to explaining the 'Gemstones' algorithm.
+0:08 -- Tomorrow I'll try to solve the [Super Reduced String](https://www.hackerrank.com/challenges/reduced-string/problem) algorithm.
+
+0:15 -- I've committed everything from yesterday to GitHub. I'm going to commit this entry to GitHub now, and then work on some mostly non-code related stuff for the rest of the night.
 ___
-9:40 -- Let's talk about the [Gemstones](https://www.hackerrank.com/challenges/gem-stones/problem) algorithm.
+9:09 -- I'm here. Let's start working on the 'Super Reduced String' algorithm.
 
-9:42 -- It looks like we have a boy named Josh that has a rock collection. Each rock consists of different minerals.
+9:12 -- It looks like we have a guy named Steve who has a string of lowercase characters ranging from a-z.
+
+Anytime Steve sees two adjacent of the same letters touching each other ('aa') he deletes both letters.
+
+Our job is to go through the string in the same manner as Steve, deleting pairs of the same letters that are touching each other.
+
+In the end, we should return what our string looks like after all of the deletions. Or, if the final string we have is empty, we'll return 'Empty String'.
+
+Here's our basic setup:
+```
+function superReducedString(s) {
+
+
+}
+```
+9:22 -- Here's some pseduocode:
+```
+// create a variable updatedString.
+
+// Loop through s as long as i is less then s.length - 1. Push the value of s[i] to updatedString.
+
+// if s[i] === s[i+1], updatedString push s and s[i+1]. updatedString.shift() two times. Otherwise if s[i] !== s, do nothing.
+
+// repeat, and then return whatever remains as our solution to this algorithm. If nothing remains, return 'Empty String' as our solution to this algorithm.
+```
+9:35 -- Almost finished...
+```
+function superReducedString(s) {
+let updatedString = [];
+for (let i = 0; i <= s.length - 1 ; i+=2) {
+  console.log(`si is ${s[i]} and si+1 is ${s[i+1]}`)
+  if (s[i] !== s[i+1]) {
+    updatedString.push(s[i], s[i+1])
+  }
+}
+console.log(updatedString)
+}
+```
+9:39 -- The one thing I'm having difficulty implementing is ensuring that I don't accidentally push undefined to the end of my array *updatedString*.
+
+9:50 -- My current solution passed 7 of the 16 test cases:
+```
+function superReducedString(s) {
+let updatedString = [];
+for (let i = 0; i <= s.length - 1 ; i+=2) {
+  console.log(`i is ${i}, si is ${s[i]} and si+1 is ${s[i+1]}`)
+  if (s[i] !== s[i+1]) {
+    updatedString.push(s[i]
+    )
+    if (i + 2 <= s.length) {
+      updatedString.push(s[i+1])
+    }
+  }
+}
+return (updatedString.length > 0 ? updatedString.join("") : 'Empty String');
+}
+```
+9:51 -- Unfortunately, I think that during my next coding session I'm going to have to go back and perhaps only increment *i* by one, or do some other form of refactoring on my code.
+
+9:52 -- Oh well, I'll see you later!
+___
+10:41 -- I'm back. Let's try to solve things again.
+
+10:59 -- I'm quite lost trying to figure out how I should be using the slice() method to solve this algorithm.
+```
+function superReducedString(s) {
+  let array = s.split("");
+for (let i = 0; i < s.length; i++) {
+  if (array[i] === array[i+1]) {
+array = array.slice(i, i+2)
+  }
+} 
+  console.log(array)
+}
+```
+11:13 -- I've finally solved the algorithm! Here's my final solution:
+```
+function superReducedString(s) {
+  let array = s.split("");
+  let b = 0
+for (let i = 0; i < array.length; i++) {
+  if (array[i] === array[i + 1]) {
+ array.splice(i, 2)
+ i = -1;
+  } 
+}
+return (array.length > 0? array.join(""): 'Empty String')
+}
+```
+11:14 -- During my next coding session I'll format my code a little bit more cleanly, and explain my solution to you.
+___
+17:51 -- Let's talk about the Super Reduced String algorithm. It looks like we have a guy named Steve who has a string of lowercase characters ranging from a-z.
+
+Anytime Steve sees two adjacent of the same letters touching each other ('aa') he deletes both letters.
+
+Our job is to go through the string in the same manner as Steve, deleting pairs of the same letters that are touching each other.
+
+In the end, we should return what our string looks like after all of the deletions. Or, if the final string we have is empty, we'll return 'Empty String'.
+
+Here's our basic setup:
+```
+function superReducedString(s) {
+
+}
+```
+17:54 -- Next, I'm going to declare a variable *array*. We'll initialize *array* to the value of *s*.split("").
+
+The reason we're doing this is because later on we'll want to use the splice() method. Doing so requires an array, and thus we need to manipulate our data types ahead of time.
+```
+function superReducedString(s) {
+  let array = s.split("");
+}
+```
+17:57 -- Moving forward, the next thing we need is a loop. This loop will have a variable *i* initialized to 0, and will run for as long as *i* is less than the length of our array.
+
+Each time we go through our loop we'll increment *i* by one.
+
+Also, if *array[i]* (some item in our array) is ever equal to *array[i+1]* (the item immediately following the previous item we just mentioned), we're going to do something.
+
+We'll talk about that in the next step.
+```
+function superReducedString(s) {
+  let array = s.split("");
+for (let i = 0; i < array.length; i++) {
+  if (array[i] === array[i + 1]) {
+  } 
+ }
+}
+```
+18:01 -- So, what's the something we're doing to do if *array[i]* is equal to *array[i+1]*? It's simple.
+
+We're going to take our array, and splice it starting at *i*, and splicing for a duration of two items.
+
+This enables us to remove items from our array, without having "empty" items in our array as would be the case if we used the delete keyword.
+
+After using the splice() method, we'll set the value of *i* equal to -1. This ensures that when our loop runs again, after *i* is incremented it will have a value of 0 (-1 + 1 === 0).
+
+The reason we want *i* to have a value of 0 is that after using the splice() method, we may have new combinations of letters touching each other.
+
+Thus, we need to go and loop through all of *array* again to see if there are any new or remaining adjacent letters that are equal to each other.
+```
+function superReducedString(s) {
+  let array = s.split("");
+for (let i = 0; i < array.length; i++) {
+  if (array[i] === array[i + 1]) {
+ array.splice(i, 2)
+ i = -1;
+  } 
+ }
+}
+```
+18:08 -- Eventually, we'll no longer have any adjacent letters that are equal to each other and we'll be able to finish looping through our variable *array*.
+
+When this happens, we'll break out of our loop.
+
+At this point we'll then return the result of our ternary operator as our solution to this algorithm!
+
+If the length of *array* is greater than 0,it means we have some letters that we weren't able to "remove" from our array.
+
+If this is the case, we'll use the .join() method on our array (because the algorithm wants our solution to be of the string data type rather than an array) and return that as our solution to this algorithm.
+
+Otherwise, if the length of our array is 0, we'll return 'Empty String' as our solution to this algorithm.
+```
+function superReducedString(s) {
+  let array = s.split("");
+for (let i = 0; i < array.length; i++) {
+  if (array[i] === array[i + 1]) {
+ array.splice(i, 2)
+ i = -1;
+  } 
+ }
+return (array.length > 0? array.join(""): 'Empty String')
+}
+```
+18:14 -- I found this algorithm to be a little bit challenging, but hopefully my algorithm solution and explanation helped clear some things up for you.
+
+Keep working hard everyday and you and your developer skills are sure to improve! :D
+
+18:19 -- I just finished committing the Super Reduced String algorithm to GitHub.
+
+18:20 -- I now have 790.7 points, which is good enough for a rank of 98,841 on HackerRank's global algorithm leaderboard.
+
+18:22 -- During my next coding session, I'll try to solve the [Halloween Sale](https://www.hackerrank.com/challenges/halloween-sale/problem) algorithm.
+___
+21:08 -- I'm back. Let's try to knock out that Halloween Sale algorithm.
+
+21:09 -- It looks like we're trying to buy video games from an online video game store. We're in luck, however, because the store has a Halloween sale going on.
+
+Our job is to determine how many video games we can purchase based on the following parameters:
+* *p* -- An integer representing the  price for the first video game one purchases during the sale.
+* *d* -- An integer representing the discount applied (with discount stacking possible) for each additional game purchased after the first video game.
+* *m* -- An integer representing the minimum cost for a single video game. Once this price is reached, the discounts from *d* can no longer be applied.
+* *s* -- An integer representing the number of dollars we have available for spending.
+
+Here's our basic setup:
+```
+function howManyGames(p, d, m, s) {
+
+}
+```
+21:19 -- As usual, I'll document my progress as I go about trying to solve this problem. I'll explain everything in more detail later when I actually reach a final solution.
+
+Here's some basic pseudocode I wrote to get me thinking about the problem:
+```
+// Initialize a variable finalCount to 0.
+
+// Initialize a currentCost variable to p.
+
+// Create a loop that continues looping for as long as our variable 's' is greater than 0.
+
+// When currentCost > s, break out of our loop and return finalCount as our solution to this algorithm!
+```
+21:24 -- Some basic progress...
+```
+function howManyGames(p, d, m, s) {
+let finalCount = 0;
+let currentCost = p;
+while (s >= currentCost) {
+s-= currentCost
+  console.log(currentCost)
+  console.log(finalCount)
+  }
+}
+```
+21:28 -- We did it! Here's my final solution:
+```
+function howManyGames(p, d, m, s) {
+let finalCount = 0;
+let currentCost = p;
+while (s >= currentCost) {
+s-= currentCost
+if (currentCost - d >= m) {
+  currentCost-=d
+}
+else {
+  currentCost = m
+}
+finalCount+=1
+  }
+  return finalCount
+}
+```
+21:29 -- I'm going to eat a quick (healthy)snack as a reward for solving this algorithm.
+
+When I finish eating my mango I'll come back and explain my solution.
+___
+21:45 -- That was a good mango! Let's explain our solution for the last algorithm.
+
+21:46 -- It looks like we're trying to buy video games from an online video game store. We're in luck, however, because the store has a Halloween sale going on.
+
+Our job is to determine how many video games we can purchase based on the following parameters:
+* *p* -- An integer representing the  price for the first video game one purchases during the sale.
+* *d* -- An integer representing the discount applied (with discount stacking possible) for each additional game purchased after the first video game.
+* *m* -- An integer representing the minimum cost for a single video game. Once this price is reached, the discounts from *d* can no longer be applied.
+* *s* -- An integer representing the number of dollars we have available for spending.
+
+Here's our basic setup:
+```
+function howManyGames(p, d, m, s) {
+
+}
+```
+21:48 -- The next thing we're going to need is a few variables. We'll need a counter to count how many video games we've already purchased.
+
+I've declared a variable *totalGamesPurchased* and initialized it to 0.
+
+We're also going to want another variable *currentCost*. The reason we want this second variable is that our cost per video game will decrease as we purchase more games.
+
+We'll initialize this second variable to the value of *p*.
+
+One question you may have is why we need to declare another variable when we could have just used the value *p*.
+
+In reality, either method is workable. The reason I'm declaring an additional variable, however, is because I think doing so will make my code more readable for you.
+```
+function howManyGames(p, d, m, s) {
+let totalGamesPurchased = 0;
+let currentCost = p;
+    }
+```
+21:53 -- Moving forward, the next thing we need to do is subtract the cost of a game from our amount of money.
+
+This is probably going to be a repeatable action -- something we're done multiple times.
+
+We know this because we're probably going to buy multiple games to take advantage of the sales promotion at the store.
+
+That's why we're using a loop. Our loop will continue running for as long as our amount of money (*s*) is greater than or equal to the cost of the next game with any applicable discounts applied(*currentCost*).
+```
+function howManyGames(p, d, m, s) {
+let totalGamesPurchased = 0;
+let currentCost = p;
+while (s >= currentCost) {
+    }
+}
+```
+21:57 -- Finally, let's talk about the logic that we're going to put inside of our loop.
+
+Each time we go through our loop, we're going to decrement *s* by *currentCost*. We do this because obviously our money will decrease each time we purchase another game.
+
+We'll also increment *totalGamesPurchased* by one because if we have enough money for our loop to continue running, we obviously had enough money for us to purchase a game.
+
+While we won't take any discounts into account the first time around (per HackerRank's instructions), the 2nd, 3rd, 4th time etc, we're going to need to pay attention to any applicable discounts.
+
+Keeping in mind that our *currentCost* or the cost of a single video game will never be less than the minimum cost *m*, we can use the following logic:
+
+> If the cost of our video game is decreased by the value of our discount, will our video game's cost still be greater than or equal to the minimum cost *m*? 
+
+If so, we'll set the value of *currentCost* equal to the value of *currentCost* decremented by the value of our discount *d* (to account for the discount the next time we go through our loop).
+
+Otherwise, if stacking another discount onto our current price would put us below the allowed minimum cost, we'll simply set *currentCost* equal to the minimum permissible cost *m*.
+
+We'll go through this process as long as our money *s* remains greater than or equal to the cost of the next video game *currentCost*.
+
+When this eventually stops being true, we'll break out of our loop and return *totalGamesPurchased* as our solution to this algorithm!
+```
+function howManyGames(p, d, m, s) {
+let totalGamesPurchased = 0;
+let currentCost = p;
+while (s >= currentCost) {
+s-= currentCost
+totalGamesPurchased+=1
+if (currentCost - d >= m) {
+  currentCost-=d
+    }
+else {
+  currentCost = m
+    }   
+  }
+  return totalGamesPurchased
+}
+```
+22:08 -- Way to stick with it. You made it all the way through the 'Halloween Sale' algorithm!
+
+22:12 -- Just finished committing the 'Halloween Sale' algorithm to GitHub.
+
+22:13 -- I now have 810.7 points, which is good enough for a rank of 96,173 on HackerRank's global algorithm leaderboard.
+
+22:14 -- During my next coding session, I'll start working on the [Gemstones](https://www.hackerrank.com/challenges/gem-stones/problem) algorithm.
+___
+23:12 -- Last coding session of the day. Let's see what kind of progress we can make on this 'Gemstones' algorithm.
+
+23:14 -- It looks like we have a boy named Josh that has a rock collection. Each rock consists of different minerals.
 
 Minerals are represented using lowercase letters (a-z).
 
@@ -18,76 +402,47 @@ function gemstones(arr) {
 
 }
 ```
-9:43 -- Now that we've got some background information and the "skeleton" of our function setup, let's declare some variables.
+23:24 -- Here's some pseudocode I wrote:
+```
+// first for loop will loop through all the characters in arr[0].
 
-My solution for this algorithm is going to require several variables including:
+// Each time our initial for loop loops over a character, we'll add that character to an already looped array. Each time through our loop, we'll have indexOf() verify that we haven't already looped through a certain mineral.
 
-* *gemstoneCount*: Initialized to 0, this variable will be an integer representing the number of gemstones we have. We'll eventually return this variable as our solution to this algorithm.
+// nested for loop will use the indexOf() method on all strings in our array. If at any point indexOf returns false, we'll break out of our nested for loop without incrementing gemstones. If we make it all through our array, however, we'll increment gemstones by 1.
 
-* *isGemstone*: A boolean that states whether our current mineral is a gemstone or not. We'll initiate this variable to true.
+// After we break out of both loops we'll return gemstones as our solution to this algorithm.
+```
+23:25 -- Now I'll try to implement those ideas from above...
 
-* *alreadyEvaluated*: An array of (in most cases) strings representing the minerals we've already evaluated and thus don't need to do any further testing on, even if we have multiple instances of said minerals later on. We'll initialize this variable to an empty array.
+23:32 -- I've got a lot of cleaning up to do...
 
-Here's the actual code for what we were talking about above:
+23:42 -- Getting closer:
 ```
 function gemstones(arr) {
   let gemstoneCount = 0
   let isGemstone = true;
-  let alreadyEvaluated = []
-}
-```
-9:51 -- Next, we need a for loop to loop through all of the minerals in our first rock.
-```
-function gemstones(arr) {
-  let gemstoneCount = 0
-  let isGemstone = true;
-  let alreadyEvaluated = []
-for (let i = 0; i < arr[0].length; i++) {
-    }
-}
-```
-9:53 -- Each time our for loop runs it's going to do a few things. First, it's going to set the value of *isGemstone* to true.
-
-The reason we're doing this is because we're going to assume a given mineral occurs in every rock and is a gemstone unless the tests we conduct later on show otherwise.
-
-We're also going to check whether we've already tested whether a certain mineral was a gemstone or not.
-
-This is necessary because a given mineral could theoretically occur dozens, hundreds,or even millions of times in a single rock.
-
-Yet, a given mineral can only be a gemstone once because the criteria for a gemstone mineral (according to the algorithm's instructions) is simply one that occurs in each rock at least once.
-
-No importance is given to whether a mineral occurs multiple times within our rocks.
-
-Thus, we want to make our function more efficient and save lots of processing power by only checking each mineral one time.
-
-We can do this by pushing any mineral we've already tested to an array *alreadyEvaluated*, and only conducting further testing on a mineral if it doesn't occur in that array (alreadyEvaluated.indexOf(arr[0][i]) < 0) and thus isn't a mineral we've already spent time looking at.
-```
-function gemstones(arr) {
-  let gemstoneCount = 0
-  let isGemstone = true;
-  let alreadyEvaluated = []
 for (let i = 0; i < arr[0].length; i++) {
   isGemstone = true
-  if (alreadyEvaluated.indexOf(arr[0][i]) < 0) {
+  for (let ii = 1; ii < arr.length; ii++)
+  {
+        console.log(i, ii)
+    if (arr[ii].indexOf(arr[0][i]) > -1) {
+      console.log('ok')
+    }
+    else {
+      isGemstone = false
+      console.log(`failed because arr[ii] ${arr[ii]} did not contain arr[0][i] ${arr[0][i]}`)
+    }
+
   }
- }
+  console.log(isGemstone)
+  if (isGemstone === true) {
+    gemstoneCount+=1
+  }
+  }
 }
 ```
-10:02 -- The last thing we need is our nested for loop. Our nested for loop will take the mineral (letter) provided by our outer for loop.
-
-Our nested for loop will then start at the 1 index of *arr* (we're starting at 1 because the 0th index is where we're pulling minerals from, and thus doesn't need to be tested).
-
-Our nested for loop will iterate through each "rock" in *arr*, evaluating whether each rock contains a given mineral: *if arr[ii].indexOf(arr[0][i]) < 0*.
-
-If at any time the given mineral does not occur within one of our rocks, we'll set *isGemstone* to false.
-
-We'll then break out of our for loop and push the just evaluated mineral to our array *alreadyEvaluated*.
-
-If, however, we get through our entire array and *isGemstone* retains its initial value of true, we'll break out of our for loop and increment *gemstoneCount* by one (because the mineral we just looked at was a gemstone), before pushing the mineral we just looked at to *alreadyEvaluated*.
-
-We'll then repeat all of the steps from before, continuing until we eventually break out of BOTH of our for loops.
-
-When that occurs, we'll return *gemstoneCount* as our solution to this algorithm!
+23:49 -- I thought I was finished, but my solution passed only 4/30 test cases. Here was my solution:
 ```
 function gemstones(arr) {
   let gemstoneCount = 0
@@ -101,287 +456,54 @@ for (let i = 0; i < arr[0].length; i++) {
     if (arr[ii].indexOf(arr[0][i]) < 0) {
       isGemstone = false
     }
-   }
+
+  }
   if (isGemstone === true) {
     gemstoneCount+=1
-   }
-  alreadyEvaluated.push(arr[0][i])
   }
- }
+  alreadyEvaluated.push(arr[i])
+  }
+}
 return gemstoneCount
 }
 ```
-10:10 -- You're done! This was a bit of a lengthy explanation, but I hope you were able to get some value out of it. Way to go!
+23:51 -- I hate these sample test cases that are 100 strings long. It makes it basically impossible to directly see where you went wrong.
 
-10:18 -- I just finished committing the 'Gemstones' algorithm to GitHub. I now have 830.7 points, which is good enough for a rank of 93,833 on HackerRank's global algorithm leaderboard.
+Maybe they do that intentionally...
 
-10:19 -- I'd like to solve at least one more algorithm in order to get my "gold badge" on HackerRank as I'm just 20 points away from doing so.
+23:53 -- I figured it out! It turns our that when I was pushing a value to *alreadyEvaluated*, I was accidentally pushing an entire item (arr[i]), rather than just a single character (arr[0][i]).
 
-For that reason, during my next coding session I'll try to solve the [ACM ICPC Team](https://www.hackerrank.com/challenges/acm-icpc-team/problem) algorithm on HackerRank.
-
-Then, maybe I'll finally move on to the data structure problems on HackerRank...
-___
-16:21 -- Caught up on some sleep, amongst other things. Let's get to solving the 'ACM ICPC Team' algorithm.
-
-16:22 -- It looks like we have some people attending the ACM-ICPC World Finals (a programming contest).
-
-Given a list of topics known by each attendee (zeros represent not known while ones represent known), determine the maximum numbers of topics a 2-person team can know.
-
-We also need to determine how many different ways a team could be formed that would know the maximum number of topics we just calculated.
-
-We have a function *acmTeam* that has a single parameter *topic*, which takes in a string of binary digits.
-
-Here's our basic setup:
+In any case, I've now passed all 30 user tests. Here's my final solution:
 ```
-function acmTeam(topic) {
-
-}
-```
-16:37 -- One thing I was initially a little bit confused by was whether we were receiving a string, or array of binary digits.
-
-I've since used the console to determine *topic* is indeed an array of integers.
-
-I'll document more of my progress as I actually have something more concrete to show.
-
-16:44 -- It's not much, but here's where I'm at now:
-```
-function acmTeam(topic) {
-let result = [];
-for (let i = 0; i < topic.length; i++) {
-  for (let ii = 0; ii < topic[i].length; ii++) {
-    console.log(`we are on person number ${i} and topic number ${ii}`)
-  }
- }
-}
-```
-16:49 -- Just trying to visualize everything at this point:
-```
-function acmTeam(topic) {
-let result = [];
-for (let i = 0; i < topic.length; i++) {
-  for (let ii = i + 1; ii < topic.length; ii++) {
-    for (let j = 0; j < topic[i].length; j++) {
-    console.log(`person number ${i} and person number ${ii} and topic ${j} `)
+function gemstones(arr) {
+  let gemstoneCount = 0
+  let isGemstone = true;
+  let alreadyEvaluated = []
+for (let i = 0; i < arr[0].length; i++) {
+  isGemstone = true
+  if (alreadyEvaluated.indexOf(arr[0][i]) < 0) {
+  for (let ii = 1; ii < arr.length; ii++)
+  {
+    if (arr[ii].indexOf(arr[0][i]) < 0) {
+      isGemstone = false
     }
   }
- }
-}
-```
-16:55 -- Well on my way to the solution...
-```
-function acmTeam(topic) {
-let highestTopicsKnown = 0;
-let numberOfTopTeams = 0;
-let currentTopicsKnown = 0;
-for (let i = 0; i < topic.length; i++) {
-  for (let ii = i + 1; ii < topic.length; ii++) {
-      currentTopicsKnown = 0
-    for (let j = 0; j < topic[i].length; j++) {
-    console.log(`person number ${i} and person number ${ii} and topic ${j} `)
-    if (topic[i][j] === '1' || topic[ii][j] === '1') {
-      currentTopicsKnown+=1
-    }
-   }
-   console.log(`person ${i} and person ${ii} knew ${currentTopicsKnown} topics`)
+  if (isGemstone === true) {
+    gemstoneCount+=1
   }
- }
-}
-```
-17:02 -- I has a solution that passed 3 out of the 9 test cases. The test cases it didn't pass seem to be due to performance issues and timeouts.
-
-Because I know I'm on the right track, I'm going to delete all my console.log() statements and see if that improves my performance at all.
-
-17:03 -- Sure enough, removing the console.log() statements for better performance was exactly what we needed!
-
-Heres's my solution that passes all of the test cases:
-```
-function acmTeam(topic) {
-let highestTopicsKnown = 0;
-let numberOfTopTeams = 0;
-let currentTopicsKnown = 0;
-for (let i = 0; i < topic.length; i++) {
-  for (let ii = i + 1; ii < topic.length; ii++) {
-      currentTopicsKnown = 0
-    for (let j = 0; j < topic[i].length; j++) {
-    if (topic[i][j] === '1' || topic[ii][j] === '1') {
-      currentTopicsKnown+=1
-    }
-   }
-   if (currentTopicsKnown > highestTopicsKnown) {
-     highestTopicsKnown = currentTopicsKnown
-     numberOfTopTeams = 1
-   }
-   else if (currentTopicsKnown === highestTopicsKnown) {
-     numberOfTopTeams +=1
-   }
+  alreadyEvaluated.push(arr[0][i])
   }
- }
- return [highestTopicsKnown, numberOfTopTeams]
+}
+return gemstoneCount
 }
 ```
-17:04 -- At this point, I'm feeling a bit tired out. I'm going to take a break and maybe do a little exercise before coming back and explaining my solution to this algorithm.
-___
-19:18 -- I got some exercise, and spent some time working on a non-coding related project. Now, let's get discuss our solution for the ACM ICPC Team algorithm.
+23:55 -- It's been a decent day of programming considering I still had some time to exercise, go to the dentist, and spend a little time with family.
 
-19:21 -- It looks like we have some people attending the ACM-ICPC World Finals (a programming contest).
-
-Given a list of topics known by each attendee (zeros represent not known while ones represent known), determine the maximum numbers of topics a 2-person team can know.
-
-We also need to determine how many different ways a team could be formed that would know the maximum number of topics we just calculated.
-
-We have a function *acmTeam* that has a single parameter *topic*, which takes in a string of binary digits.
-
-Here's our basic setup:
-```
-function acmTeam(topic) {
-
-}
-```
-19:22 -- Now that we talked about what we're trying to do in this problem and we've gotten our function's skeleton all written out, let's talk about variables.
-
-Our solution is going to utilize a few variables:
-* *highestTopicsKnown*: An integer representing the maximum number of topics any of our teams know.
-* *numberOfTopTeams*: An integer representing how many teams know the maximum numbers of topics (*highestTopicsKnown*).
-* *currentTopicsKnown*: An integer representing how many topics our current team knows.
-
-All of the above variables can be initialized to 0.
-```
-function acmTeam(topic) {
-let highestTopicsKnown = 0;
-let numberOfTopTeams = 0;
-let currentTopicsKnown = 0;
-}
-```
-19:28 --  Next, we need several loops. Our first loop will loop through all of the people in our array *topic*.
-
-Our 2nd layer for loop will also iterate through the people in our array, but this for loop will start with its position being the person after whoever the outer for loop currently has selected (i + 1).
-
-These two for loops will work together to compare every possible combination of teams (of 2 individuals) possible.
-
-For example if we have 4 individuals our for loops will run like this.
-```
-i = 0
-ii = 1
-ii = 2
-ii = 3
-i = 1
-ii = 2
-ii = 3
-i = 2
-ii = 3
-```
-
-Each time we run through our 2nd layer for loop, we're also going to update the value of *currentTopicsKnown* to 0.
-
-We're doing this because it doesn't matter how many topics previous potential teams had, we're only concerned with how many topics our current combination of individuals (will) know.
-
-Hopefully, you're following along alright thus far. Here's a view of our code as things currently stand :)
-```
-function acmTeam(topic) {
-let highestTopicsKnown = 0;
-let numberOfTopTeams = 0;
-let currentTopicsKnown = 0;
-for (let i = 0; i < topic.length; i++) {
-  for (let ii = i + 1; ii < topic.length; ii++) {
-  }
- }
-}
-```
-19:35 -- Now, we're going to need one more for loop. This 3rd layer for loop will iterate through each possible topic.
-
-We'll then check to see where either person 'a' (topic[i][j]) or person 'b' (topic[i][j]) knows topic 'j' (topic[i][j] === '1' || topic[ii][j] === '1').
-
-If so, we'll increment *currentTopicsKnown* by 1. If not, we'll continue repeating this 3rd layer for loop until we've run out of topics.
-```
-function acmTeam(topic) {
-let highestTopicsKnown = 0;
-let numberOfTopTeams = 0;
-let currentTopicsKnown = 0;
-for (let i = 0; i < topic.length; i++) {
-  for (let ii = i + 1; ii < topic.length; ii++) {
-      currentTopicsKnown = 0
-    for (let j = 0; j < topic[i].length; j++) {
-    if (topic[i][j] === '1' || topic[ii][j] === '1') {
-      currentTopicsKnown+=1
-    }
-   }
-  }
- }
-}
-```
-19:38 -- After we've run through all of our topics, we'll break out of our 3rd layer for loop and reach an if statement.
-
-This if statement uses the logic that if *currentTopicsKnown* is greater than the amount of topics any previous team had known *highestTopicsKnown*, we'll update the value of *highestTopicsKnown* to *currentTopicsKnown*.
-
-Of course, if this was the case, we'd also have to update the value of *numberOfTopTeams* to 1. This is because at this time, only 1 team would have the record for greatest number of topics known.
-```
-function acmTeam(topic) {
-let highestTopicsKnown = 0;
-let numberOfTopTeams = 0;
-let currentTopicsKnown = 0;
-for (let i = 0; i < topic.length; i++) {
-  for (let ii = i + 1; ii < topic.length; ii++) {
-      currentTopicsKnown = 0
-    for (let j = 0; j < topic[i].length; j++) {
-    if (topic[i][j] === '1' || topic[ii][j] === '1') {
-      currentTopicsKnown+=1
-    }
-   }
-   if (currentTopicsKnown > highestTopicsKnown) {
-     highestTopicsKnown = currentTopicsKnown
-     numberOfTopTeams = 1
-   }
-  }
- }
-}
-```
-19:44 -- Finally, if the value of *currentTopicsKnown* was equal to *highestTopicsknown* after breaking out of our 3rd layer for loop, we'd know that 2 or more teams shared the record for *highestTopicsKnown*.
-
-Thus, we'd increment *numberOfTopTeams* by 1.
-
-We'd then go through all of our 3 for loops again and again until we eventually broke out of all of them.
-
-When that happens, we can return an array containing *highestTopicsKnown* and *numberOfTopTeams* as our solution to this algorithm!
-```
-function acmTeam(topic) {
-let highestTopicsKnown = 0;
-let numberOfTopTeams = 0;
-let currentTopicsKnown = 0;
-for (let i = 0; i < topic.length; i++) {
-  for (let ii = i + 1; ii < topic.length; ii++) {
-      currentTopicsKnown = 0
-    for (let j = 0; j < topic[i].length; j++) {
-    if (topic[i][j] === '1' || topic[ii][j] === '1') {
-      currentTopicsKnown+=1
-    }
-   }
-   if (currentTopicsKnown > highestTopicsKnown) {
-     highestTopicsKnown = currentTopicsKnown
-     numberOfTopTeams = 1
-   }
-   else if (currentTopicsKnown === highestTopicsKnown) {
-     numberOfTopTeams +=1
-   }
-  }
- }
- return [highestTopicsKnown, numberOfTopTeams]
-}
-```
-19:47 -- Way to stick with it. We're done!
-
-19:52 -- I just finished committing that last algorithm solution to GitHub.
-
-19:53 -- I now have 855.7 points, which is good enough for a rank of 90,207 on HackerRank's global problem solving leaderboard. 
-
-19:56 -- Now that I've solved and produced written explanations for over 50 algorithms, the next thing I'd like to do is get some more experience with data structures. For that reason, I'll spend the rest of my trip in the USA (another week or so) solving data structure problems on HackerRank.
-
-During my next coding session, I'll solve what seems to be a very basic data structures problem: [Array - DS](https://www.hackerrank.com/challenges/arrays-ds/problem).
-
-I'll see you then!
+23:56 -- Tomorrow, I'll explain to you my solution for the 'Gemstones' algorithm. For now, however, I'm going to commit this journal entry to GitHub and then be done for the day.
 
 ___
-**Total time spent coding today**: 
+**Total time spent coding today**: 4 hours and 2 minutes
 
-**Total time spent coding thus far in July 2019**: 
+**Total time spent coding thus far in July 2019**: 4 hours and 2 minutes
 
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**: 654 hours 22 minutes
