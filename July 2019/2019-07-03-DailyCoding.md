@@ -55,7 +55,36 @@ Hopefully someone will be able to tell me where I'm going wrong with this proble
 In any case, I'm going to take a break and go through my morning routine.
 
 I should also quickly say hello to some family members that stopped by our house.
+___
+13:51 -- I'm back. It looks like I'm on my own. Nobody has offered me any assistance yet on either HackerRank's discussion board nor on FreeCodeCamp's JavaScript forum.
 
+So, I'll keep looking for things on my own.
+
+14:18 -- I'm lost on the stdin and stdout stuff. I'm going to take a break on that as I'm just banging my head against the wall at this point.
+
+Again, my solution works in Repl.it, but I can't figure out how to get the right inputs into my function so that it can have a dynamic input rather than me having to hard code the passed argument and thus only being able to pass a maximum of one user test at any time:
+```
+function leftRotation (arr, rotations) {
+  let splicedValue;
+  for (let i = 0; i < rotations; i+=1) {
+splicedValue = arr.splice(0, 1).join("");
+arr.push(parseInt(splicedValue))
+  }
+  return arr
+}
+
+leftRotation([41, 73, 89, 7, 10, 1, 59, 58, 84, 77, 77, 97, 58, 1, 86, 58, 26, 10, 86, 51], 10)function leftRotation (arr, rotations) {
+  let splicedValue;
+  for (let i = 0; i < rotations; i+=1) {
+splicedValue = arr.splice(0, 1).join("");
+arr.push(parseInt(splicedValue))
+  }
+  return arr
+}
+
+leftRotation([41, 73, 89, 7, 10, 1, 59, 58, 84, 77, 77, 97, 58, 1, 86, 58, 26, 10, 86, 51], 10)
+```
+14:30 -- If I cannot get any help for the data structure problem by the time I start my next programming session, I'll put the data structures work on hold, and try to solve the [Flatland Space Stations](https://www.hackerrank.com/challenges/flatland-space-stations/problem) algorithm.
 
 ___
 **Total time spent coding today**: 
