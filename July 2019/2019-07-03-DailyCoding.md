@@ -85,10 +85,23 @@ arr.push(parseInt(splicedValue))
 leftRotation([41, 73, 89, 7, 10, 1, 59, 58, 84, 77, 77, 97, 58, 1, 86, 58, 26, 10, 86, 51], 10)
 ```
 14:30 -- If I cannot get any help for the data structure problem by the time I start my next programming session, I'll put the data structures work on hold, and try to solve the [Flatland Space Stations](https://www.hackerrank.com/challenges/flatland-space-stations/problem) algorithm.
-
 ___
-**Total time spent coding today**: 
+23:39 -- Looks like I'm not getting any help from the communities at HackerRank or FCC. Well, I guess I'll just move on to the next algorithm then.
 
-**Total time spent coding thus far in July 2019**: 
+To be honest, I'm getting a bit burnt out on these algorithms and data structure problems.
 
-**Total lifetime hours of coding**: 
+I want to start doing something else soon.
+
+23:49 -- I've started working on the 'Flatland Space Stations' algorithm, but my mental clarity is horrible right now.
+
+I just can't think straight for whatever reason.
+
+23:51 -- My brain is toast. I'm going to commit this journal entry to GitHub, and try to come back again stronger tomorrow.
+
+While tomorrow is 4th of July and my family will probably want me to hang out,I'll still try to get a couple hours of coding in.
+___
+**Total time spent coding today**: 2 hours 21 minutes
+
+**Total time spent coding thus far in July 2019**: 10 hours 1 minute
+
+**Total lifetime hours of coding**: 660 hours 22 minutes
