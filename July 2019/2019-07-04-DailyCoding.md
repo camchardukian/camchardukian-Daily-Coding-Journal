@@ -10,7 +10,7 @@ For that reason, I'm going to spend today and tomorrow learning about Webpack. I
 
 Thus, a baseline level of comfort will speed my onboarding process wherever I get hired. It'll also be good to be able to talk about Webpack intelligently if it comes up in an interview.
 
-I'm going to be taking notes from this [Learn Webpack for Beginners](https://www.youtube.com/watch?v=MpGLUVbqoYQ) video tutorial from FreeCodeCamp. 
+I'm going to be taking notes from this [Learn Webpack for Beginners](https://www.youtube.com/watch?v=MpGLUVbqoYQ) video course from Colt Steele.
 
 Here we go!
 
@@ -26,10 +26,27 @@ Here we go!
 * *webpack_require_* is how Webpack keeps track of where things should be imported and exported (which is basically how Webpack manages our dependencies).
 
 22:22 -- We're finished with part I! I'm going to get a little exercise, and then we'll get to part II.
+___
+23:13 -- Alright I'm back. Let's get another 40 or so minutes of code in today.
+
+Here are my notes for part II of the [Learn Webpack for Beginners](https://www.youtube.com/watch?v=MpGLUVbqoYQ) video course from Colt Steele:
+* Colt has been demonstrating what it would look like to manage dependencies without Webpack.
+
+Basically, he's stressing the point that managing the dependencies of a React app with dozens, or even hundreds of components, each with their own dependencies would be a total nightmare.
+
+* To install Webpack, the first thing we need to do is set up our package.JSON. We can do this using the command:
+> npm init -y
+
+* The next thing we want to do is install Webpack and Webpack's command line interface. We can do this using the commands (Note: sometime this step can take several seconds, or minutes to reach completion):
+> npm install --save-dev webpack webpack-cli
+
+* By default even before choosing anything for yourself, Webpack has some default values.
+
+UPDATE: I was able to reach all the way to the 18th or so minute in this video course. In tomorrow's journal entry, we'll try to finish going through the course.
 
 ___
-**Total time spent coding today**: 
+**Total time spent coding today**: 46 minutes
 
-**Total time spent coding thus far in July 2019**: 
+**Total time spent coding thus far in July 2019**: 10 hours 47 minutes
 
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**: 661 hours 7 minutes
