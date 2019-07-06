@@ -71,10 +71,33 @@ ___
 * Inside of our config file we can also decrease/eliminate the frequency of "debuggingish" code blocks occuring in our saved file by setting the *devtool* property to *"none"*. While I'm not whether this is ever absolutely necessary, it is possible.
 
 20:57 -- I just finished taking notes on Part IV of Colt Steele's Learn Webpack course. During my next coding session I'll move on to taking notes on Part V of the course.
-
 ___
-**Total time spent coding today**: 
+23:18 -- I got a little bit of exercise in and spent some time chatting with my parents because I'll be heading back to Vietnam next week.
 
-**Total time spent coding thus far in July 2019**: 
+23:19 -- Let's get to taking notes on Part V of Colt Steele's Learn Webpack course:
 
-**Total lifetime hours of coding**: 
+* Bundling different files together is pretty simple because this is the default behavior of Webpack.
+
+* While Webpack is capable of bundling countless types of files, doing so requires installing some packages, modifying our webpack config file (discussed earlier), as well as something called loaders (which I don't yet know about, but that the course is about to go into).
+
+* The webpack documentation basically states that Webpack uses loaders to preprocsess files, which allows us to use Webpack to bundle any static resource.
+
+In other words, loaders enable us to use Webpack to bundle any static file types.
+
+If there isn't a loader already defined within Webpack for the type of file you're working with, it's also possible to "easily" write loaders to preprocess any static file type using Node.js.
+
+* In order for us to begin adding loaders to our Webpack "project", we need to go to our webpack config file, and within our *module* object, we need to add *rules* which is an array of objects, each talking about different rules for different types of files. 
+
+* Normally our rules will contain a *test* property, which will have a RegEx such as */\\.css$/* as its value which will look for a certain type of file. Our rule will also have a *use* property which will have a value of an array which contains whichever loader (or I'm assuming because this is an array we could also have multiple loaders) that we want to use.
+
+* *css-loader* and *style-loader* are different because *css-loader* takes our CSS and turns it into JavaScript. *style-loader* on the other hand, will take our JavaScript (which was previously CSS) and put it into the DOM (which I assume usually means index.html) by inserting style tags.
+
+* While counterintuitive, *style-loader* should actually be included before *css-loader*. 
+
+23:58 -- It's getting late now so I'm going to call it a night. Tomorrow morning I'll finish taking notes on Part V of this course.
+___
+**Total time spent coding today**: 2 hours 34 minutes
+
+**Total time spent coding thus far in July 2019**: 13 hours 21 minutes
+
+**Total lifetime hours of coding**: 663 hours 41 minutes
