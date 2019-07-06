@@ -17,6 +17,42 @@ It's important to note, however, that using this loader requires installation of
 
 11:12 -- I just finished Part V of the course! Now, I'm going to commit this journal entry to GitHub, take a 10-15 minute break, and then continue on with part VI of the course!
 ___
+
+11:34 -- Mom came home. Helping with some groceries, will chat a little, go through my morning routine and then be back in an hour or so.
+
+12:52 -- I'm back. Let's start part VI 'Cache Busting & Plugins'.
+
+12:55 -- Cache busting is a way of preventing browsers from caching assets that we don't want to be cached.
+
+12:56 -- A cached file is basically a file that the browser "remembers" and already has a copy of locally.
+
+Because of this, the browser will often opt to use the file it already has access to locally rather than trying to pull a file from the server that may or may not have received any updates since the last time the file was cached.
+
+13:00 -- If everytime we bundle our code using Webpack, it's very possible the browser will attempt to cache our code if the name of our file doesn't change.
+
+For that reason, we want the name of our file to change whenever any of the contents of that file change.
+
+We DON'T want to update everything on our website, but have our users unable to view these updates because they already have files from our website cached.
+
+Sure, some internet users may be savy enough to clear their cache if they are anticipating an update, but this is far from ideal and certainly not the norm.
+
+Fortunately, we can use something called a "content hash" which basically changes the name of the file into what appears to be a series of random characters, but is actually produced using a hashing function (often md5).
+
+This gives us a slightly different file name whenever we make ANY change to our file, and thus forces the user's computer to NOT rely on their cache, but instead request the updated data from the server!
+
+This entire process can be referred to cache busting.
+
+13:08 -- Taking a step back, let's think about what types of files we'd want the browser to cache, and which files we should perform cache busting on.
+
+The answer is pretty simple actually. If a file is expected to change frequently, or any changes it may have are of significant importance to our application, we should use cache busting.
+
+If we're ok with using older versions of a file, as perhaps is the case with JavaScript libraries for example, we can allow the browser to cache said file in order to optimize load times.
+
+13:11 -- Next, we're going to start learning about plugins. Here's what the official Webpack documentation says about plugins:
+> The *plugins* option is used to customize the webpack build process in a variety of ways. Webpack comes with a variety of built-in plugins available under *webpack.[plugin-name]*
+
+13:14 -- My focus is pretty poor today because I'm running on low sleep. I'm going to commit this journal entry to GitHub, do some chores, take a nap, and then finish part VI later.
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in July 2019**: 
