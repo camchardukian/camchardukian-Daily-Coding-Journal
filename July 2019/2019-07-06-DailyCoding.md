@@ -77,6 +77,26 @@ Of course, obviously the value you give to the template property would contain a
 
 18:05 -- I'm going to commit this journal entry to GitHub, and then try to knock out the first half of part VII.
 ___
+18:09 -- Alright, just finished committing things to GitHub. Now, let's get started with part VII!
+
+18:10 -- Often, we may want our developmental application and consumer/client application to have different features or functionality.
+
+For example, we may want our dev mode application to have a live server which would allow us to more efficiently write and test our code.
+
+On the other hand, we may want our live application to use minified files to speed load times for consumers/clients.
+
+18:20 -- Remember how we just talked about having a live server above? Here's the code we could include inside of our *package.json*
+```
+"scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js --open
+}
+```
+While I think some of the above code could change depending on what we named our dev server (I think, but I'm not sure that our dev server could be named anything), most important is the fact that we include --open, which will open up a window in our browser whenever we save our webpack project.
+
+18:26 -- During my next coding session I'll tackle part VIII -- HTML-Loader & File-Loader.
+
+Clearly we live in exciting times hahaha.
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in July 2019**: 
