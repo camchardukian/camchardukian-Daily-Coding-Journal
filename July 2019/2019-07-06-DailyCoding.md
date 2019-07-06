@@ -53,6 +53,30 @@ If we're ok with using older versions of a file, as perhaps is the case with Jav
 
 13:14 -- My focus is pretty poor today because I'm running on low sleep. I'm going to commit this journal entry to GitHub, do some chores, take a nap, and then finish part VI later.
 ___
+17:38 -- Got some sleep, did some laundry, ate lunch, etc. Now, let's finish taking notes on part VI.
+
+17:40 -- Webpack has hundreds of different plugins.
+
+17:41 -- Let's talk about the *HtmlWebpackPlugin*. Here's the official explanation from the [documentation](https://webpack.js.org/plugins/html-webpack-plugin/):
+> The *HtmlWebpackPlugin* simplifies creation of HTML files to serve your webpack bundles. This is especially useful for webpack bundles that include a hash in the filename which changes every compilation. You can either let the plugin generate an HTML file for you,supply your own template using lodash templates, or use your own loader.
+
+17:54 -- We can install the *HtmlWebpackPlugin* with the following command:
+> npm install --save-dev html-webpack-plugin
+
+18:00 -- If we want to use a template with the *HtmlWebpackPlugin* we can do so using the following code:
+```
+plugins: [
+    new HtmlWebpackPlugin({
+        template: ".pathHere/htmlFileNameHere"
+    })
+]
+```
+Of course, obviously the value you give to the template property would contain an actual path to an actual HTML file.
+
+18:04 -- We're now finished with part VI of the [Colt Steele Learn Webpack course](https://www.youtube.com/watch?v=MpGLUVbqoYQ).
+
+18:05 -- I'm going to commit this journal entry to GitHub, and then try to knock out the first half of part VII.
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in July 2019**: 
