@@ -43,7 +43,34 @@ For that reason, I'm going to get some rest and during my next coding session I'
 
 See you then!
 ___
+20:08 -- I'm back. Let's continue our notes on Part IV:
 
+* The config file could be called just about anything we'd like it to be, but a fairly standard naming convention is to call it *webpack.config.js*. 
+
+* The entry property is used to determine where we should enter, or have Webpack begin "doing its job". Webpack can be configured for our application to have either one or many entry points.
+
+* According to the [official documentation](https://webpack.js.org/concepts/output/), the output property tells Webpack where to write the compiled files to the disk. In other words, it seems that we can use the output property to say where we want our file to be saved after Webpack finishes "building" whatever it needs to build or do.
+
+* We can also control the name of the saved file using the *filename* property inside of our *output* object.
+
+* Most importantly, we also need to tell Webpack **where** to "spit out" this saved file. We can do this using the *path* property and giving this property a value of *path.resolve(__dirname, "ChooseYourDirectoryNameHere")*. The reason we need to use *.resolve* and *__dirname* is because the directory we are currently in on our machine is likely different than the directory someone would be inside of on another machine.
+
+* *__dirname* is used to determine whatever directory the user is inside of on their machine, which then allows us to save our directory containing our file inside of that directory.
+
+* Inside of our *package.json* file, we'll want to include the code
+```
+"scripts": {
+"start": "webpack -- config webpack.config.js"
+}
+```
+
+* The above code tells *package.json* to run Webpack starting with the configuration file. Of course, if you named your configuration file something different you wouldn't write *webpack.config.js*, but you'd use whatever you called your configuration file.
+
+* Webpack runs in production mode by default. We can change this by using the *mode* property and giving it a value of *"development"*.
+
+* Inside of our config file we can also decrease/eliminate the frequency of "debuggingish" code blocks occuring in our saved file by setting the *devtool* property to *"none"*. While I'm not whether this is ever absolutely necessary, it is possible.
+
+20:57 -- I just finished taking notes on Part IV of Colt Steele's Learn Webpack course. During my next coding session I'll move on to taking notes on Part V of the course.
 
 ___
 **Total time spent coding today**: 
