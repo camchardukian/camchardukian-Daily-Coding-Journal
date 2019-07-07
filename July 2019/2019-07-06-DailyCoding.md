@@ -134,10 +134,46 @@ We can then cache *vendor.js* while still updating our *main.js* with some frequ
 21:55 -- My family just got home from dinner so I'll probably hang out with them a bit before my brother goes back to Milwaukee.
 
 With that being said, I'll try to finish the rest of this Webpack course tonight.
+___
+22:39 -- I'm back. Let's go, Part X -- 
+[Extract CSS & Minify HTML/JS](https://www.youtube.com/watch?v=MpGLUVbqoYQ).
+
+22:41 -- For performance reasons, it can be beneficial to have a separate CSS file rather than having to wait for JavaScript to inject CSS into our HTML.
+
+22:48 -- We can minimize our CSS using the *optimize-css-assets-webpack-plugin* plugin.
+
+22:53 -- We can minimize our HTML file using *HtmlWebpackPlugin* and using the *minify property*, and passing it an object that has the following properties all set to true:
+*removeAttributeQuotes*, *collapseWhitespace*, *removeComments*.
+
+22:55 -- Here's the actual code for what we were just dicussing above about minimizing our HTML:
+```
+new HtmlWebpackPlugin({
+    minify: {
+        removeAttributeQuotes: true,
+        collapseWhitespace: true,
+        removeComments: true
+    }
+})
+```
+23:02 -- I just finished Colt Steele's Learn Webpack course. If I'm being honest, I'm still not super comfortable with Webpack.
+
+With that being said, I no longer feel as if I'm going to be panicking if I have to work on some project that requires me to interact with Webpack.
+
+It's also good to know that for the most part, we really only need to setup Webpack once per project.
+
+That, along with the fact that I may be on a team of developers working with Webpack means that being a Webpack master right out of the gate when I start working probably isn't absolutely necessary.
+
+With all of this being said, I'm glad I went through this course, and spent 6-8 hours (or however many hours it ended up being) getting comfortable with Webpack.
+
+23:07 -- I think that tomorrow I'll work on building a reponsive, mobile first website using HTML 5 and CSS3.
+
+I think I should review those skills as I've pretty much been focusing on JavaScript and React these last 6 months.
+
+23:08 -- See you tomorrow!
 
 ___
-**Total time spent coding today**: 
+**Total time spent coding today**: 3 hours 10 minutes
 
-**Total time spent coding thus far in July 2019**: 
+**Total time spent coding thus far in July 2019**: 16 hours 31 minutes
 
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**: 666 hours 51 minutes
