@@ -97,6 +97,32 @@ While I think some of the above code could change depending on what we named our
 
 Clearly we live in exciting times hahaha.
 ___
+19:48 -- Got a little bit of exercise in. Now, let's talk about HTML-LOADER & FILE-LOADER.
+
+20:03 -- I felt this part of the course was a bit confusing. For that reason, I'm going to take notes from some supplementary videos.
+
+20:04 -- [Supplementary video #1](https://www.youtube.com/watch?v=GSUP1zK7aXA) notes:
+
+* Webpack doesn't know every programming language. It only "knows" JavaScript.
+
+* Webpack relies on different loaders to "understand" code from other programming languages or file types.
+
+* Loaders run in the reverse order that they are written. In other words, the loaders written last (closer to the bottom of your file) will actually be processed first, and Webpack will then work through the loaders sequentially going upward.
+
+20:11 -- [Supplementary video #2](https://www.youtube.com/watch?v=8DDVr6wjJzQ) notes:
+
+* An entry point is where Webpack will start looking for dependencies. A Webpack project can have multiple entry points.
+
+* The term output refers to where Webpack should store the bundle(s) it creates.
+
+* Module loaders allow us to transform our code.
+
+20:21 -- Getting back to the Colt Steele course, we can install a plugin called *clean-webpack-plugin*, which will delete or "clean up" the *dist* directory everytime we build our application.
+
+This prevents a lot of clutter from accumulating in the *dist* directory.
+
+20:24 -- During my next coding session, I'll take notes on part IX of Colt's course.
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in July 2019**: 
