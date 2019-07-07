@@ -123,6 +123,19 @@ This prevents a lot of clutter from accumulating in the *dist* directory.
 
 20:24 -- During my next coding session, I'll take notes on part IX of Colt's course.
 ___
+21:39 -- I'm back. Let's take some more notes.
+
+21:48 -- This part talked about *vendor.js*. From my limited understanding, it looks like the point of having a *vendor.js* file is to store files that rarely change such as JavaScript libraries and other less frequently updated dependencies such as BootStrap.
+
+We can then cache *vendor.js* while still updating our *main.js* with some frequency.
+
+21:53 -- I'm feeling a bit burnt out on coding everything alone. I'm still keeping with it to some extent, but I'm definitely hoping to join a team and work on some real projects soon.
+
+21:55 -- My family just got home from dinner so I'll probably hang out with them a bit before my brother goes back to Milwaukee.
+
+With that being said, I'll try to finish the rest of this Webpack course tonight.
+
+___
 **Total time spent coding today**: 
 
 **Total time spent coding thus far in July 2019**: 
