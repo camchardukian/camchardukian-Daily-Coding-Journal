@@ -220,14 +220,22 @@ return result.join("")
 
 9:54 -- Explaining that last algorithm took waaaaaay longer than I expected. It's all good though.
 
-Explaining everything in more detail really made me think about my solution. I feel solving this last algorithm really helped strengthen my comfort with ASCII codes, as as the charCodeAt() and String.fromCharCode() methods.
+Explaining everything in more detail really made me think about my solution. I feel solving this last algorithm really helped strengthen my comfort with ASCII codes, as well as the charCodeAt() and String.fromCharCode() methods.
 
 9:55 -- I now have 882.92 points which is good enough for a rank of 85,718 on HackerRank's global algorithms & data structures leaderboard.
 
 9:57 -- During my next coding session, I'll attempt to solve [The Love Letter Mystery](https://www.hackerrank.com/challenges/the-love-letter-mystery/problem) algorithm.
 ___
-**Total time spent coding today**: 
+23:40 -- Ended up spending a lot of time with family today because of the fact that I'll be headed back to Vietnam soon.
 
-**Total time spent coding thus far in July 2019**: 
+I also lost a couple hours finding a place to stay on airbnb for my first few weeks back.
 
-**Total lifetime hours of coding**: 
+Tomorrow I'll try to get at least an hour of coding in. It's unlikely I'll get a ton of coding in this week because of needing to say goodbyes, having a long flight back to Asia, and being jetlagged/finding work when I get back.
+
+In any case, I'm excited to see how the next few weeks play out.
+___
+**Total time spent coding today**: 1 hour 39 minutes 
+
+**Total time spent coding thus far in July 2019**: 19 hours 44 minutes
+
+**Total lifetime hours of coding**: 670 hours 4 minutes
