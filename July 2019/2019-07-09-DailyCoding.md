@@ -48,12 +48,14 @@ function theLoveLetterMystery(s) {
 
 // We'll eventually break out of our loop and return reductionCount as our solution to this algorithm!
 ```
-19:39 -- My family is pushing me to come eat as it's our last night together. I'm going to eat dinner, and then hopefully finish solving this algorithm later tonight. 
+19:39 -- My family is pushing me to come eat as it's our last night together. I'm going to eat dinner, and then hopefully finish solving this algorithm later tonight.
+
+UPDATE: Didn't get around to any additional coding. Will be flying back home to Vietnam tomorrow, so it will be difficult to get any coding in tomorrow also.
 
 
 ___
-**Total time spent coding today**: 
+**Total time spent coding today**: 41 minutes
 
-**Total time spent coding thus far in July 2019**: 
+**Total time spent coding thus far in July 2019**: 20 hours 26 minutes
 
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**: 670 hours 46 minutes
