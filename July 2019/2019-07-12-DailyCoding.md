@@ -1,4 +1,4 @@
-# Thursday July 11th, 2019 Daily Coding Journal
+# Friday July 12th, 2019 Daily Coding Journal
 
 Did not get around to coding today as I was moving into my new apartment, catching up with the girl I'm dating (and haven't seen in a month) and just exhausted from being jetlagged.
 
