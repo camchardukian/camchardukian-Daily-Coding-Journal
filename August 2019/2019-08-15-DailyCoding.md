@@ -165,9 +165,11 @@ function squares(a, b) {
 19:09 -- I now have 902.92 points which is good enough for a rank of 85,757 on HackerRank.
 
 19:12 -- During my next coding session, I'll try to solve the [Between Two Sets algorithm](https://www.hackerrank.com/challenges/between-two-sets/problem).
+
+22:48 -- UPDATE: I'll get to solve that algorithm tomorrow. For now, I'm going to do a little bit more work on other projects before getting an early night of sleep (at least early compared to the usual times I've been going to bed lately.)
 ___
-**Total time spent coding today**: 
+**Total time spent coding today**: 1 hour 24 minutes
 
-**Total time spent coding thus far in August 2019**: 
+**Total time spent coding thus far in August 2019**: 3 hours 17 minutes
 
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**: 682 hours 57 minutes
