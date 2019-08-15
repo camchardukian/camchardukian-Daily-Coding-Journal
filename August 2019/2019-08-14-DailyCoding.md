@@ -39,9 +39,12 @@ squares(100, 49)
 While objectively I didn't make a ton of progress in this session, it did allow me to start to reactivate the "programming" and problem solving part of my brain again.
 
 I'm hopeful the next session will be slightly less exhausting.
+
+---
+UPDATE: I didn't end up getting any additional coding time in.
 ___
-**Total time spent coding today**: 
+**Total time spent coding today**: 31 minutes
 
-**Total time spent coding thus far in August 2019**: 
+**Total time spent coding thus far in August 2019**: 1 hour 54 minutes
 
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**: 681 hours 33 minutes
