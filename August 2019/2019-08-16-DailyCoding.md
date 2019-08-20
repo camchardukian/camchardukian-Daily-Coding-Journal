@@ -86,9 +86,10 @@ return (finalList.length)
 ```
 12:12 -- Unfortunately, my current solution only passes 4 of the 9 HackerRank test cases. I'll have to explore more during my next coding session to identify where my faulty logic is.
 
+UPDATE: I didn't get any more coding time in.
 ___
-**Total time spent coding today**: 
+**Total time spent coding today**: 47 minutes
 
-**Total time spent coding thus far in August 2019**: 
+**Total time spent coding thus far in August 2019**: 4 hours 4 minutes
 
-**Total lifetime hours of coding**: 
+**Total lifetime hours of coding**: 683 hours 44 minutes
