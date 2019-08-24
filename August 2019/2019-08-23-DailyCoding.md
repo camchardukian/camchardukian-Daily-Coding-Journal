@@ -1,3 +1,5 @@
+# Friday August 23rd, 2019 Daily Coding Journal
+
 18:43 -- I'm about to study some stuff about Redux. Here's what my day at the office was like today:
 ```
 7:50 - 8:00
