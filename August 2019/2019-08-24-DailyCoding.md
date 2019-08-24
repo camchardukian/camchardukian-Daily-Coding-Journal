@@ -28,16 +28,18 @@ Anyway, until I can figure out what is going wrong, I’ll just link to an exter
 
 20:06 — Anyway, it’s getting late now. I think I’m going to get dinner and then I’ll probably get back at it again tomorrow, unless my girl and I return tonight unexpectedly soon.
 
+22:53 -- I'm exhausted. I just got back from a night market with karaoke and tons of exotic foods with my girl.
 
+I've been programming and working a lot the last several days. I'm going to commit this journal entry to GitHub, and then get some well deserved rest.
 
 
 ___
-**Total time spent working as an employed developer today**: 
+**Total time spent working as an employed developer today**: N/A
 
-**Total time spent practicing coding outside of work today**: 
+**Total time spent practicing coding outside of work today**: 2 hours 15 minutes
 
-**Total time spent practicing coding outside of work thus far in August 2019**: 
+**Total time spent practicing coding outside of work thus far in August 2019**: 10 hours 43 minutes
 
-**Total lifetime hours practicing code outside of a job**: 
+**Total lifetime hours practicing code outside of a job**: 690 hours 22 minutes
 
-**Total lifetime hours working as an employed developer**: 
+**Total lifetime hours working as an employed developer**: 26 hours 22 minutes
