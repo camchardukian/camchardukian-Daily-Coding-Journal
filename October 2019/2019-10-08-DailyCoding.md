@@ -1,0 +1,1 @@
+23:27 -- I'm a little bit behind schedule. Here's what my day at the office looked like today:
