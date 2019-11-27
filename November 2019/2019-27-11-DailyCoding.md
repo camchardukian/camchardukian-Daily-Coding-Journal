@@ -6,7 +6,6 @@ Thus, I spent most of the afternoon just reading documentation, learning more ab
 
 21:37 -- Here's what my day at the office looked like:
 ```
-
 7:50 - 8:00
 Connected keyboard.
 
@@ -115,13 +114,13 @@ I also spent about 30 or 35 minutes after work watching some videos and doing ex
 
 But, it's getting late now so let's eat dinner, and get ready for bed.
 
-In any case, it's geti
+See you tomorrow!
 ___
 **Total time spent working as an employed developer today**: 8 hours 8 minute
 
 **Total time spent practicing code outside of work today**: 36 minutes
 
-**Total time spent practicing code outside of work thus far in November 2019**: 22 hours 47minutes
+**Total time spent practicing code outside of work thus far in November 2019**: 22 hours 47 minutes
 
 **Total lifetime hours practicing code outside of a job**: 787 hours 10 minutes
 
