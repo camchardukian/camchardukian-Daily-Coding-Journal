@@ -1,4 +1,4 @@
-# Monday November 25th, 2019 Daily Coding Journal
+# Tuesday November 26th, 2019 Daily Coding Journal
 
 20:26 -- Here's what my day at the office looked like:
 ```
