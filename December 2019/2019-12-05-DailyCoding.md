@@ -1,4 +1,4 @@
-# Thursday December 4th, 2019 Daily Coding Journal
+# Thursday December 5th, 2019 Daily Coding Journal
 
 22:24 -- It's been a long day. Here's what the day at the office looked like:
 ```
