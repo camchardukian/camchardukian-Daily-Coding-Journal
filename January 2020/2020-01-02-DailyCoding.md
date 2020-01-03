@@ -36,7 +36,6 @@ While they both use ‘…’ syntax, rest parameters are used to collect all th
 20:24 -- I was a bit tired out today, but I still learned some good things. The most notable of which was probably getting some exposure to Ant Design, another front-end library for quickly building beautiful user interfaces.
 
 Let's keep on grinding. See you tomorrow.
-___
 
 **Total time spent working as an employed developer today**: 8 hours 9 minutes
 
