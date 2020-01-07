@@ -11,7 +11,6 @@ Refactored the code from the student-list page.
 
 Started working on the student detail page.
 
-
 11:45 - 12:45
 Lunch/nap
 
