@@ -24,8 +24,6 @@ Notes:
 It is possible to insert additional div tags into Ant Design components to make them easier to style.
 
 When doing CSS 3 transitions for the height property of dynamic content, we cannot use percentages. We should instead set the values of the max-height properties.
-
-Summary: 
 ```
 ___
 **Total time spent working as an employed developer today**: 8 hours 5 minutes
