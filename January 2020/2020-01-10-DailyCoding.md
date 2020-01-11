@@ -1,4 +1,4 @@
-# Friday January 9th 2019 Daily Coding Journal
+# Friday January 10th 2019 Daily Coding Journal
 
 23:09 -- Today was an interesting day at work. I spent most of it fixing bugs, attending meetings, and reading documentation about React-Native/setting up my development environment.
 
