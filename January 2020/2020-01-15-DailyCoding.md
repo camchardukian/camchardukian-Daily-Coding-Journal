@@ -1,4 +1,4 @@
-# Tuesday January 14th 2019 Daily Coding Journal
+# Wednesday January 15th 2019 Daily Coding Journal
 
 23:12 -- Today was another day spent on strengthening my React-Native skills. Here's what I got into at the office today:
 ```
