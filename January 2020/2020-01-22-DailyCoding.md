@@ -1,4 +1,4 @@
-# Tuesday January 22nd 2020 Daily Coding Journal
+# Wednesday January 22nd 2020 Daily Coding Journal
 
 23:52 -- Today was a solid day of work. I can't believe it's finally time for Chinese New Year.
 
