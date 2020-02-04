@@ -1,4 +1,4 @@
-# Wednesday January 22nd 2020 Daily Coding Journal
+# Thursday January 23rd 2020 Daily Coding Journal
 
 21:08 -- Didn't do much code related stuff today. If I'm going to be perfectly honest, I was a bit lazy today. Sure, I did some more apartment cleaning and prepared for my trip to Malaysia, but if I was being a good executor like I normally am I would've got things done today.
 
