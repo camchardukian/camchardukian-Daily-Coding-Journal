@@ -9,6 +9,14 @@ I've implemented the current number display correctly, but I'm still having some
 11:57 -- See you again this afternoon/evening!
 
 ___
+
+17:47 -- Let's try to grind for another hour or so!
+
+19:04 -- During this coding session, I created a reusable component for the different types of arithmetic operators and created an alert message if the user tries to select a random number when the display already has a number.
+
+The alert message is pretty ugly and hopefully just a temporary fix.
+
+___
 ??????? -- we'll update this section at the end of the day.
 
 **Total time spent working as an employed developer today**: N/A
