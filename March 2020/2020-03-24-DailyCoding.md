@@ -24,7 +24,7 @@ Notes:
 
 23:23 -- While I did learn some things today about Progressive Web Apps, Flutter,and the Iconic framework, I **STRONGLY** prefer writing code over writing reports.
 
-Even with that being the case, I spent an extra hour or so when I came studying some technical topics so that I'm able to be a more eloquent speaker when I give this presentation.
+Even with that being the case, I spent an extra hour or so when I came home tonight studying some technical topics so that I'm able to be a more eloquent speaker when I give this presentation.
 
 In any case, it's getting late now so I'm going to get to sleep.
 
