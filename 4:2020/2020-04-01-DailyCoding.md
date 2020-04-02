@@ -25,7 +25,7 @@ Notes:
 That's 150 long days striving to improve. We've come a looooooong way since we first got started in August, and I'm looking forward to continuing to improve! :D
 
 Tomorrow is a holiday so I'm off the 9-5 grind, but I'll still try to spend a little time on some side project.
-
+___
 **Total time spent working as an employed developer today**: 8 hours 11 minutes
 
 **Total time spent practicing code outside of work today**: 53 minutes
