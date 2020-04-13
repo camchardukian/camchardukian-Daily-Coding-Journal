@@ -1,4 +1,4 @@
-# Saturday April 11th 2020 Daily Coding Journal
+# Sunday April 12th 2020 Daily Coding Journal
 
 I didn't do anything code related on this day.
 ___
