@@ -41,6 +41,6 @@ ___
 
 **Total time spent practicing code outside of work thus far in April 2020**: 4 hours 40 minutes
 
-**Total lifetime hours practicing code outside of a job**: 856 hours 4 minutes
+**Total lifetime hours practicing code outside of a job**: 856 hours 14 minutes
 
 **Total lifetime hours working as an employed developer**: 1294 hours 18 minutes
