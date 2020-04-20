@@ -10,7 +10,7 @@ In any case, it's late so I'm going to get to sleep. See you tomorrow!
 ___
 **Total time spent working as an employed developer today**: 31 minutes
 
-**Total time spent practicing code outside of work today**: 1 hour 32 minutes minutes
+**Total time spent practicing code outside of work today**: 1 hour 32 minutes
 
 **Total time spent practicing code outside of work thus far in April 2020**: 6 hours 34 minutes
 
