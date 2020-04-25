@@ -1,4 +1,4 @@
-# Thursday April 23rd 2020 Daily Coding Journal
+# Friday April 24th 2020 Daily Coding Journal
 
 22:06 -- This morning at about 10am I realized that during discussions with my coworkers I had repeatedly said Firebase Firestone instead of Firebase Firestore. Oh well, you live and you learn hahaha ;)
 
