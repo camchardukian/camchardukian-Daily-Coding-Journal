@@ -8,7 +8,6 @@ So, instead of doing that, we're doing a different approach tomorrow. Anyway, to
 
 Here's what my first day back looked like:
 ```
-
 8:00 - 11:45
 Daily standup meeting
 
