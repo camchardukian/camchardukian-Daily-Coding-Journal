@@ -15,3 +15,21 @@ But... I've already built a JavaScript calculator a couple months ago using Reac
 If I've already built a calculator which is the 4th project in their curriculum, surely I can complete the 3rd project in the curriculum...
 
 And surely we'll learn some cool stuff in the process :)
+___
+19:00 -- So far this drum machine project has been coming along a lot easier than I expected.
+
+While the holidays are over and I'll be back to work at the office tomorrow as usual, I wouldn't be surprised if I finish this drum machine project within the next 2-3 days in my free time after work.
+
+19:04 -- In any case, I'm really proud of the progress I made on this FCC certificate these last 4 days. I'm about halfway finished with the certificate already, and I'm very confident I'll be able to finish the entire certificate by the end of the month.
+
+I've gained a lot of confidence in my development skills this weekend, and I'm excited to continue working on these projects over the next few weeks and earn my 1st new certificate in over a year! :D
+___
+**Total time spent working as an employed developer today**: N/A
+
+**Total time spent practicing code outside of work today**: 2 hours 59 minutes
+
+**Total time spent practicing code outside of work thus far in May 2020**: 8 hours 8 minutes
+
+**Total lifetime hours practicing code outside of a job**: 875 hours 47 minutes
+
+**Total lifetime hours working as an employed developer**: 1369 hours 10 minutes
