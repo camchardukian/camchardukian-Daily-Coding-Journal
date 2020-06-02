@@ -56,4 +56,4 @@ CreateRef should be used with class components while UseRef should be used insid
 
 **Total lifetime hours practicing code outside of a job**: 894 hours 18 minutes
 
-**Total lifetime hours working as an employed developer**: 1544 hours 132minutes
+**Total lifetime hours working as an employed developer**: 1544 hours 32 minutes
