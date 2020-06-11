@@ -1,4 +1,4 @@
-# Tuesday June 9th 2020 Daily Coding Journal
+# Wednesday June 10th 2020 Daily Coding Journal
 
 23:21 -- Today was another MONSTER day of coding. I spent more than 12 hours on code related activities today! Here's what my day at the office looked like:
 
