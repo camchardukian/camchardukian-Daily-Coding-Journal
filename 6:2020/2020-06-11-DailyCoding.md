@@ -34,9 +34,9 @@ Now... I'm ready for bed after all the hustling today. I'm going to get some res
 
 **Total time spent working as an employed developer today**: 8 hours 41 minutes
 
-**Total time spent practicing code outside of work today**: 15 hours 37 minutes
+**Total time spent practicing code outside of work today**: 2 hours 55 minutes
 
-**Total time spent practicing code outside of work thus far in June 2020**: 12 hours 42 minutes
+**Total time spent practicing code outside of work thus far in June 2020**: 15 hours 37 minutes
 
 **Total lifetime hours practicing code outside of a job**: 908 hours 32 minutes
 
