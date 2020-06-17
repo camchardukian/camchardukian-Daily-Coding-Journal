@@ -36,6 +36,8 @@ Notes:
 
 22:52 -- Well, let's try to get some sleep and get ready for tomorrow.
 
+---
+
 **Total time spent working as an employed developer today**: 8 hours 15 minutes
 
 **Total time spent practicing code outside of work today**: 4 minutes
