@@ -34,7 +34,9 @@ While I was working on my time parser project, I found [this video](https://www.
 
 23:35 -- In any case, I'm still not fully myself. I found myself getting fatigued quite easily today.
 
-## Hopefully, getting some rest now will help me feel less tired tomorrow.
+Hopefully, getting some rest now will help me feel less tired tomorrow.
+
+---
 
 **Total time spent working as an employed developer today**: 8 hours 30 minutes
 
