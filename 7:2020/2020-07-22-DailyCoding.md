@@ -1,4 +1,4 @@
-# Tuesday July 21st 2020 Daily Coding Journal
+# Wednesday July 22nd 2020 Daily Coding Journal
 
 23:23 -- Today was a pretty solid day. Here's what my day at the office looked like:
 
