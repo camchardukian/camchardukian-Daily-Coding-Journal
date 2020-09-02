@@ -33,6 +33,6 @@ I have off tomorrow because it's a holiday in Vietnam. Because of that, maybe I'
 
 **Total time spent practicing code outside of work thus far in September 2020**: 10 minutes
 
-**Total lifetime hours practicing code outside of a job**: 952 hours 26 minutes
+**Total lifetime hours practicing code outside of a job**: 975 hours 42 minutes
 
 **Total lifetime hours working as an employed developer**: 2079 hours 25 minutes
