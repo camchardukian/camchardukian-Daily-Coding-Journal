@@ -1,4 +1,4 @@
-# Tuesday September 1st 2020 Daily Coding Journal
+# Wednesday September 2nd 2020 Daily Coding Journal
 
 15:30 — Today is a holiday in Vietnam so I’ve spent most of the morning and early afternoon taking it easy. Let’s take a few minutes now, however, to get started on FreeCodeCamp’s _Advanced Node and Express Challenges_.
 
