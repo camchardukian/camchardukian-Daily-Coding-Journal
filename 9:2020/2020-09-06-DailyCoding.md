@@ -1,6 +1,6 @@
-# Saturday September 5th 2020 Daily Coding Journal
+# Sunday September 6th 2020 Daily Coding Journal
 
-22:11 -- I felt pretty worn out so I didn't do much coding related stuff today.
+21:09 -- I didn't do anything coding related today as I was focused more on my personal life.
 
 ---
 
