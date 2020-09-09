@@ -16,7 +16,7 @@ Lunch/Nap
 12:45 - 17:05
 Made some small fixes, and built/distributed 4 applications.
 
-Read documentation about tests in a cost effective manner.
+Read documentation about writing tests in a cost effective manner.
 
 Resources:
 React Native Linking documentation: https://reactnative.dev/docs/linking
