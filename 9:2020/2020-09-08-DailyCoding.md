@@ -28,7 +28,7 @@ I don't think I have it in me to continue grinding FreeCodeCamp projects as that
 
 For now, I think I'm going to take some time to work on passion projects, read software development books, or simply do some other activity to refresh myself until I'm ready to get back on the FCC grind.
 
-Tonight for instance that meant spending about 40 minutes or reading about object-oriented programming.
+Tonight for instance that meant spending about 40 minutes or so reading about object-oriented programming.
 
 Anyway, that's a quick update of how things are going. I'll see you again tomorrow! :))
 
