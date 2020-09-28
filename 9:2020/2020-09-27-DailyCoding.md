@@ -1,4 +1,4 @@
-# Sunday September 26th 2020 Daily Coding Journal
+# Sunday September 27th 2020 Daily Coding Journal
 
 Today was a decent day. I taught English classes in the morning and then spent about an hour reading _Pro Git_ this evening.
 
