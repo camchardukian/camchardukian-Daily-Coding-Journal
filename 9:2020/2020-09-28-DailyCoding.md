@@ -46,7 +46,7 @@ In any case, I'm pretty tired now so I'm going to call it a night. See you tomor
 
 **Total time spent working as an employed developer today**: 8 hours 1 minute
 
-**Total time spent practicing code outside of work today**: 1 hour 2 minutew
+**Total time spent practicing code outside of work today**: 1 hour 2 minutes
 
 **Total time spent practicing code outside of work thus far in September 2020**: 11 hours 55 minutes
 
