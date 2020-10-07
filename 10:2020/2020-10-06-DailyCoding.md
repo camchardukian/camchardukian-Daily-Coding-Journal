@@ -41,7 +41,7 @@ We'll talk more about that later though as we see how things shake out. In any c
 
 **Total time spent practicing code outside of work today**: 24 minutes
 
-**Total time spent practicing code outside of work thus far in October 2020**: 2 hour 22 minutes
+**Total time spent practicing code outside of work thus far in October 2020**: 2 hours 22 minutes
 
 **Total lifetime hours practicing code outside of a job**: 990 hours 55 minutes
 
