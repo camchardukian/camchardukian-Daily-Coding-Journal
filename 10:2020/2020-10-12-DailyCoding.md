@@ -1,4 +1,4 @@
-# Sunday October 11th 2020 Daily Coding Journal
+# Monday October 12th 2020 Daily Coding Journal
 
 22:16 -- Man I'm exhausted. Let me quickly put my notes down for today and then get some rest:
 
