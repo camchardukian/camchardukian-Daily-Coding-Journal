@@ -40,4 +40,4 @@ While I'm all about continually trying to get better everyday, I can't deny the 
 
 **Total lifetime hours practicing code outside of a job**: 998 hours 22 minutes
 
-**Total lifetime hours working as an employed developer**: 23123 hours 26 minutes
+**Total lifetime hours working as an employed developer**: 2323 hours 26 minutes
