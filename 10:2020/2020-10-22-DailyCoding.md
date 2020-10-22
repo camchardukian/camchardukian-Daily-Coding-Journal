@@ -1,4 +1,4 @@
-# Wednesday October 21st 2020 Daily Coding Journal
+# Thursday October 22nd 2020 Daily Coding Journal
 
 21:50 -- I'm currently on annual leave so I did not do anything related to code today.
 
