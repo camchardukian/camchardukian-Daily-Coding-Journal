@@ -34,7 +34,7 @@ Reading and taking notes on another book? Building some projects? I'm not sure y
 
 **Total time spent practicing code outside of work today**: 30 minutes
 
-**Total time spent practicing code outside of work thus far in November 2020**: 30
+**Total time spent practicing code outside of work thus far in November 2020**: 30 minutes
 
 **Total lifetime hours practicing code outside of a job**: 999 hours 52 minutes
 
