@@ -3,7 +3,7 @@
 22:57 -- Today was a pretty normal day at the office. Here's what I did:
 
 ```
-8:00 - 11:45
+8:30 - 11:45
 Daily standup meeting
 
 Caught up on email/slack
