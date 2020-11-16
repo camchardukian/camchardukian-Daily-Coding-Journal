@@ -1,4 +1,4 @@
-# Sunday November 15 2020 Daily Coding Journal
+# Sunday November 15th 2020 Daily Coding Journal
 
 23:17 -- Today was super busy so I unfortunately wasn't able to do anything related to code today. We'll get back on the grind tomorrow.
 
