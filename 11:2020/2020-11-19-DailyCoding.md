@@ -1,4 +1,4 @@
-# Thursday November 18th 2020 Daily Coding Journal
+# Thursday November 19th 2020 Daily Coding Journal
 
 22:03 -- This morning was a pretty normal morning at the office. This afternoon was pretty rough though. For some reason the back of one of hands started hurting whenever I was typing. As a result I spent the entire afternoon either typing in pain or typing one handed.
 
@@ -21,7 +21,6 @@ Lunch/Nap
 
 12:45 - 17:00
 Continued working on the post creation task
-
 
 Resources:
 
