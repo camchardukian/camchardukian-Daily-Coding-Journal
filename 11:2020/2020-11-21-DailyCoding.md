@@ -1,6 +1,6 @@
 # Saturday November 21st 2020 Daily Coding Journal
 
-## 23:55 -- I didn't do anything related to code today.
+23:55 -- I didn't do anything related to code today.
 
 ---
 
