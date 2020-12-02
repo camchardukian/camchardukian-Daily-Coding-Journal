@@ -31,7 +31,7 @@ Notes:
 
 **Total time spent practicing code outside of work today**: 2 minutes
 
-**Total time spent practicing code outside of work thus far in November 2020**: 4 minutes
+**Total time spent practicing code outside of work thus far in December 2020**: 4 minutes
 
 **Total lifetime hours practicing code outside of a job**: 1013 hours 29 minutes
 
