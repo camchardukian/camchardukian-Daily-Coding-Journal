@@ -14,8 +14,7 @@ Made some additional improvements to the create/edit post flow
 Lunch/Nap
 
 12:45 - 17:15
-Continued making some additional improvements to the create/edit post flow based on senior
-dev feedback
+Continued making some additional improvements to the create/edit post flow based on senior dev feedback
 
 Resources:
 
