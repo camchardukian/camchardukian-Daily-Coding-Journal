@@ -35,7 +35,7 @@ With that being said, I'm going to call it a night here as I need to eat dinner 
 
 **Total time spent working as an employed developer today**: 8 hours 5 minutes
 
-**Total time spent practicing code outside of work today**: 1 hourn 23 minutes
+**Total time spent practicing code outside of work today**: 1 hour 23 minutes
 
 **Total time spent practicing code outside of work thus far in December 2020**: 2 hours 20 minutes
 
